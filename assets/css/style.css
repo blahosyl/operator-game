@@ -14,6 +14,7 @@ flex-direction: column;
 /* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
 align-items: center;
 border: solid 2px red;
+border-radius: 20px;
 padding: 2rem;
 }
 
@@ -25,6 +26,7 @@ padding: 2rem;
   min-width: 200px;
   justify-content: space-between;
   border: solid 2px orange;
+  border-radius: 10px;
   padding: 1rem;
   margin-bottom: 2rem;
 }
@@ -33,4 +35,10 @@ padding: 2rem;
 .operand-selector {
   padding: 1 rem;
   margin-block-end: 0;
+}
+
+#submit-button {
+  border-radius: 5px;
+  border-color: red;
+  background-color: orange;
 }
