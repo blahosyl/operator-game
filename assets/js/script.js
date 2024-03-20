@@ -48,7 +48,9 @@ function eliminateZero(array,count) {
   return array;
 }
 
-//assign the the array of random numbers to the integers shown on the site
+/**
+* assign the the array of random numbers to the integers shown on the site
+*/
 function showRandomOperands() {
   let operandsComputed = eliminateZero(generateRandomNumbers(11),11);
   let operands = document.getElementsByClassName('operand');
