@@ -1,5 +1,7 @@
 function newGame() {
-  calculateSolution();
+  console.log('Get operands',getOperands());
+  console.log('showRandomOperands',showRandomOperands());
+  // calculateSolution();
 }
 
 // run this function when refreshing the page
@@ -11,6 +13,56 @@ let newGameButton = document.getElementById('new-game-button')
 // add event listener to New Game button to run the new game function
 newGameButton.addEventListener('click',newGame);
 
+// get the array of operands
+function getOperands() {
+  // empty array of operand values
+  let operandValues = [];
+  // get all elements with the class 'operand'
+  let operands = document.getElementsByClassName('operand');
+
+  for (let operand of operands) {
+    operandValues.push(operand.innerHTML);
+  }
+  return operandValues;
+}
+
+// 8 generate an array of random numbers, array size is the `count` parameter
+function generateRandomNumbers(count) {
+  randomNumbers = [];
+for (let i = 0; i<getOperands().length; i++) {
+    // generate random integer between 0 and 10
+    let randomNumber = Math.floor(Math.random()*count);
+    randomNumbers.push(randomNumber);
+  }
+  return randomNumbers;
+}
+
+// eliminate zero from an array (par1) and replace it with a random number (par2)
+function eliminateZero(array,count) {
+  // make sure the number is not 0
+  for (i in array) {
+    while (array[i] === 0) {
+      array[i] = Math.floor(Math.random()*count);
+    }
+  }
+  return array;
+}
+
+//assign the the array of random numbers to the integers shown on the site
+function showRandomOperands() {
+  let operandsComputed = eliminateZero(generateRandomNumbers(11),11);
+  let operands = document.getElementsByClassName('operand');
+  for (let operand of operands) {
+    operand.innerHTML = operandsComputed;
+  }
+  console.log('type of operands:',typeof operands);
+  console.log('operands: element', operands);
+  console.log('operands keys:', Object.keys(operands));
+  console.log('operands length:', operands.length);
+  return operandsComputed;
+}
+
+// THIS FUNCTION SHOULD BE BROKEN UP INTO SMALLER PIECES
 //replace all operands with random integers between 1 and 10 (incl)
 function randomOperands() {
   // get the array of operands
@@ -32,6 +84,7 @@ function randomOperands() {
     // add the random integer to the array of values for calculation
     operandValues.push(operand.innerHTML*1);
   }
+  console.log(operandValues);
   return operandValues;
 }
 
@@ -51,8 +104,14 @@ function randomOperators() {
     // add an element from `operators`based on the random number
     chosenOperators.push(operators[randomNumber]);
   }
+  console.log(chosenOperators);
   return chosenOperators;
 }
+
+// TRY TO BREAK UP FUNCTIONS INTO SMALLER PIECES:
+// 1. RANDOM NUMBER GENERATOR FOR INTEGERS, ADDS VALUES TO ARRAY `operandValues`
+// 2. function to change `innerHTML` using `operandValues`
+
 
 function calculateSolution() {
   let solution = '';
