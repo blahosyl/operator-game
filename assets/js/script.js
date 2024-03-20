@@ -1,7 +1,13 @@
+// Global variable to hold the chosen operators
+let currentChosenOperators = [];
+
 function newGame() {
   console.log('showRandomOperands',showRandomOperands());
-
-  console.log('chosenOperators:',generateRandomOperators());
+  // Roo
+  if (currentChosenOperators.length === 0) {
+    currentChosenOperators = generateRandomOperators();
+  }
+  console.log('chosenOperators:',generateRandomOperators);
 
   calculateSolution();
 
@@ -12,9 +18,16 @@ newGame()
 
 // New Game button should start a new game
 // get the New Game button
-let newGameButton = document.getElementById('new-game-button')
+// let newGameButton = document.getElementById('new-game-button')
 // add event listener to New Game button to run the new game function
-newGameButton.addEventListener('click',newGame);
+// newGameButton.addEventListener('click',newGame);
+
+// Roo
+let newGameButton = document.getElementById('new-game-button');
+newGameButton.addEventListener('click', function() {
+  currentChosenOperators = []; // Reset chosen operators for a new game
+  newGame();
+});
 
 // get the array of operands
 function getOperands() {
@@ -65,7 +78,7 @@ function showRandomOperands() {
 
 function generateRandomOperators() {
   let randomOperatorNumbers = generateRandomNumbers(4);
-  console.log('randomOperatorNumbers: ',randomOperatorNumbers);
+  console.log(randomOperatorNumbers);
   // the operators the program can chose from
   let operators = ["+","-","*","/"];
   // the array that will be filled with the randomly chosen operators at each game
@@ -106,8 +119,8 @@ function calculateSolution() {
   let solution = '';
   // alternately add a number and an operator
   for (let i = 0; i<3; i++) {
-    solution+=getOperands()[i];
-    solution+=generateRandomOperators()[i];
+    solution += getOperands()[i];
+    solution += currentChosenOperators[i];; // Roo
   }
 
   // cut off the last operand from the end of the string
