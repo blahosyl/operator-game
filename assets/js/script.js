@@ -54,9 +54,14 @@ function eliminateZero(array,count) {
 function showRandomOperands() {
   let operandsComputed = eliminateZero(generateRandomNumbers(11),11);
   let operands = document.getElementsByClassName('operand');
-  for (let operand of operands) {
-    operand.innerHTML = operandsComputed;
+  for (let i = 0; i < operandsComputed.length; i++) {
+    operands[i].innerHTML = operandsComputed[i];
   }
+
+  // for (let operand in operands) {
+  //   operand.innerHTML = operandsComputed[operand];
+  // }
+
   console.log('type of operands:',typeof operands);
   console.log('operands: element', operands);
   console.log('operands keys:', Object.keys(operands));
