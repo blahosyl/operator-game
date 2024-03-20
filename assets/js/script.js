@@ -1,7 +1,5 @@
 function newGame() {
-  randomOperands();
-  randomOperators();
-  calculateSolution()
+  calculateSolution();
 }
 
 // run this function when refreshing the page
@@ -30,6 +28,7 @@ function randomOperands() {
     }
     // show the random integer in the HTML
     operand.innerHTML = randomNumber;
+    // add the random integer to the array of values for calculation
     operandValues.push(randomNumber);
   }
   return operandValues;
