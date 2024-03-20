@@ -6,6 +6,12 @@ function newGame() {
 // run this function when refreshing the page
 newGame()
 
+// New Game button should start a new game
+// get the New Game button
+let newGameButton = document.getElementById('new-game-button')
+// add event listener to New Game button to run the new game function
+newGameButton.addEventListener('click',newGame);
+
 //replace all operands with random integers between 1 and 10 (incl)
 function randomOperands() {
   // get the array of operands
@@ -26,8 +32,6 @@ function randomOperands() {
     operandValues.push(randomNumber);
   }
   return operandValues;
-  // for testing, REMOVE LATER
-  console.log(operandValues);
 }
 
 // pick random operators: +, -, * or /
@@ -47,13 +51,4 @@ function randomOperators() {
     chosenOperators.push(operators[randomNumber]);
   }
   return chosenOperators;
-  // for testing, REMOVE LATER
-  console.log(chosenOperators);
 }
-
-
-// New Game button should start a new game
-// get the New Game button
-let newGameButton = document.getElementById('new-game-button')
-// add event listener to New Game button to run the new game function
-newGameButton.addEventListener('click',newGame);
