@@ -108,7 +108,8 @@ Web Disability Simulator
 - [`form` color picker](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_color)
 - [Call a function within a function](https://stackoverflow.com/a/4524890)
 - [Slice a character off the end of a string](https://stackoverflow.com/a/952945)
-- Remove a certain characrer from a string[https://www.scaler.com/topics/javascript-remove-character-from-string/]
+- [Remove a certain characrer from a string](https://www.scaler.com/topics/javascript-remove-character-from-string/)
+- [Evaulate a string as a mathematical expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#never_use_direct_eval!)
 
 ### Content
 
