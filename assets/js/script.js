@@ -11,4 +11,12 @@ function randomOperands() {
   }
 }
 
+// run this function when refreshing the page
 randomOperands()
+
+// New Game button should generate a new set of random randomOperands
+// get the New Game button
+let newGameButton = document.getElementById('new-game-button')
+console.log(newGameButton);
+// add event listener to New Game button to run the random operands function
+newGameButton.addEventListener('click',randomOperands);
