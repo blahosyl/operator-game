@@ -28,8 +28,9 @@ function randomOperands() {
     }
     // show the random integer in the HTML
     operand.innerHTML = randomNumber;
+    console.log(operand.innerHTML);
     // add the random integer to the array of values for calculation
-    operandValues.push(randomNumber);
+    operandValues.push(operand.innerHTML*1);
   }
   return operandValues;
 }
@@ -44,7 +45,7 @@ function randomOperators() {
   // get the length of array of operands, and generate the same number of chosenOperators
   // this is one more than we need, but it ensures the arrays of operands and operators are of the same length (for concatenating them for calculation)
   // the extra operator will be removed after calculation
-  for (let i = 0; i<randomOperands().length; i++) {
+  for (let i = 0; i<3; i++) {
     // generate random integer between 0 and 3 (incl)
     randomNumber = Math.floor(Math.random()*4);
     // add an element from `operators`based on the random number
@@ -55,7 +56,7 @@ function randomOperators() {
 
 function calculateSolution() {
   let solution = '';
-  for (let i = 0; i<randomOperands().length; i++) {
+  for (let i = 0; i<3; i++) {
     solution+=randomOperands()[i];
     solution+=randomOperators()[i];
   }
