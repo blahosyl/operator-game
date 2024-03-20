@@ -1,6 +1,7 @@
 function newGame() {
   randomOperands();
-  console.log(randomOperators());
+  randomOperators();
+  calculateSolution()
 }
 
 // run this function when refreshing the page
@@ -51,4 +52,24 @@ function randomOperators() {
     chosenOperators.push(operators[randomNumber]);
   }
   return chosenOperators;
+}
+
+function calculateSolution() {
+  let solution = '';
+  for (let i = 0; i<randomOperands().length; i++) {
+    solution+=randomOperands()[i];
+    solution+=randomOperators()[i];
+  }
+
+  // cut off the last operand from the end of the string
+  solution = solution.slice(0, -1);
+
+  solutionValue = eval(solution);
+
+  console.log(solution+'='+solutionValue);
+
+  // shows the correct solution for now. to be changed to show calculation of incorrect solution only
+  let solutionDiv = document.getElementById('solution');
+  solutionDiv.innerHTML = solution+'='+solutionValue;
+
 }
