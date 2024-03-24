@@ -112,6 +112,7 @@ Web Disability Simulator
 - [Remove a certain characrer from a string](https://www.scaler.com/topics/javascript-remove-character-from-string/)
 - [Evaulate a string as a mathematical expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#never_use_direct_eval!)
 - [Docstrings](https://stackoverflow.com/questions/34205666/utilizing-docstrings)
+- [Enable and disable an input button](https://stackoverflow.com/a/13831737)
 
 ### Content
 
