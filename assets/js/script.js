@@ -134,6 +134,9 @@ function generateRandomOperators() {
   return chosenOperators;
 }
 
+/**
+ * Show the expected result in the question area
+*/
 function showResult() {
   let result = document.getElementById('result');
   result.innerHTML = eval(concatenateWithOperands(currentChosenOperators));
