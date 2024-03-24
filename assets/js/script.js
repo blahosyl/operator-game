@@ -15,9 +15,9 @@ function newGame() {
 
   showResult()
 
-  checkAnswer()
+  // checkAnswer()
 
-  console.log('the correct solution:',concatenateSolution()+'='+eval(concatenateSolution()));
+  console.log('the correct solution:',concatenateWithOperands(generateRandomOperators())+'='+eval(concatenateWithOperands(generateRandomOperators())));
 
 }
 
@@ -114,33 +114,16 @@ function generateRandomOperators() {
   // get the length of array of operands, and generate the same number of chosenOperators
   // this is one more than we need, but it ensures the arrays of operands and operators are of the same length (for concatenating them for calculation)
   // the extra operator will be removed after calculation
-  for (let i = 0; i<getOperands().length; i++) {
+  for (let i = 0; i<getOperands().length-1; i++) {
     // add an element from `operators`based on the random number
     chosenOperators.push(operators[randomOperatorNumbers[i]]);
   }
   return chosenOperators;
 }
 
-/**
-* Calculate the correct solution based on the random numbers and random operators
- */
-function concatenateSolution() {
-  // define empty string for solution
-  let solution = '';
-  // alternately add a number and an operator
-  for (let i = 0; i<getOperands().length; i++) {
-    solution += getOperands()[i];
-    solution += currentChosenOperators[i]; // Roo
-  }
-
-  // cut off the last operator from the end of the string
-  solution = solution.slice(0, -1);
-  return solution;
-}
-
 function showResult() {
   let result = document.getElementById('result');
-  result.innerHTML = eval(concatenateSolution());
+  result.innerHTML = eval(concatenateWithOperands(generateRandomOperators()));
 }
 
 /** 
