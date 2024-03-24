@@ -168,6 +168,9 @@ function checkAnswer() {
   concatenateWithOperands(getUserOperators());
   // calculate the user answer
   checkSolution();
+
+  // Trigger extra events at certain perfect streak milestones
+  showMilestones();
 }
 
 /**
@@ -284,4 +287,19 @@ function enableSubmitButton() {
 function refreshStreakCounter() {
   let streakCounter = document.getElementById('streak');
   streakCounter.textContent=streak;
+  return streakCounter;
+}
+
+/**
+ * Trigger extra events at certain perfect streak milestones
+ */
+function showMilestones() {
+  switch (streak) {
+    case 4:
+      alert('4 in a row!');
+      break;
+    case 10:
+      alert('10 in a row!');
+      break;
+  }
 }
