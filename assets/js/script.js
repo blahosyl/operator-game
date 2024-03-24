@@ -12,16 +12,15 @@ function newGame() {
   // Submit button should have initial text
   document.getElementById('submit-button').textContent='Check Answer';
 
-
-  console.log('showRandomOperands',showRandomOperands());
+  // show operands in the question area
+  showRandomOperands();
 
   // reset operator numbers
   currentChosenOperators = []
   console.log(currentChosenOperators = generateRandomOperators()); // Roo
 
+  // show the expected result of the calculation in the question area
   showResult()
-
-  // checkAnswer()
 
   console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+eval(concatenateWithOperands(currentChosenOperators)));
 
@@ -146,7 +145,6 @@ function showResult() {
 function checkAnswer() {
   concatenateWithOperands(getUserOperators());
   // calculate the user answer
-  console.log('userAnswer: ',concatenateWithOperands(getUserOperators())+'='+eval(concatenateWithOperands(getUserOperators())));
   checkSolution();
 }
 
@@ -207,11 +205,9 @@ function showUserSolution() {
 function checkSolution() {
   // the result based on the operands shown and the operators selected by the user
   let userSolution = eval(concatenateWithOperands(getUserOperators()));
-  console.log('userSolution:' ,userSolution);
 
   // the correct result based on the operands shown and the randomly generated operators
   let correctSolution = eval(concatenateWithOperands(currentChosenOperators));
-  console.log('correctSolution:' ,correctSolution);
 
   let solutionDiv = document.getElementById('solution');
 
