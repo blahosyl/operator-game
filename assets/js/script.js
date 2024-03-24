@@ -16,6 +16,9 @@ function newGame() {
   showResult()
 
   checkAnswer()
+
+  console.log('the correct solution:',concatenateSolution()+'='+eval(concatenateSolution()));
+
 }
 
 // run this function when refreshing the page
@@ -121,7 +124,7 @@ function generateRandomOperators() {
 /**
 * Calculate the correct solution based on the random numbers and random operators
  */
-function calculateSolution() {
+function concatenateSolution() {
   // define empty string for solution
   let solution = '';
   // alternately add a number and an operator
@@ -132,21 +135,12 @@ function calculateSolution() {
 
   // cut off the last operator from the end of the string
   solution = solution.slice(0, -1);
-
-  // calculate the correct solution
-  let solutionValue = eval(solution);
-
-  console.log('the correct solution:',solution+'='+solutionValue);
-
-  // shows the correct solution for now. to be changed to show calculation of incorrect solution only
-  let solutionDiv = document.getElementById('solution');
-  solutionDiv.innerHTML = solution+'='+solutionValue;
-  return solutionValue;
+  return solution;
 }
 
 function showResult() {
   let result = document.getElementById('result');
-  result.innerHTML = calculateSolution();
+  result.innerHTML = eval(concatenateSolution());
 }
 
 /** 
@@ -156,6 +150,7 @@ function checkAnswer() {
   concatenateWithOperands(getUserOperators());
   // calculate the user answer
   console.log('userAnswer: ',concatenateWithOperands(getUserOperators())+'='+eval(concatenateWithOperands(getUserOperators())));
+  showUserSolution();
 }
 
 /**
@@ -193,4 +188,13 @@ function concatenateWithOperands(operators) {
     // cut off the last operator from the end of the string
     concatenatedString = concatenatedString.slice(0, -1);
     return concatenatedString;
+}
+
+function showUserSolution() {
+  // get the concatenated string of operands and user operators
+  let solution = concatenateWithOperands(getUserOperators());
+
+  // shows the user's solution and its result
+  let solutionDiv = document.getElementById('solution');
+  solutionDiv.innerHTML = solution+'='+eval(solution);
 }
