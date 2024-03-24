@@ -13,8 +13,7 @@ function newGame() {
   currentChosenOperators = []
   console.log(currentChosenOperators = generateRandomOperators()); // Roo
 
-  calculateSolution();
-
+  showResult()
 }
 
 // run this function when refreshing the page
@@ -133,5 +132,10 @@ function calculateSolution() {
   // shows the correct solution for now. to be changed to show calculation of incorrect solution only
   let solutionDiv = document.getElementById('solution');
   solutionDiv.innerHTML = solution+'='+solutionValue;
+  return solutionValue;
+}
 
+function showResult() {
+  let result = document.getElementById('result');
+  result.innerHTML = calculateSolution();
 }
