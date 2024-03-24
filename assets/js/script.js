@@ -14,6 +14,8 @@ function newGame() {
   console.log(currentChosenOperators = generateRandomOperators()); // Roo
 
   showResult()
+
+  checkAnswer()
 }
 
 // run this function when refreshing the page
@@ -24,6 +26,13 @@ newGame()
 let newGameButton = document.getElementById('new-game-button')
 // add event listener to New Game button to run the new game function
 newGameButton.addEventListener('click',newGame);
+
+// get the Submit Answer button
+let submitButton = document.getElementById('submit-button')
+// add event listener to Submit button to check the user asnwer
+submitButton.addEventListener('click',checkAnswer);
+
+
 
 /**
 *
@@ -138,4 +147,24 @@ function calculateSolution() {
 function showResult() {
   let result = document.getElementById('result');
   result.innerHTML = calculateSolution();
+}
+
+/** 
+ * Check the answer submitted by the user
+*/
+function checkAnswer() {
+  getUserOperators();
+}
+
+/**
+ * Get the operators chosen by the user
+ * @return {array} the array of operators chosen by the user
+ */
+function getUserOperators() {
+  let userOperators = document.getElementsByClassName('operator-selector');
+  let userOperatorValues = [];
+  for (let i=0; i<userOperators.length; i++) {
+    userOperatorValues.push(userOperators[i].value);
+  }
+  console.log(userOperatorValues);
 }
