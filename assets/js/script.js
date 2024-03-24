@@ -1,6 +1,10 @@
 // Global variable to hold the chosen operators – solution by tutor Roo
 let currentChosenOperators = [];
 
+  // counter for streak without errors
+  let streak = 0;
+  console.log('streak: ',streak);
+
 // event listeners
 
 // New Game button should start a new game
@@ -237,6 +241,10 @@ function checkSolution() {
     `;
     // disable Submit button
     document.getElementById('submit-button').disabled = true;
+    // increase perfect streak counter
+    streak += 1;
+    console.log('streak: ',streak);
+    refreshStreakCounter();
   } else {  
     // show the solution of the user's guess
     showUserSolution();
@@ -246,6 +254,10 @@ function checkSolution() {
     submitButton.textContent = 'Check Again';
     // disable Submit button
     submitButton.disabled = true;
+    // reset perfect streak
+    streak = 0;
+    console.log('streak: ',streak);
+    refreshStreakCounter();
   }
 }
 
@@ -264,4 +276,12 @@ function clearSolutionText() {
  */
 function enableSubmitButton() {
   submitButton.disabled = false;
+}
+
+/**
+ * Refresh the perfect streak counter in the HTML
+ */
+function refreshStreakCounter() {
+  let streakCounter = document.getElementById('streak');
+  streakCounter.textContent=streak;
 }
