@@ -6,6 +6,7 @@ let currentChosenOperators = [];
 */
 function newGame() {
 
+  clearSolutionText();
 
   console.log('showRandomOperands',showRandomOperands());
 
@@ -35,6 +36,13 @@ let submitButton = document.getElementById('submit-button')
 // add event listener to Submit button to check the user asnwer
 submitButton.addEventListener('click',checkAnswer);
 
+// get all operator select forms
+let operators = document.getElementsByClassName('operator-selector');
+// add event listener to each operator select form:
+// when any of them are changed, the solution text is cleared
+for (operator of operators) {
+  operator.addEventListener('change',clearSolutionText);
+}
 
 
 /**
@@ -196,4 +204,10 @@ function checkSolution() {
   } else {  
     showUserSolution();
   }
+}
+
+function clearSolutionText() {
+  let solutionDiv = document.getElementById('solution');
+  solutionDiv.innerHTML = '';
+
 }
