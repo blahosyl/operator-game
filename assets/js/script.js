@@ -17,7 +17,7 @@ function newGame() {
 
   // checkAnswer()
 
-  console.log('the correct solution:',concatenateWithOperands(generateRandomOperators())+'='+eval(concatenateWithOperands(generateRandomOperators())));
+  console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+eval(concatenateWithOperands(currentChosenOperators)));
 
 }
 
@@ -123,7 +123,7 @@ function generateRandomOperators() {
 
 function showResult() {
   let result = document.getElementById('result');
-  result.innerHTML = eval(concatenateWithOperands(generateRandomOperators()));
+  result.innerHTML = eval(concatenateWithOperands(currentChosenOperators));
 }
 
 /** 
