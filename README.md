@@ -110,6 +110,7 @@ Web Disability Simulator
 - [Slice a character off the end of a string](https://stackoverflow.com/a/952945)
 - [Remove a certain characrer from a string](https://www.scaler.com/topics/javascript-remove-character-from-string/)
 - [Evaulate a string as a mathematical expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#never_use_direct_eval!)
+- [Docstrings](https://stackoverflow.com/questions/34205666/utilizing-docstrings)
 
 ### Content
 
