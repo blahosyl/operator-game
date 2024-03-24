@@ -5,8 +5,6 @@ let currentChosenOperators = [];
 let streak = 0;
 console.log('streak: ',streak);
 
-addOperand();
-console.log('operandNumber: ',getOperatorNumber());
 
 // event listeners
 
@@ -29,6 +27,11 @@ for (operator of operators) {
   operator.addEventListener('change',clearSolutionText);
   operator.addEventListener('change',enableSubmitButton);
 }
+
+// when the operator selector is changed, add the correcponding number of operand+operator pairs
+let operatorSelector = document.getElementById('number-selector');
+operatorSelector.addEventListener('change',addOperand);
+
 
 /**
 * Run a new game by generating new operands and operators, calculating the correct score and showing the puzzle to the user
@@ -322,18 +325,29 @@ function addOperand() {
   let questionDiv = document.getElementById('question-area');
   let operand1 = questionDiv.children[0];
   let operator1 = questionDiv.children[1];
-  let newOperand = operand1.cloneNode(true);
-  let newOperator = operator1.cloneNode(true);
+  let num = getOperandNumber();
 
-  questionDiv.insertBefore(newOperator, questionDiv.children[0]);
-  questionDiv.insertBefore(newOperand, questionDiv.children[0]);
+  for (i=2; i<num; i++) { 
+    // clone the first operand node
+    let newOperand = operand1.cloneNode(true);
+    // clone the first operator node
+    let newOperator = operator1.cloneNode(true);
+    // add operator to the beginning of the div
+    // has to be added before adding the operand
+    questionDiv.insertBefore(newOperator, questionDiv.children[0]);
+    // add operand to the beginning of the div
+    // has to be added after adding the operator
+    questionDiv.insertBefore(newOperand, questionDiv.children[0]);
+  }
+
+  newGame();
 }
 
 /**
  * Get the operater number from the dropdown selector
  * @returns {number}
  */
-function getOperatorNumber() {
-  let operatorNumber = document.getElementById('number-selector').value;
-  return operatorNumber;
+function getOperandNumber() {
+  let operandNumber = document.getElementById('number-selector').value;
+  return operandNumber;
 }
