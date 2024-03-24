@@ -153,9 +153,9 @@ function showResult() {
  * Check the answer submitted by the user
 */
 function checkAnswer() {
-  concatenateUserAnswer();
+  concatenateWithOperands(getUserOperators());
   // calculate the user answer
-  console.log('userAnswer: ',concatenateUserAnswer()+'='+eval(concatenateUserAnswer()));
+  console.log('userAnswer: ',concatenateWithOperands(getUserOperators())+'='+eval(concatenateWithOperands(getUserOperators())));
 }
 
 /**
@@ -171,21 +171,26 @@ function getUserOperators() {
   return userOperatorValues;
 }
 
-
-function concatenateUserAnswer() {
+/**
+ * Alternately concatenates the operands shown with an array of operators.
+ * @param {array} operators the array of operators chosen.  
+ * The operators can be the ones chosen by the user or the randomly generated ones.
+ * @returns {string} a concatenated string of the operands shown and the operators specified
+ */
+function concatenateWithOperands(operators) {
   // define empty string for user answer
-  let userAnswer = '';
+  let concatenatedString = '';
   // get the operators chosen by the user
-  let userOperatorValues = getUserOperators();
+  let userOperatorValues = operators;
   // add a dummy operator at the end of the `userOperatorValues` array
   // to make its length equal to the array of operators
   userOperatorValues.push('X');
     // alternately add a number and an operator
     for (let i = 0; i<getOperands().length; i++) {
-      userAnswer += getOperands()[i];
-      userAnswer += userOperatorValues[i];
+      concatenatedString += getOperands()[i];
+      concatenatedString += userOperatorValues[i];
     }
     // cut off the last operator from the end of the string
-    userAnswer = userAnswer.slice(0, -1);
-    return userAnswer;
+    concatenatedString = concatenatedString.slice(0, -1);
+    return concatenatedString;
 }
