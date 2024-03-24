@@ -48,8 +48,15 @@ function newGame() {
   console.log(currentChosenOperators = generateRandomOperators()); // Roo
 
   // show the expected result of the calculation in the question area
-  showResult()
+  // also on the console for development
+  console.log(showResult());
 
+  // the result should not have more than 2 decimal places
+  while (Number.isInteger(showResult()*100) === false) {
+    newGame();
+  }
+
+  // show the correct result in the log for development purposes
   console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+eval(concatenateWithOperands(currentChosenOperators)));
 
 }
@@ -147,6 +154,7 @@ function generateRandomOperators() {
 function showResult() {
   let result = document.getElementById('result');
   result.innerHTML = eval(concatenateWithOperands(currentChosenOperators));
+  return result.innerHTML;
 }
 
 /** 
