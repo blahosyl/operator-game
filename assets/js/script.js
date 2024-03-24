@@ -127,13 +127,13 @@ function calculateSolution() {
   // alternately add a number and an operator
   for (let i = 0; i<getOperands().length; i++) {
     solution += getOperands()[i];
-    solution += currentChosenOperators[i];; // Roo
+    solution += currentChosenOperators[i]; // Roo
   }
 
   // cut off the last operator from the end of the string
   solution = solution.slice(0, -1);
 
-
+  // calculate the correct solution
   let solutionValue = eval(solution);
 
   console.log('the correct solution:',solution+'='+solutionValue);
@@ -153,7 +153,9 @@ function showResult() {
  * Check the answer submitted by the user
 */
 function checkAnswer() {
-  getUserOperators();
+  concatenateUserAnswer();
+  // calculate the user answer
+  console.log('userAnswer: ',concatenateUserAnswer()+'='+eval(concatenateUserAnswer()));
 }
 
 /**
@@ -166,5 +168,24 @@ function getUserOperators() {
   for (let i=0; i<userOperators.length; i++) {
     userOperatorValues.push(userOperators[i].value);
   }
-  console.log(userOperatorValues);
+  return userOperatorValues;
+}
+
+
+function concatenateUserAnswer() {
+  // define empty string for user answer
+  let userAnswer = '';
+  // get the operators chosen by the user
+  let userOperatorValues = getUserOperators();
+  // add a dummy operator at the end of the `userOperatorValues` array
+  // to make its length equal to the array of operators
+  userOperatorValues.push('X');
+    // alternately add a number and an operator
+    for (let i = 0; i<getOperands().length; i++) {
+      userAnswer += getOperands()[i];
+      userAnswer += userOperatorValues[i];
+    }
+    // cut off the last operator from the end of the string
+    userAnswer = userAnswer.slice(0, -1);
+    return userAnswer;
 }
