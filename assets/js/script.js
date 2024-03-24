@@ -169,6 +169,9 @@ function checkAnswer() {
   // calculate the user answer
   checkSolution();
 
+  // refresh the perfect streak counter
+  refreshStreakCounter();
+
   // Trigger extra events at certain perfect streak milestones
   showMilestones();
 }
@@ -247,7 +250,6 @@ function checkSolution() {
     // increase perfect streak counter
     streak += 1;
     console.log('streak: ',streak);
-    refreshStreakCounter();
   } else {  
     // show the solution of the user's guess
     showUserSolution();
@@ -260,7 +262,6 @@ function checkSolution() {
     // reset perfect streak
     streak = 0;
     console.log('streak: ',streak);
-    refreshStreakCounter();
   }
 }
 
@@ -294,12 +295,16 @@ function refreshStreakCounter() {
  * Trigger extra events at certain perfect streak milestones
  */
 function showMilestones() {
+  let streakCounter = document.getElementById('streak');
+
   switch (streak) {
     case 4:
       alert('4 in a row!');
+      streakCounter.style.color='red';
       break;
     case 10:
       alert('10 in a row!');
+      streakCounter.style.color='blue';
       break;
   }
 }
