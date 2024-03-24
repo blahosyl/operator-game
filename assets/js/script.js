@@ -103,7 +103,7 @@ function generateRandomOperators() {
   // get the length of array of operands, and generate the same number of chosenOperators
   // this is one more than we need, but it ensures the arrays of operands and operators are of the same length (for concatenating them for calculation)
   // the extra operator will be removed after calculation
-  for (let i = 0; i<3; i++) {
+  for (let i = 0; i<getOperands().length; i++) {
     // add an element from `operators`based on the random number
     chosenOperators.push(operators[randomOperatorNumbers[i]]);
   }
@@ -117,7 +117,7 @@ function calculateSolution() {
   // define empty string for solution
   let solution = '';
   // alternately add a number and an operator
-  for (let i = 0; i<currentChosenOperators.length; i++) {
+  for (let i = 0; i<getOperands().length; i++) {
     solution += getOperands()[i];
     solution += currentChosenOperators[i];; // Roo
   }
