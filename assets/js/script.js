@@ -228,11 +228,17 @@ function checkSolution() {
   }
 }
 
+/**
+ * Clear the `solution` div
+ */
 function clearSolutionText() {
   let solutionDiv = document.getElementById('solution');
   solutionDiv.innerHTML = '';
 }
 
+/**
+ * Enable the Submit button
+ */
 function enableSubmitButton() {
   submitButton.disabled = false;
 }
