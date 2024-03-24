@@ -114,6 +114,7 @@ Web Disability Simulator
 - [Docstrings](https://stackoverflow.com/questions/34205666/utilizing-docstrings)
 - [Enable and disable an input button](https://stackoverflow.com/a/13831737)
 - [Check if a number is an integer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
+- [Set timeout before `alert` execution](https://stackoverflow.com/a/41936135)
 
 ### Content
 

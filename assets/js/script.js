@@ -249,7 +249,6 @@ function checkSolution() {
     document.getElementById('submit-button').disabled = true;
     // increase perfect streak counter
     streak += 1;
-    console.log('streak: ',streak);
   } else {  
     // show the solution of the user's guess
     showUserSolution();
@@ -261,7 +260,10 @@ function checkSolution() {
     submitButton.disabled = true;
     // reset perfect streak
     streak = 0;
-    console.log('streak: ',streak);
+    // set the counter color back to black
+    let streakCounter = document.getElementById('streak');
+    streakCounter.style.color='black';
+
   }
 }
 
@@ -299,11 +301,15 @@ function showMilestones() {
 
   switch (streak) {
     case 4:
-      alert('4 in a row!');
+      // fire an alert (with timeout, so other code executes before it)
+      setTimeout(function () { alert('4 in a row!'); }, 10);
+      // change color of streak number
       streakCounter.style.color='red';
       break;
     case 10:
-      alert('10 in a row!');
+      // fire an alert (with timeout, so other code executes before it)
+      setTimeout(function () { alert('10 in a row!'); }, 10);
+      // change color of streak number
       streakCounter.style.color='blue';
       break;
   }
