@@ -1,33 +1,7 @@
 // Global variable to hold the chosen operators – solution by tutor Roo
 let currentChosenOperators = [];
 
-/**
-* Run a new game by generating new operands and operators, calculating the correct score and showing the puzzle to the user
-*/
-function newGame() {
-
-  clearSolutionText();
-  // enable Submit button again
-  document.getElementById('submit-button').disabled = false;
-  // Submit button should have initial text
-  document.getElementById('submit-button').textContent='Check Answer';
-
-  // show operands in the question area
-  showRandomOperands();
-
-  // reset operator numbers
-  currentChosenOperators = []
-  console.log(currentChosenOperators = generateRandomOperators()); // Roo
-
-  // show the expected result of the calculation in the question area
-  showResult()
-
-  console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+eval(concatenateWithOperands(currentChosenOperators)));
-
-}
-
-// run this function when refreshing the page
-newGame()
+// event listeners
 
 // New Game button should start a new game
 // get the New Game button
@@ -49,6 +23,39 @@ for (operator of operators) {
   operator.addEventListener('change',enableSubmitButton);
 }
 
+/**
+* Run a new game by generating new operands and operators, calculating the correct score and showing the puzzle to the user
+*/
+function newGame() {
+
+  clearSolutionText();
+  // enable Submit button again
+  document.getElementById('submit-button').disabled = false;
+
+  // Submit button should have initial text
+  document.getElementById('submit-button').textContent='Check Answer';
+
+  // set operator menus back to '+'
+  for (operator of operators) {
+    operator.value = ('+');
+  }
+
+  // show operands in the question area
+  showRandomOperands();
+
+  // reset operator numbers
+  currentChosenOperators = []
+  console.log(currentChosenOperators = generateRandomOperators()); // Roo
+
+  // show the expected result of the calculation in the question area
+  showResult()
+
+  console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+eval(concatenateWithOperands(currentChosenOperators)));
+
+}
+
+// run this function when refreshing the page
+newGame()
 
 /**
 *
