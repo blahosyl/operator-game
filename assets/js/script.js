@@ -49,15 +49,15 @@ function newGame() {
 
   // show the expected result of the calculation in the question area
   // also on the console for development
-  console.log(showResult());
+  showResult();
+
+  // show the correct result in the log for development purposes
+  console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+eval(concatenateWithOperands(currentChosenOperators)));
 
   // the result should not have more than 2 decimal places
   while (Number.isInteger(showResult()*100) === false) {
     newGame();
   }
-
-  // show the correct result in the log for development purposes
-  console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+eval(concatenateWithOperands(currentChosenOperators)));
 
 }
 
@@ -226,10 +226,11 @@ function checkSolution() {
 
   // the correct result based on the operands shown and the randomly generated operators
   let correctSolution = eval(concatenateWithOperands(currentChosenOperators));
-
+  // the `div` containing the solution/congratulation message
   let solutionDiv = document.getElementById('solution');
 
   if (userSolution === correctSolution) {
+    // display congratulations message
     solutionDiv.innerHTML = `Congratulations, that is correct!
      <br>
       🎉🎉🎉🎉
@@ -237,7 +238,9 @@ function checkSolution() {
     // disable Submit button
     document.getElementById('submit-button').disabled = true;
   } else {  
+    // show the solution of the user's guess
     showUserSolution();
+    // get the Submit button from the HTML
     let submitButton = document.getElementById('submit-button');
     // change text on Submit button
     submitButton.textContent = 'Check Again';
@@ -250,7 +253,9 @@ function checkSolution() {
  * Clear the `solution` div
  */
 function clearSolutionText() {
+  // get the `solution` div from HTML
   let solutionDiv = document.getElementById('solution');
+  // set its contents to empty
   solutionDiv.innerHTML = '';
 }
 
