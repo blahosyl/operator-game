@@ -133,7 +133,7 @@ function checkAnswer() {
   concatenateWithOperands(getUserOperators());
   // calculate the user answer
   console.log('userAnswer: ',concatenateWithOperands(getUserOperators())+'='+eval(concatenateWithOperands(getUserOperators())));
-  showUserSolution();
+  checkSolution();
 }
 
 /**
@@ -180,4 +180,20 @@ function showUserSolution() {
   // shows the user's solution and its result
   let solutionDiv = document.getElementById('solution');
   solutionDiv.innerHTML = solution+'='+eval(solution);
+}
+
+function checkSolution() {
+  let userSolution = eval(concatenateWithOperands(getUserOperators()));
+  console.log('userSolution:' ,userSolution);
+
+  let correctSolution = eval(concatenateWithOperands(currentChosenOperators));
+  console.log('correctSolution:' ,correctSolution);
+
+  let solutionDiv = document.getElementById('solution');
+
+  if (userSolution === correctSolution) {
+    solutionDiv.innerHTML = 'Congratulations, that is correct!';
+  } else {  
+    showUserSolution();
+  }
 }
