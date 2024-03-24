@@ -1,13 +1,13 @@
-// Global variable to hold the chosen operators
+// Global variable to hold the chosen operators – solution by tutor Roo
 let currentChosenOperators = [];
 
 function newGame() {
+
   console.log('showRandomOperands',showRandomOperands());
-  // Roo
-  if (currentChosenOperators.length === 0) {
-    currentChosenOperators = generateRandomOperators();
-  }
-  console.log('chosenOperators:',generateRandomOperators);
+
+  // reset operator numbers
+  currentChosenOperators = []
+  console.log(currentChosenOperators = generateRandomOperators()); // Roo
 
   calculateSolution();
 
@@ -18,16 +18,9 @@ newGame()
 
 // New Game button should start a new game
 // get the New Game button
-// let newGameButton = document.getElementById('new-game-button')
+let newGameButton = document.getElementById('new-game-button')
 // add event listener to New Game button to run the new game function
-// newGameButton.addEventListener('click',newGame);
-
-// Roo
-let newGameButton = document.getElementById('new-game-button');
-newGameButton.addEventListener('click', function() {
-  currentChosenOperators = []; // Reset chosen operators for a new game
-  newGame();
-});
+newGameButton.addEventListener('click',newGame);
 
 // get the array of operands
 function getOperands() {
@@ -42,7 +35,7 @@ function getOperands() {
   return operandValues;
 }
 
-// 8 generate an array of random numbers, array size is the `count` parameter
+// generate an array of random numbers, number range is the `count` parameter
 function generateRandomNumbers(count) {
   randomNumbers = [];
 for (let i = 0; i<getOperands().length; i++) {
@@ -53,7 +46,7 @@ for (let i = 0; i<getOperands().length; i++) {
   return randomNumbers;
 }
 
-// eliminate zero from an array (par1) and replace it with a random number (par2)
+// eliminate zero from the array specified in the parameter `array`, and replace it with a random number from the range 1 to `count`
 function eliminateZero(array,count) {
   // make sure the number is not 0
   for (i in array) {
@@ -78,7 +71,7 @@ function showRandomOperands() {
 
 function generateRandomOperators() {
   let randomOperatorNumbers = generateRandomNumbers(4);
-  console.log(randomOperatorNumbers);
+  console.log('randomOperatorNumbers: ',randomOperatorNumbers);
   // the operators the program can chose from
   let operators = ["+","-","*","/"];
   // the array that will be filled with the randomly chosen operators at each game
