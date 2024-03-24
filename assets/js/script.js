@@ -7,6 +7,11 @@ let currentChosenOperators = [];
 function newGame() {
 
   clearSolutionText();
+  // enable Submit button again
+  document.getElementById('submit-button').disabled = false;
+  // Submit button should have initial text
+  document.getElementById('submit-button').textContent='Submit Answer';
+
 
   console.log('showRandomOperands',showRandomOperands());
 
@@ -181,28 +186,46 @@ function concatenateWithOperands(operators) {
     return concatenatedString;
 }
 
+/**
+ * Displays the solution if the user gets it wrong.
+ */
 function showUserSolution() {
   // get the concatenated string of operands and user operators
   let solution = concatenateWithOperands(getUserOperators());
 
   // shows the user's solution and its result
   let solutionDiv = document.getElementById('solution');
-  solutionDiv.innerHTML = solution+'='+eval(solution);
+  solutionDiv.innerHTML = `Not quite!<br>
+  Your result is:<br>`+
+  solution+'='+eval(solution);
 }
 
+/**
+ * Check the user's solution against the correct solution
+ */
 function checkSolution() {
+  // the result based on the operands shown and the operators selected by the user
   let userSolution = eval(concatenateWithOperands(getUserOperators()));
   console.log('userSolution:' ,userSolution);
 
+  // the correct result based on the operands shown and the randomly generated operators
   let correctSolution = eval(concatenateWithOperands(currentChosenOperators));
   console.log('correctSolution:' ,correctSolution);
 
   let solutionDiv = document.getElementById('solution');
 
   if (userSolution === correctSolution) {
-    solutionDiv.innerHTML = 'Congratulations, that is correct!';
+    solutionDiv.innerHTML = `Congratulations, that is correct!
+     <br>
+      🎉🎉🎉🎉
+    `;
+    // disable Submit button
+    document.getElementById('submit-button').disabled = true;
   } else {  
     showUserSolution();
+    // change text on Submit button
+    document.getElementById('submit-button').textContent='Try Again';
+
   }
 }
 
