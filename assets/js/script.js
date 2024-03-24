@@ -110,28 +110,6 @@ function generateRandomOperators() {
   return chosenOperators;
 }
 
-
-// TO BE BROKEN UP
-// pick random operators: +, -, * or /
-function randomOperators() {
-  // the operators the program can chose from
-  let operators = ["+","-","*","/"];
-  // the array that will be filled with the randomly chosen operators at each game
-  let chosenOperators = [];
-
-  // get the length of array of operands, and generate the same number of chosenOperators
-  // this is one more than we need, but it ensures the arrays of operands and operators are of the same length (for concatenating them for calculation)
-  // the extra operator will be removed after calculation
-  for (let i = 0; i<3; i++) {
-    // generate random integer between 0 and 3 (incl)
-    randomNumber = Math.floor(Math.random()*4);
-    // add an element from `operators`based on the random number
-    chosenOperators.push(operators[randomNumber]);
-  }
-  console.log(chosenOperators);
-  return chosenOperators;
-}
-
 /**
 * Calculate the correct solution based on the random numbers and random operators
  */
