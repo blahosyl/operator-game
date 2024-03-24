@@ -10,7 +10,7 @@ function newGame() {
   // enable Submit button again
   document.getElementById('submit-button').disabled = false;
   // Submit button should have initial text
-  document.getElementById('submit-button').textContent='Submit Answer';
+  document.getElementById('submit-button').textContent='Check Answer';
 
 
   console.log('showRandomOperands',showRandomOperands());
@@ -47,6 +47,7 @@ let operators = document.getElementsByClassName('operator-selector');
 // when any of them are changed, the solution text is cleared
 for (operator of operators) {
   operator.addEventListener('change',clearSolutionText);
+  operator.addEventListener('change',enableSubmitButton);
 }
 
 
@@ -223,14 +224,19 @@ function checkSolution() {
     document.getElementById('submit-button').disabled = true;
   } else {  
     showUserSolution();
+    let submitButton = document.getElementById('submit-button');
     // change text on Submit button
-    document.getElementById('submit-button').textContent='Try Again';
-
+    submitButton.textContent = 'Check Again';
+    // disable Submit button
+    submitButton.disabled = true;
   }
 }
 
 function clearSolutionText() {
   let solutionDiv = document.getElementById('solution');
   solutionDiv.innerHTML = '';
+}
 
+function enableSubmitButton() {
+  submitButton.disabled = false;
 }
