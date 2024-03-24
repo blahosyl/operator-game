@@ -115,6 +115,8 @@ Web Disability Simulator
 - [Enable and disable an input button](https://stackoverflow.com/a/13831737)
 - [Check if a number is an integer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
 - [Set timeout before `alert` execution](https://stackoverflow.com/a/41936135)
+- [Clone node](https://www.w3schools.com/jsref/met_node_clonenode.asp)
+- [Insert before](https://www.w3schools.com/jsref/met_node_insertbefore.asp)
 
 ### Content
 

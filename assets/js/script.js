@@ -1,9 +1,11 @@
 // Global variable to hold the chosen operators – solution by tutor Roo
 let currentChosenOperators = [];
 
-  // counter for streak without errors
-  let streak = 0;
-  console.log('streak: ',streak);
+// counter for streak without errors
+let streak = 0;
+console.log('streak: ',streak);
+
+addOperand();
 
 // event listeners
 
@@ -313,4 +315,22 @@ function showMilestones() {
       streakCounter.style.color='blue';
       break;
   }
+}
+
+function addOperand() {
+  let questionDiv = document.getElementById('question-area');
+  let operand1 = questionDiv.children[0];
+  let operator1 = questionDiv.children[1];
+  console.log(questionDiv);
+  console.log(operand1);
+  console.log(operator1);
+  let newOperand = operand1.cloneNode(true);
+  console.log(newOperand);
+  let newOperator = operator1.cloneNode(true);
+  console.log(newOperator);
+
+  questionDiv.insertBefore(newOperator, questionDiv.children[0]);
+  questionDiv.insertBefore(newOperand, questionDiv.children[0]);
+
+
 }
