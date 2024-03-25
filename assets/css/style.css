@@ -23,8 +23,9 @@ padding: 2rem;
   /* children should be in a row */
   display: flex;
   /* elements horizontally spread out */
-  min-width: 200px;
+  min-width: 250px;
   justify-content: space-between;
+  flex-wrap: wrap;
   border: solid 2px orange;
   border-radius: 10px;
   padding: 1rem;
