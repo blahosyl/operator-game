@@ -3,8 +3,6 @@ let currentChosenOperators = [];
 
 // counter for streak without errors
 let streak = 0;
-console.log('streak: ',streak);
-
 
 // event listeners
 
