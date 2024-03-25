@@ -52,8 +52,8 @@ function newGame() {
   showRandomOperands();
  
   // reset operator numbers
-  currentChosenOperators = []
-  console.log(currentChosenOperators = generateRandomOperators()); // Roo
+  currentChosenOperators = []// with the help of tutor Roo (refactored)
+  console.log(currentChosenOperators = generateRandomOperators()); // with the help of tutor Roo
 
   // show the expected result of the calculation in the question area
   // also on the console for development
@@ -129,8 +129,8 @@ function eliminateZero(array,count) {
 function showRandomOperands() {
   let operandsComputed = eliminateZero(generateRandomNumbers(11),11);
   let operands = document.getElementsByClassName('operand');
-  for (let i = 0; i < operandsComputed.length; i++) {
-    operands[i].innerHTML = operandsComputed[i];
+  for (let i = 0; i < operandsComputed.length; i++) { //with the help of tutor Lewis
+    operands[i].innerHTML = operandsComputed[i]; //with the help of tutor Lewis
   }
   return operandsComputed;
 }
