@@ -44,6 +44,7 @@ padding: 2rem;
   text-align: center;
 }
 
+/* the button for checking the user guess */
 #submit-button {
   border-radius: 5px;
   border-color: red;
@@ -51,6 +52,7 @@ padding: 2rem;
   font-size: 120%;
 }
 
+/* the button for starting a new game */
 #new-game-button {
   border-radius: 5px;
   border-color: orange;
