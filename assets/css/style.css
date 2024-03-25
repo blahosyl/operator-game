@@ -62,13 +62,26 @@ padding: 2rem;
   font-size: 200%;
 }
 
+/* the div containing the perfect streak text and count */
+#streak-div {
+  display: flex;
+  margin-top: 1rem;
+}
+
+/* the number showing the user's perfect streak count */
+#streak {
+  margin-left: 2px;
+}
+
 /* the `div` containing the operator selector dropdown and its label */
 #number-selector-div {
   display: flex;
   margin-top: 1rem;
 }
 
+/* the dropdown for selecting the number of operands */
 #number-selector {
  margin-left: 2px;
 }
+
 
