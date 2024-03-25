@@ -52,7 +52,7 @@ function newGame() {
 
   // show operands in the question area
   showRandomOperands();
-
+ 
   // reset operator numbers
   currentChosenOperators = []
   console.log(currentChosenOperators = generateRandomOperators()); // Roo
@@ -327,19 +327,31 @@ function addOperand() {
   let operator1 = questionDiv.children[1];
   let num = getOperandNumber();
 
-  for (i=2; i<num; i++) { 
-    // clone the first operand node
-    let newOperand = operand1.cloneNode(true);
-    // clone the first operator node
-    let newOperator = operator1.cloneNode(true);
-    // add operator to the beginning of the div
-    // has to be added before adding the operand
-    questionDiv.insertBefore(newOperator, questionDiv.children[0]);
-    // add operand to the beginning of the div
-    // has to be added after adding the operator
-    questionDiv.insertBefore(newOperand, questionDiv.children[0]);
-  }
+  while (getOperands().length +1 <= num){
+    // 2 operands appear by default, so:
+    // iterate 2 times less than the number specified by the dropdown
+    for (i=2; i<num; i++) { 
+      // clone the first operand node
+      let newOperand = operand1.cloneNode(true);
+      // clone the first operator node
+      let newOperator = operator1.cloneNode(true);
+      // add operator to the beginning of the div
+      // has to be added before adding the operand
+      questionDiv.insertBefore(newOperator, questionDiv.children[0]);
+      // add operand to the beginning of the div
+      // has to be added after adding the operator
+      questionDiv.insertBefore(newOperand, questionDiv.children[0]);
+    }
+}
 
+  //DOES NOT WORK, REMOVE OR REFACTOR
+  // while (getOperands().length > num-2) {
+  //   for (i=0; 1<2; i++) {
+  //     questionDiv.firstChild.remove();
+  //   }
+  // }
+
+  // start a new game after changing the number of operands
   newGame();
 }
 
