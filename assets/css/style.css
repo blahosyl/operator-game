@@ -32,8 +32,8 @@ padding: 2rem;
   margin-bottom: 2rem;
 }
 
-/* the operand selector drop-down menus */
-.operand-selector {
+/* the operator selector drop-down menus */
+.operator-selector {
   padding: 1 rem;
   margin-block-end: 0;
 }
