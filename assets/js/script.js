@@ -344,12 +344,13 @@ function addOperand() {
     }
 }
 
-  //DOES NOT WORK, REMOVE OR REFACTOR
-  // while (getOperands().length > num-2) {
-  //   for (i=0; 1<2; i++) {
-  //     questionDiv.firstChild.remove();
-  //   }
-  // }
+  // if the number of operands is larger than the value of 
+  // the operand selector, remove the first operator dropdown
+  // and the first operand
+  while (getOperands().length > num) {
+      questionDiv.children[1].remove();
+      questionDiv.children[0].remove();
+  }
 
   // start a new game after changing the number of operands
   newGame();
