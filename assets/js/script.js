@@ -315,11 +315,17 @@ function showMilestones() {
   let streakCounter = document.getElementById('streak-counter');
 
   switch (streak) {
-    case 4:
+    case 3:
       // fire an alert (with timeout, so other code executes before it)
-      setTimeout(function () { alert('4 in a row!'); }, 10);
+      setTimeout(function () { alert('3 in a row!'); }, 10);
       // change color of streak number
       streakCounter.style.color='red';
+      break;
+    case 5:
+      // fire an alert (with timeout, so other code executes before it)
+      setTimeout(function () { alert('5 in a row!'); }, 10);
+      // change color of streak number
+      streakCounter.style.color='orange';
       break;
     case 10:
       // fire an alert (with timeout, so other code executes before it)
