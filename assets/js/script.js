@@ -273,7 +273,7 @@ function checkSolution() {
     // reset perfect streak
     streak = 0;
     // set the counter color back to black
-    let streakCounter = document.getElementById('streak');
+    let streakCounter = document.getElementById('streak-counter');
     streakCounter.style.color='black';
 
   }
@@ -302,7 +302,7 @@ function enableSubmitButton() {
  */
 function refreshStreakCounter() {
   // get the streak counter from the page
-  let streakCounter = document.getElementById('streak');
+  let streakCounter = document.getElementById('streak-counter');
   // set its content to the value of the global variable `streak`
   streakCounter.textContent=streak;
   return streakCounter;
@@ -312,7 +312,7 @@ function refreshStreakCounter() {
  * Trigger extra events at certain perfect streak milestones
  */
 function showMilestones() {
-  let streakCounter = document.getElementById('streak');
+  let streakCounter = document.getElementById('streak-counter');
 
   switch (streak) {
     case 4:
