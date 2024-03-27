@@ -117,6 +117,7 @@ Web Disability Simulator
 - [Set timeout before `alert` execution](https://stackoverflow.com/a/41936135)
 - [Clone node](https://www.w3schools.com/jsref/met_node_clonenode.asp)
 - [Insert before](https://www.w3schools.com/jsref/met_node_insertbefore.asp)
+- [Change display style of DOM elements with Javasscript](https://www.w3schools.com/jsref/prop_style_display.asp)
 
 ### Content
 
