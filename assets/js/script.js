@@ -8,6 +8,8 @@ let streak = 0;
 
  // the `div` where the solution/congratulation text is displayed
 const solutionDiv = document.getElementById('solution');
+// Start Game button
+const startGameButton = document.getElementById('start-game-button')
  // the Check Answer/Submit button
 const submitButton = document.getElementById('submit-button')
  // the New Game button
@@ -17,6 +19,8 @@ const newGameButton = document.getElementById('new-game-button')
 
 
 // event listeners
+
+startGameButton.addEventListener('click',startGame);
 
 // New Game button should start a new game
 // add event listener to New Game button to run the `newGame()` function
@@ -39,6 +43,11 @@ let operatorSelector = document.getElementById('number-selector');
 operatorSelector.addEventListener('change',setOperandOperatorCount);
 
 //functions
+
+function startGame() {
+  let welcomeDiv = document.getElementById('welcome-div');
+  welcomeDiv.style.display = 'none';
+}
 
 // generating and displaying operands (numbers)
 
