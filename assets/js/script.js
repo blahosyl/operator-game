@@ -8,12 +8,12 @@ let streak = 0;
 
 // New Game button should start a new game
 // get the New Game button
-let newGameButton = document.getElementById('new-game-button')
+const newGameButton = document.getElementById('new-game-button')
 // add event listener to New Game button to run the new game function
 newGameButton.addEventListener('click',newGame);
 
 // get the Submit Answer button
-let submitButton = document.getElementById('submit-button')
+const submitButton = document.getElementById('submit-button')
 // add event listener to Submit button to check the user asnwer
 submitButton.addEventListener('click',checkAnswer);
 
@@ -39,10 +39,10 @@ function newGame() {
   // clear the `solution` text
   clearSolutionText();
   // enable Submit button again
-  document.getElementById('submit-button').disabled = false;
+  submitButton.disabled = false;
 
   // Submit button should have initial text
-  document.getElementById('submit-button').textContent='Check Answer';
+  submitButton.textContent='Check Answer';
 
   // set operator menus back to '+'
   for (operator of operators) {
@@ -259,14 +259,12 @@ function checkUserGuess() {
       🎉🎉🎉🎉
     `;
     // disable Submit button
-    document.getElementById('submit-button').disabled = true;
+    submitButton.disabled = true;
     // increase perfect streak counter
     streak += 1;
   } else {  
     // show the result of the user's guess
     showUserGuess();
-    // get the Submit button from the HTML
-    let submitButton = document.getElementById('submit-button');
     // change text on Submit button
     submitButton.textContent = 'Check Again';
     // enable Submit button
