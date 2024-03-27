@@ -48,7 +48,8 @@ operatorSelector.addEventListener('change',setOperandOperatorCount);
 */
 function generateRandomNumbers(bound) {
   randomNumbers = [];
-for (let i = 0; i<getOperands().length; i++) {
+  let length = getOperands().length;
+for (let i = 0; i<length; i++) {
     // generate random integer between 0 and `bound-1`
     let randomNumber = Math.floor(Math.random()*bound);
     // add the random integer to the array `randomNumbers`
@@ -126,7 +127,8 @@ function generateRandomOperators() {
   let chosenOperators = [];
   // get the length of array of operands, and generate 1 less `chosenOperators`
   // there should always be 1 less operators than operands
-  for (let i = 0; i<getOperands().length-1; i++) {
+  let length = getOperands().length-1;
+  for (let i = 0; i<length; i++) {
     // add an element from `operators`based on the random number
     chosenOperators.push(operators[randomOperatorNumbers[i]]);
   }
@@ -146,8 +148,10 @@ function concatenateWithOperands(operators) {
   // to make its length equal to the array of operators
   operators.push('X');
     // alternately add a number and an operator to the string
-    for (let i = 0; i<getOperands().length; i++) {
-      concatenatedString += getOperands()[i];
+    let operands = getOperands();
+    let length = operands.length;
+    for (let i = 0; i<length; i++) {
+      concatenatedString += operands[i];
       concatenatedString += operators[i];
     }
     // cut off the dummy operator from the end of the string
@@ -170,7 +174,8 @@ function showResult() {
 */
 function checkAnswer() {
   // concatenate the operands with the operators selected by the user
-  concatenateWithOperands(getUserOperators());
+  let userOperators = getUserOperators();
+  concatenateWithOperands(userOperators);
   // calculate the user answer
   checkUserGuess();
 
@@ -202,7 +207,8 @@ function getUserOperators() {
  */
 function showUserGuess() {
   // get the concatenated string of operands and user-selected operators
-  let guess = concatenateWithOperands(getUserOperators());
+  let userOperators = getUserOperators();
+  let guess = concatenateWithOperands(userOperators);
 
   // show the user's guess and its result
   solutionDiv.innerHTML = `Not quite!<br>
