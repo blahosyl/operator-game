@@ -24,11 +24,10 @@ padding: 2rem;
 }
 
 #welcome-div {
-  background-color: black;
-  color: orange;
-  opacity: 0.8;
-  width: 90vw;
-  height: 90vh;
+  background-color: rgba(43, 11, 9, 0.9);
+  color: white;
+  width: 80vw;
+  height: 85vh;
   position: absolute;
   margin-top: 2vh;
   top: 0;
@@ -49,6 +48,10 @@ padding: 2rem;
   height: 5rem;
   background-color: orange;
   border-radius: 20px;
+}
+
+#welcome-div a {
+  color: white;
 }
 
 /* question area items should be in a row (where they fit) */
