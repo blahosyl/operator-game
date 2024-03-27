@@ -33,10 +33,9 @@ padding: 2rem;
   align-items: center;
   /* elements vertically centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
   justify-content: center;
-}
-
-#welcome-div p{
   font-size: 120%;
+  border-radius: 20px;
+  padding: 2rem;
 }
 
 #welcome-div button {
