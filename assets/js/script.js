@@ -176,7 +176,7 @@ function checkAnswer() {
   // concatenate the operands with the operators selected by the user
   concatenateWithOperands(getUserOperators());
   // calculate the user answer
-  checkSolution();
+  checkUserGuess();
 
   // refresh the perfect streak counter
   refreshStreakCounter();
@@ -226,32 +226,32 @@ function concatenateWithOperands(operators) {
 }
 
 /**
- * Displays the solution if the user guess is wrong
+ * Display the result of the user's incorrect guess
  */
-function showUserSolution() {
-  // get the concatenated string of operands and user operators
-  let solution = concatenateWithOperands(getUserOperators());
+function showUserGuess() {
+  // get the concatenated string of operands and user-selected operators
+  let guess = concatenateWithOperands(getUserOperators());
 
-  // shows the user's solution and its result
+  // show the user's guess and its result
   let solutionDiv = document.getElementById('solution');
   solutionDiv.innerHTML = `Not quite!<br>
   Your result is:<br>`+
-  solution+'='+eval(solution);
+  guess+'='+eval(guess);
 }
 
 /**
- * Check the user's solution against the correct solution
+ * Check the user's guess against the correct solution
  */
-function checkSolution() {
+function checkUserGuess() {
   // the result based on the operands shown and the operators selected by the user
-  let userSolution = eval(concatenateWithOperands(getUserOperators()));
+  let userGuess = eval(concatenateWithOperands(getUserOperators()));
 
   // the correct result based on the operands shown and the randomly generated operators
   let correctSolution = eval(concatenateWithOperands(currentChosenOperators));
   // the `div` containing the solution/congratulation message
   let solutionDiv = document.getElementById('solution');
 
-  if (userSolution === correctSolution) {
+  if (userGuess === correctSolution) {
     // display congratulations message
     solutionDiv.innerHTML = `Congratulations, that is correct!
      <br>
@@ -262,8 +262,8 @@ function checkSolution() {
     // increase perfect streak counter
     streak += 1;
   } else {  
-    // show the solution of the user's guess
-    showUserSolution();
+    // show the result of the user's guess
+    showUserGuess();
     // get the Submit button from the HTML
     let submitButton = document.getElementById('submit-button');
     // change text on Submit button
