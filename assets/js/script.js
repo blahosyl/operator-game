@@ -15,7 +15,7 @@ const submitButton = document.getElementById('submit-button')
  // the New Game button
 const newGameButton = document.getElementById('new-game-button')
  // the streak counter from the bottom of the page
- let streakCounter = document.getElementById('streak-counter');
+ const streakCounter = document.getElementById('streak-counter');
 
 
 // event listeners
