@@ -50,7 +50,7 @@ function newGame() {
   }
 
   // show operands in the question area
-  showRandomOperands();
+  showRandomOperands(11);
  
   // reset operator numbers
   currentChosenOperators = []// with the help of tutor Roo (refactored)
@@ -124,13 +124,14 @@ function eliminateZero(array,count) {
 }
 
 /**
-* Replace the integers shown on the site with ones from an array of random numbers
+* Replace the integers shown on the site with ones from an array of random integers between 0 and `bound` (excl.)
+* @param {number} `bound` the upper bound of the range where integers are selected from (not included in the range)
 * @return {array} the array of random integers
 */
-function showRandomOperands() {
-  // generate an array, random integers between 1 and 10
+function showRandomOperands(bound) {
+  // generate an array of random integers between 1 and `bound`-1
   // array length is equal to the number of operands shown on the page
-  let operandsComputed = eliminateZero(generateRandomNumbers(11),11);
+  let operandsComputed = eliminateZero(generateRandomNumbers(bound),bound);
   let operands = document.getElementsByClassName('operand');
   // each operand shown on the page is replaced by a random integer from the array
   for (let i = 0; i < operandsComputed.length; i++) { //with the help of tutor Lewis
