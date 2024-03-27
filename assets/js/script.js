@@ -5,14 +5,16 @@ let currentChosenOperators = [];
 let streak = 0;
 
 // constants (HTML elements)
-// the `div` where the solution/congratulation text is displayed
+
+ // the `div` where the solution/congratulation text is displayed
 const solutionDiv = document.getElementById('solution');
- // the streak counter from the bottom of the page
- let streakCounter = document.getElementById('streak-counter');
+ // the Check Answer/Submit button
+const submitButton = document.getElementById('submit-button')
  // the New Game button
 const newGameButton = document.getElementById('new-game-button')
-// the Submit Answer button
-const submitButton = document.getElementById('submit-button')
+ // the streak counter from the bottom of the page
+ let streakCounter = document.getElementById('streak-counter');
+
 
 // event listeners
 
