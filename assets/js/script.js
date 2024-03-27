@@ -314,6 +314,26 @@ function getOperandNumber() {
 }
 
 /**
+ * Adjust the instruction text in the game area depending on the number of operands:
+ * singular "operator" for 2 operands, plural "operators" for 3 or more operands
+ */
+function adjustInstructions() {
+  // get the `game-area` from the HTML
+  let gameArea = document.getElementById('game-area');
+  // the first paragraph within it
+  let instructions = gameArea.children[0];
+  // the number of operands chose by the user
+  let num = getOperandNumber();
+  if (num == 2) { // this needs to be `==`, not `====`, type conversion needed
+    instructions.innerHTML = 'Choose the correct operator to get the result shown'
+  } else {
+    instructions.innerHTML = 'Choose the correct operators to get the result shown'
+  }
+  console.log(instructions);
+}
+
+
+/**
  * Adjust the number of operators and operands based on the value of the operand dropdown selector
  */
 function setOperandOperatorCount() {
@@ -349,6 +369,9 @@ function setOperandOperatorCount() {
       // remove the first operand
       questionDiv.children[0].remove();
   }
+
+  // adjust the instruction text based on the number of operands
+  adjustInstructions();
 
   // start a new game after changing the number of operands
   newGame();
