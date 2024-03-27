@@ -5,7 +5,10 @@ let currentChosenOperators = [];
 let streak = 0;
 
 // constants (HTML elements)
+// the `div` where the solution/congratulation text is displayed
 const solutionDiv = document.getElementById('solution');
+ // the streak counter from the bottom of the page
+ let streakCounter = document.getElementById('streak-counter');
 
 
 // event listeners
@@ -296,8 +299,6 @@ function enableSubmitButton() {
  * Refresh the perfect streak counter in the HTML
  */
 function refreshStreakCounter() {
-  // get the streak counter from the page
-  let streakCounter = document.getElementById('streak-counter');
   // set its content to the value of the global variable `streak`
   streakCounter.textContent=streak;
   return streakCounter;
@@ -307,8 +308,6 @@ function refreshStreakCounter() {
  * Trigger extra events at certain perfect streak milestones
  */
 function showMilestones() {
-  let streakCounter = document.getElementById('streak-counter');
-
   switch (streak) {
     case 0:
       // change color of streak number
