@@ -17,7 +17,7 @@ const submitButton = document.getElementById('submit-button')
 // event listeners
 
 // New Game button should start a new game
-// add event listener to New Game button to run the new game function
+// add event listener to New Game button to run the `newGame()` function
 newGameButton.addEventListener('click',newGame);
 
 // add event listener to Submit button to check the user asnwer
@@ -36,64 +36,9 @@ for (operator of operators) {
 let operatorSelector = document.getElementById('number-selector');
 operatorSelector.addEventListener('change',setOperandOperatorCount);
 
+//functions
 
-/**
-* Run a new game by generating new operands and operators, calculating the correct score and showing the puzzle to the user
-*/
-function newGame() {
-
-  // clear the `solution` text
-  clearSolutionText();
-  // enable Submit button again
-  submitButton.disabled = false;
-
-  // Submit button should have initial text
-  submitButton.textContent='Check Answer';
-
-  // set operator menus back to '+'
-  for (operator of operators) {
-    operator.value = ('+');
-  }
-
-  // show operands in the question area
-  showRandomOperands(11);
- 
-  // reset operator numbers
-  currentChosenOperators = []// with the help of tutor Roo (refactored)
-  console.log(currentChosenOperators = generateRandomOperators()); // with the help of tutor Roo
-
-  // show the expected result of the calculation in the question area
-  showResult();
-
-  // show the correct result in the log for development purposes
-  console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+eval(concatenateWithOperands(currentChosenOperators)));
-
-  // the result should not have more than 2 decimal places
-  while (Number.isInteger(showResult()*100) === false) {
-    newGame();
-  }
-
-}
-
-// run a new game when refreshing the page
-newGame()
-
-/**
-*
-* Get the array of operand values from the HTML code
-* @return {array} HTML collection https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection
-*/
-function getOperands() {
-  // empty array of operand values
-  let operandValues = [];
-  // get all elements with the class 'operand'
-  let operands = document.getElementsByClassName('operand');
-  // add the values of operands from the HTML to the array `operandValues`
-  for (let operand of operands) {
-    operandValues.push(operand.innerHTML);
-  }
-  return operandValues;
-}
+// generating and displaying operands (numbers)
 
 /**
 *
@@ -147,7 +92,29 @@ function showRandomOperands(bound) {
 }
 
 /**
- * Pick random operators from an array
+*
+* Get the array of operand values from the HTML code.
+* This is a separate function because its output is used by multiple other functions, so it needs to be unchanged.
+* Getting the output of `showRandomOperands()` would result in a different random array each time it's called
+* @return {array} HTML collection https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection
+*/
+function getOperands() {
+  // empty array of operand values
+  let operandValues = [];
+  // get all elements with the class 'operand'
+  let operands = document.getElementsByClassName('operand');
+  // add the values of operands from the HTML to the array `operandValues`
+  for (let operand of operands) {
+    operandValues.push(operand.innerHTML);
+  }
+  return operandValues;
+}
+
+// end of generating and displaying operands (numbers)
+
+/**
+ * Pick random operators from an array.
+ * These are not shown to the user.
  * @return {array} an array random operators with the length equal to the length of the array of operands
  */
 function generateRandomOperators() {
@@ -164,6 +131,30 @@ function generateRandomOperators() {
     chosenOperators.push(operators[randomOperatorNumbers[i]]);
   }
   return chosenOperators;
+}
+
+/**
+ * Alternately concatenate the operands shown with an array of operators.
+ * @param {array} operators the array of operators chosen.  
+ * The operators can be the ones chosen by the user or the randomly generated ones.
+ * @returns {string} a concatenated string of the operands shown and the operators specified
+ */
+function concatenateWithOperands(operators) {
+  // define empty string for user answer
+  let concatenatedString = '';
+  // get the operators chosen by the user
+  let userOperatorValues = operators;
+  // add a dummy operator at the end of the operator array
+  // to make its length equal to the array of operators
+  userOperatorValues.push('X');
+    // alternately add a number and an operator to the string
+    for (let i = 0; i<getOperands().length; i++) {
+      concatenatedString += getOperands()[i];
+      concatenatedString += userOperatorValues[i];
+    }
+    // cut off the dummy operator from the end of the string
+    concatenatedString = concatenatedString.slice(0, -1);
+    return concatenatedString;
 }
 
 /**
@@ -206,30 +197,6 @@ function getUserOperators() {
     userOperatorValues.push(userOperators[i].value);
   }
   return userOperatorValues;
-}
-
-/**
- * Alternately concatenate the operands shown with an array of operators.
- * @param {array} operators the array of operators chosen.  
- * The operators can be the ones chosen by the user or the randomly generated ones.
- * @returns {string} a concatenated string of the operands shown and the operators specified
- */
-function concatenateWithOperands(operators) {
-  // define empty string for user answer
-  let concatenatedString = '';
-  // get the operators chosen by the user
-  let userOperatorValues = operators;
-  // add a dummy operator at the end of the operator array
-  // to make its length equal to the array of operators
-  userOperatorValues.push('X');
-    // alternately add a number and an operator to the string
-    for (let i = 0; i<getOperands().length; i++) {
-      concatenatedString += getOperands()[i];
-      concatenatedString += userOperatorValues[i];
-    }
-    // cut off the dummy operator from the end of the string
-    concatenatedString = concatenatedString.slice(0, -1);
-    return concatenatedString;
 }
 
 /**
@@ -334,6 +301,15 @@ function showMilestones() {
 }
 
 /**
+ * Get the number of operands from the dropdown selector
+ * @returns {number}
+ */
+function getOperandNumber() {
+  let operandNumber = document.getElementById('number-selector').value;
+  return operandNumber;
+}
+
+/**
  * Adjust the number of operators and operands based on the value of the operand dropdown selector
  */
 function setOperandOperatorCount() {
@@ -375,10 +351,42 @@ function setOperandOperatorCount() {
 }
 
 /**
- * Get the number of operands from the dropdown selector
- * @returns {number}
- */
-function getOperandNumber() {
-  let operandNumber = document.getElementById('number-selector').value;
-  return operandNumber;
+* Run a new game
+*/
+function newGame() {
+
+  // clear the `solution` text
+  clearSolutionText();
+  // enable Submit button again
+  submitButton.disabled = false;
+
+  // Submit button should have initial text
+  submitButton.textContent='Check Answer';
+
+  // set operator menus back to '+'
+  for (operator of operators) {
+    operator.value = ('+');
+  }
+
+  // show operands in the question area
+  showRandomOperands(11);
+ 
+  // reset operator numbers
+  currentChosenOperators = []// with the help of tutor Roo (refactored)
+  console.log(currentChosenOperators = generateRandomOperators()); // with the help of tutor Roo
+
+  // show the expected result of the calculation in the question area
+  showResult();
+
+  // show the correct result in the log for development purposes
+  console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+eval(concatenateWithOperands(currentChosenOperators)));
+
+  // the result should not have more than 2 decimal places
+  while (Number.isInteger(showResult()*100) === false) {
+    newGame();
+  }
+
 }
+
+// run a new game when refreshing the page
+newGame()
