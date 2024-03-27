@@ -272,10 +272,6 @@ function checkUserGuess() {
     submitButton.disabled = true;
     // reset perfect streak
     streak = 0;
-    // set the counter color back to black
-    let streakCounter = document.getElementById('streak-counter');
-    streakCounter.style.color='black';
-
   }
 }
 
@@ -315,6 +311,10 @@ function showMilestones() {
   let streakCounter = document.getElementById('streak-counter');
 
   switch (streak) {
+    case 0:
+      // change color of streak number
+      streakCounter.style.color='black';
+      break;
     case 3:
       // fire an alert (with timeout, so other code executes before it)
       setTimeout(function () { alert('3 in a row!'); }, 10);
