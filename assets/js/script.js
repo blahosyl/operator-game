@@ -142,15 +142,13 @@ function generateRandomOperators() {
 function concatenateWithOperands(operators) {
   // define empty string for user answer
   let concatenatedString = '';
-  // get the operators chosen by the user
-  let userOperatorValues = operators;
   // add a dummy operator at the end of the operator array
   // to make its length equal to the array of operators
-  userOperatorValues.push('X');
+  operators.push('X');
     // alternately add a number and an operator to the string
     for (let i = 0; i<getOperands().length; i++) {
       concatenatedString += getOperands()[i];
-      concatenatedString += userOperatorValues[i];
+      concatenatedString += operators[i];
     }
     // cut off the dummy operator from the end of the string
     concatenatedString = concatenatedString.slice(0, -1);
