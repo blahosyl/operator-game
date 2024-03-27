@@ -4,6 +4,10 @@ let currentChosenOperators = [];
 // counter for streak without errors
 let streak = 0;
 
+// constants (HTML elements)
+const solutionDiv = document.getElementById('solution');
+
+
 // event listeners
 
 // New Game button should start a new game
@@ -234,7 +238,6 @@ function showUserGuess() {
   let guess = concatenateWithOperands(getUserOperators());
 
   // show the user's guess and its result
-  let solutionDiv = document.getElementById('solution');
   solutionDiv.innerHTML = `Not quite!<br>
   Your result is:<br>`+
   guess+'='+eval(guess);
@@ -250,7 +253,6 @@ function checkUserGuess() {
   // the correct result based on the operands shown and the randomly generated operators
   let correctSolution = eval(concatenateWithOperands(currentChosenOperators));
   // the `div` containing the solution/congratulation message
-  let solutionDiv = document.getElementById('solution');
 
   if (userGuess === correctSolution) {
     // display congratulations message
@@ -278,9 +280,7 @@ function checkUserGuess() {
  * Clear the `solution` div
  */
 function clearSolutionText() {
-  // get the `solution` div from HTML
-  let solutionDiv = document.getElementById('solution');
-  // set its contents to empty
+  // set the contents of the `solution` `div` to empty
   solutionDiv.innerHTML = '';
 }
 
