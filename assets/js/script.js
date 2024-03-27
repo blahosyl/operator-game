@@ -222,9 +222,10 @@ function showUserGuess() {
   let guess = concatenateWithOperands(userOperators);
 
   // show the user's guess and its result
-  solutionDiv.innerHTML = `Not quite!<br>
-  Your result is:<br>`+
-  guess+'='+eval(guess);
+  solutionDiv.innerHTML = `Not quite! Your result is:<br>`+
+  `<span class="hilight">`+guess+'='+eval(guess)+`</span>
+  <br>
+  Try changing an operator!`;
 }
 
 /**
