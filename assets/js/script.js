@@ -6,21 +6,30 @@ let streak = 0;
 
 // constants (HTML elements)
 
- // the `div` where the solution/congratulation text is displayed
-const solutionDiv = document.getElementById('solution');
+// the welcome screen `div`
+let welcomeDiv = document.getElementById('welcome-div');
 // Start Game button
 const startGameButton = document.getElementById('start-game-button')
- // the Check Answer/Submit button
+// the link to the score `div`
+const scoreLink = document.getElementById('score-link')
+// the `div` where the scoring rules are displayed
+const scoreDiv = document.getElementById('score-div');
+// the `div` where the solution/congratulation text is displayed
+const solutionDiv = document.getElementById('solution');
+// the Check Answer/Submit button
 const submitButton = document.getElementById('submit-button')
- // the New Game button
+// the New Game button
 const newGameButton = document.getElementById('new-game-button')
- // the streak counter from the bottom of the page
+// the streak counter from the bottom of the page
  const streakCounter = document.getElementById('streak-counter');
 
 
 // event listeners
 
+scoreLink.addEventListener('click',showScoreDiv);
+
 startGameButton.addEventListener('click',startGame);
+
 
 // New Game button should start a new game
 // add event listener to New Game button to run the `newGame()` function
@@ -44,9 +53,15 @@ operatorSelector.addEventListener('change',setOperandOperatorCount);
 
 //functions
 
-function startGame() {
-  let welcomeDiv = document.getElementById('welcome-div');
+function showScoreDiv() {
   welcomeDiv.style.display = 'none';
+  scoreDiv.style.display = 'flex';
+  scoreDiv.style.flexDirection = 'column';
+}
+
+function startGame() {
+welcomeDiv.style.display = 'none';
+scoreDiv.style.display = 'none';
 }
 
 // generating and displaying operands (numbers)
