@@ -9,18 +9,17 @@ let streak = 0;
 const solutionDiv = document.getElementById('solution');
  // the streak counter from the bottom of the page
  let streakCounter = document.getElementById('streak-counter');
-
+ // the New Game button
+const newGameButton = document.getElementById('new-game-button')
+// the Submit Answer button
+const submitButton = document.getElementById('submit-button')
 
 // event listeners
 
 // New Game button should start a new game
-// get the New Game button
-const newGameButton = document.getElementById('new-game-button')
 // add event listener to New Game button to run the new game function
 newGameButton.addEventListener('click',newGame);
 
-// get the Submit Answer button
-const submitButton = document.getElementById('submit-button')
 // add event listener to Submit button to check the user asnwer
 submitButton.addEventListener('click',checkAnswer);
 
