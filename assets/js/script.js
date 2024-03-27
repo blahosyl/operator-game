@@ -36,6 +36,7 @@ operatorSelector.addEventListener('change',addOperand);
 */
 function newGame() {
 
+  // clear the `solution` text
   clearSolutionText();
   // enable Submit button again
   document.getElementById('submit-button').disabled = false;
@@ -56,7 +57,6 @@ function newGame() {
   console.log(currentChosenOperators = generateRandomOperators()); // with the help of tutor Roo
 
   // show the expected result of the calculation in the question area
-  // also on the console for development
   showResult();
 
   // show the correct result in the log for development purposes
@@ -69,7 +69,7 @@ function newGame() {
 
 }
 
-// run this function when refreshing the page
+// run a new game when refreshing the page
 newGame()
 
 /**
@@ -82,7 +82,7 @@ function getOperands() {
   let operandValues = [];
   // get all elements with the class 'operand'
   let operands = document.getElementsByClassName('operand');
-
+  // add the values of operands from the HTML to the array `operandValues`
   for (let operand of operands) {
     operandValues.push(operand.innerHTML);
   }
@@ -100,6 +100,7 @@ function generateRandomNumbers(count) {
 for (let i = 0; i<getOperands().length; i++) {
     // generate random integer between 0 and `count-1`
     let randomNumber = Math.floor(Math.random()*count);
+    // add the random integer to the array `randomNumbers`
     randomNumbers.push(randomNumber);
   }
   return randomNumbers;
@@ -123,12 +124,15 @@ function eliminateZero(array,count) {
 }
 
 /**
-* Assign the the array of random numbers to the integers shown on the site
+* Replace the integers shown on the site with ones from an array of random numbers
 * @return {array} the array of random integers
 */
 function showRandomOperands() {
+  // generate an array, random integers between 1 and 10
+  // array length is equal to the number of operands shown on the page
   let operandsComputed = eliminateZero(generateRandomNumbers(11),11);
   let operands = document.getElementsByClassName('operand');
+  // each operand shown on the page is replaced by a random integer from the array
   for (let i = 0; i < operandsComputed.length; i++) { //with the help of tutor Lewis
     operands[i].innerHTML = operandsComputed[i]; //with the help of tutor Lewis
   }
@@ -146,9 +150,8 @@ function generateRandomOperators() {
   let operators = ["+","-","*","/"];
   // the array that will be filled with the randomly chosen operators at each game
   let chosenOperators = [];
-  // get the length of array of operands, and generate the same number of chosenOperators
-  // this is one more than we need, but it ensures the arrays of operands and operators are of the same length (for concatenating them for calculation)
-  // the extra operator will be removed after calculation
+  // get the length of array of operands, and generate 1 less `chosenOperators`
+  // there should always be 1 less operators than operands
   for (let i = 0; i<getOperands().length-1; i++) {
     // add an element from `operators`based on the random number
     chosenOperators.push(operators[randomOperatorNumbers[i]]);
@@ -158,6 +161,7 @@ function generateRandomOperators() {
 
 /**
  * Show the expected result in the question area
+ * @return {number} The correct solution of the puzzle
 */
 function showResult() {
   let result = document.getElementById('result');
@@ -169,6 +173,7 @@ function showResult() {
  * Check the answer submitted by the user
 */
 function checkAnswer() {
+  // concatenate the operands with the operators selected by the user
   concatenateWithOperands(getUserOperators());
   // calculate the user answer
   checkSolution();
@@ -185,8 +190,11 @@ function checkAnswer() {
  * @return {array} the array of operators chosen by the user
  */
 function getUserOperators() {
+  // get the array of all operators selected by the user
   let userOperators = document.getElementsByClassName('operator-selector');
+  // empty array to add operator values to
   let userOperatorValues = [];
+  // add each operator value selected by the user to the empty array
   for (let i=0; i<userOperators.length; i++) {
     userOperatorValues.push(userOperators[i].value);
   }
@@ -194,7 +202,7 @@ function getUserOperators() {
 }
 
 /**
- * Alternately concatenates the operands shown with an array of operators.
+ * Alternately concatenate the operands shown with an array of operators.
  * @param {array} operators the array of operators chosen.  
  * The operators can be the ones chosen by the user or the randomly generated ones.
  * @returns {string} a concatenated string of the operands shown and the operators specified
@@ -204,21 +212,21 @@ function concatenateWithOperands(operators) {
   let concatenatedString = '';
   // get the operators chosen by the user
   let userOperatorValues = operators;
-  // add a dummy operator at the end of the `userOperatorValues` array
+  // add a dummy operator at the end of the operator array
   // to make its length equal to the array of operators
   userOperatorValues.push('X');
-    // alternately add a number and an operator
+    // alternately add a number and an operator to the string
     for (let i = 0; i<getOperands().length; i++) {
       concatenatedString += getOperands()[i];
       concatenatedString += userOperatorValues[i];
     }
-    // cut off the last operator from the end of the string
+    // cut off the dummy operator from the end of the string
     concatenatedString = concatenatedString.slice(0, -1);
     return concatenatedString;
 }
 
 /**
- * Displays the solution if the user gets it wrong.
+ * Displays the solution if the user guess is wrong
  */
 function showUserSolution() {
   // get the concatenated string of operands and user operators
@@ -260,7 +268,7 @@ function checkSolution() {
     let submitButton = document.getElementById('submit-button');
     // change text on Submit button
     submitButton.textContent = 'Check Again';
-    // disable Submit button
+    // enable Submit button
     submitButton.disabled = true;
     // reset perfect streak
     streak = 0;
@@ -283,6 +291,7 @@ function clearSolutionText() {
 
 /**
  * Enable the Submit button
+ * Made into a separate function so that an event listener could trigger it
  */
 function enableSubmitButton() {
   submitButton.disabled = false;
@@ -292,7 +301,9 @@ function enableSubmitButton() {
  * Refresh the perfect streak counter in the HTML
  */
 function refreshStreakCounter() {
+  // get the streak counter from the page
   let streakCounter = document.getElementById('streak');
+  // set its content to the value of the global variable `streak`
   streakCounter.textContent=streak;
   return streakCounter;
 }
@@ -319,10 +330,16 @@ function showMilestones() {
   }
 }
 
+/**
+ * Adjust the number of operators and operands based on the value of the operand dropdown selector
+ */
 function addOperand() {
   let questionDiv = document.getElementById('question-area');
+  // the first operand shown
   let operand1 = questionDiv.children[0];
+  // the first operator dropdown shown
   let operator1 = questionDiv.children[1];
+  // the value of the operand selector
   let num = getOperandNumber();
 
   while (getOperands().length +1 <= num){
@@ -342,11 +359,11 @@ function addOperand() {
     }
 }
 
-  // if the number of operands is larger than the value of 
-  // the operand selector, remove the first operator dropdown
-  // and the first operand
+  // if the number of operands is larger than the value of the operand selector 
   while (getOperands().length > num) {
+      // remove the first operator dropdown
       questionDiv.children[1].remove();
+      // remove the first operand
       questionDiv.children[0].remove();
   }
 
@@ -355,7 +372,7 @@ function addOperand() {
 }
 
 /**
- * Get the operater number from the dropdown selector
+ * Get the number of operands from the dropdown selector
  * @returns {number}
  */
 function getOperandNumber() {
