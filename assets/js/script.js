@@ -28,7 +28,7 @@ for (operator of operators) {
 
 // when the operator selector is changed, add the correcponding number of operand+operator pairs
 let operatorSelector = document.getElementById('number-selector');
-operatorSelector.addEventListener('change',addOperand);
+operatorSelector.addEventListener('change',setOperandOperatorCount);
 
 
 /**
@@ -333,7 +333,7 @@ function showMilestones() {
 /**
  * Adjust the number of operators and operands based on the value of the operand dropdown selector
  */
-function addOperand() {
+function setOperandOperatorCount() {
   let questionDiv = document.getElementById('question-area');
   // the first operand shown
   let operand1 = questionDiv.children[0];
