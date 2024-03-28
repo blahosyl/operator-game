@@ -23,6 +23,8 @@ const gameplayRulesButton = document.getElementById('gameplay-rules-button')
 
 // Milestones
 const milestoneDiv = document.getElementById('milestone-div');
+// Continue Game button
+const continueGameButton = document.getElementById('continue-game-button')
 
 // Gameplay
 const solutionDiv = document.getElementById('solution');
@@ -51,6 +53,9 @@ newGameButton.addEventListener('click',newGame);
 
 // add event listener to Submit button to check the user asnwer
 submitButton.addEventListener('click',checkAnswer);
+
+// hide the Milestone "popup" screen
+continueGameButton.addEventListener('click',continueGame);
 
 // get all operator select forms
 let operators = document.getElementsByClassName('operator-selector');
@@ -340,7 +345,6 @@ function showMilestone() {
 function continueGame() {
   milestoneDiv.style.display = 'none';
   }
-  
 
 /**
  * Trigger extra events at certain perfect streak milestones

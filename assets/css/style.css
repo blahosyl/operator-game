@@ -96,13 +96,16 @@ padding: 2rem;
   color: white;
 }
 
-#start-game-button {
+.popup-big-button {
   margin-top: auto;  
   font-size: 200%;
   width: 15rem;
   height: 5rem;
-  background-color: orange;
   border-radius: 20px;
+}
+
+#start-game-button {
+  background-color: orange;
 }
 
 /* the "popup" screen celebrating selected milestones */
@@ -110,6 +113,10 @@ padding: 2rem;
   display: none;
   background-color: rgba(215, 107, 6, 0.9);
   color: white;
+}
+
+#continue-game-button {
+  background-color: red;
 }
 
 /* question area items should be in a row (where they fit) */
