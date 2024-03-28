@@ -63,7 +63,7 @@ submitButton.addEventListener('click',checkAnswer);
 let operators = document.getElementsByClassName('operator-selector');
 // add event listener to each operator select form:
 // when any of them are changed, the solution text is cleared
-for (operator of operators) {
+for (let operator of operators) {
   operator.addEventListener('change',clearSolutionText);
   operator.addEventListener('change',enableSubmitButton);
 }
@@ -111,7 +111,7 @@ welcomeDiv.style.display = 'none';
 * @return {array} an array of random integers between 0 and `bound`-1
 */
 function generateRandomNumbers(bound) {
-  randomNumbers = [];
+  let randomNumbers = [];
   let length = getOperands().length;
 for (let i = 0; i<length; i++) {
     // generate random integer between 0 and `bound-1`
@@ -131,7 +131,7 @@ for (let i = 0; i<length; i++) {
 */
 function eliminateZero(array,bound) {
   // make sure the number is not 0
-  for (i in array) {
+  for (let i in array) {
     while (array[i] === 0) {
       array[i] = Math.floor(Math.random()*bound);
     }
@@ -430,7 +430,7 @@ function setOperandOperatorCount() {
   while (getOperands().length +1 <= num){
     // 2 operands appear by default, so:
     // iterate 2 times less than the number specified by the drop-down
-    for (i=2; i<num; i++) { 
+    for (let i=2; i<num; i++) { 
       // clone the first operand node
       let newOperand = operand1.cloneNode(true);
       // clone the first operator node
@@ -473,7 +473,7 @@ function newGame() {
   submitButton.textContent='Check Answer';
 
   // set operator menus back to '+'
-  for (operator of operators) {
+  for (let operator of operators) {
     operator.value = ('+');
   }
 
@@ -481,7 +481,7 @@ function newGame() {
   showRandomOperands(11);
  
   // reset operator numbers
-  currentChosenOperators = []// with the help of tutor Roo (refactored)
+  currentChosenOperators = [];// with the help of tutor Roo (refactored)
   console.log(currentChosenOperators = generateRandomOperators()); // with the help of tutor Roo
 
   // show the expected result of the calculation in the question area
