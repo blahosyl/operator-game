@@ -1,3 +1,13 @@
+/* colors */
+:root {
+  --dark-blue: #004056;
+  --light-blue: #1adae8;
+  --med-orange: #cf6437;
+  --light-orange: #fcaf02;
+  --dull-red: #d42d45;
+  --red: red;
+
+}
 /* global layout */
 body {
 /* elements in one column */
@@ -104,7 +114,7 @@ align-items: center;
 
 #milestone-div h1 {
   background-color: orange;
-  justify-self: center;
+  text-align: center;  
   padding: 1rem;
   border-radius: 5px;
   font-size: 250%;

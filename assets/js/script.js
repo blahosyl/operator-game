@@ -361,31 +361,63 @@ function continueGame() {
  * Trigger extra events at certain perfect streak milestones
  */
 function showMilestones() {
+  // get the message on the milestone div
+  let streakText = milestoneDiv.children[0];
+  // get the `span` for the streak count
   let streakDisplay = milestoneDiv.children[0].children[0];
+  // color variable for the streakText background color and the color of streakText
+  let color;
+  // color variable for the Continue Game button
+  let buttonColor;
   switch (streak) {
     case 0:
       // change color of streak number
-      streakCounter.style.color='black';
+      streakCounter.style.color='black';;
       break;
     case 3:
+      // set streak milestone color
+      color = 'var(--light-orange)';
+      buttonColor = 'var(--light-blue)';
+      // buttonColor = 'var(--red)';
       // show the `milestoneDiv`
       showMilestone();
       // show streak count on `milestoneDiv`
       streakDisplay.textContent = streak;
+      streakText.style.backgroundColor=color;
+      // change color of Continue button
+      continueGameButton.style.backgroundColor=buttonColor;
       // change color of streak number
-      streakCounter.style.color='red';
+      streakCounter.style.color=color;
       break;
     case 5:
-      // fire an alert (with timeout, so other code executes before it)
-      setTimeout(function () { alert('5 in a row!'); }, 10);
+      // set streak milestone color
+      color = 'var(--red)';
+      buttonColor = 'var(--light-orange)';
+      // buttonColor = 'var(--red)';
+      // show the `milestoneDiv`
+      showMilestone();
+      // show streak count on `milestoneDiv`
+      streakDisplay.textContent = streak;
+      streakText.style.backgroundColor=color;
+      // change color of Continue button
+      continueGameButton.style.backgroundColor=buttonColor;
       // change color of streak number
-      streakCounter.style.color='orange';
+      streakCounter.style.color=color;
       break;
     case 10:
-      // fire an alert (with timeout, so other code executes before it)
-      setTimeout(function () { alert('10 in a row!'); }, 10);
+      // set streak milestone color
+      color = 'var(--dark-blue)';
+      buttonColor = 'var(--light-orange)';
+      // buttonColor = 'var(--red)';
+      // show the `milestoneDiv`
+      showMilestone();
+      // show streak count on `milestoneDiv`
+      streakDisplay.textContent = streak;
+      streakText.style.backgroundColor=color;
+      // change color of Continue button
+      continueGameButton.style.backgroundColor=buttonColor;
       // change color of streak number
-      streakCounter.style.color='blue';
+      streakCounter.style.color=color;
       break;
   }
 }
