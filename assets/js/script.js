@@ -14,28 +14,28 @@ const welcomeDiv = document.getElementById('welcome-div');
 // the `div` where the gameplay rules are displayed
 const gameplayRulesDiv = document.getElementById('gameplay-rules-div');
 // Start Game button
-const startGameButton = document.getElementById('start-game-button')
+const startGameButton = document.getElementById('start-game-button');
 // the button for showing the score `div`
-const scoreButton = document.getElementById('score-button')
+const scoreButton = document.getElementById('score-button');
 // the `div` where the scoring rules are displayed
 const scoreRulesDiv = document.getElementById('score-rules-div');
 // the button for showing the gameplay `div`
-const gameplayRulesButton = document.getElementById('gameplay-rules-button')
+const gameplayRulesButton = document.getElementById('gameplay-rules-button');
 // the `div` where the solution/congratulation text is displayed
 
 // Gameplay
 const solutionDiv = document.getElementById('solution');
 // the Check Answer/Submit button
-const submitButton = document.getElementById('submit-button')
+const submitButton = document.getElementById('submit-button');
 // the New Game button
-const newGameButton = document.getElementById('new-game-button')
+const newGameButton = document.getElementById('new-game-button');
 // the streak counter from the bottom of the page
 const streakCounter = document.getElementById('streak-counter');
 
 // Milestones
 const milestoneDiv = document.getElementById('milestone-div');
 // Continue Game button
-const continueGameButton = document.getElementById('continue-game-button')
+const continueGameButton = document.getElementById('continue-game-button');
 
 // Event Listeners
 
@@ -407,9 +407,9 @@ function adjustInstructions() {
   // the number of operands chose by the user
   let num = getOperandNumber();
   if (num == 2) { // this needs to be `==`, not `====`, type conversion needed
-    instructions.innerHTML = 'Choose the correct operator to get the result shown'
+    instructions.innerHTML = 'Choose the correct operator to get the result shown';
   } else {
-    instructions.innerHTML = 'Choose the correct operators to get the result shown'
+    instructions.innerHTML = 'Choose the correct operators to get the result shown';
   }
   console.log(instructions);
 }
@@ -498,4 +498,4 @@ function newGame() {
 }
 
 // run a new game when refreshing the page
-newGame()
+newGame();
