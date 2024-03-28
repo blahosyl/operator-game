@@ -1,11 +1,12 @@
 /* colors */
 :root {
   --dark-blue: #004056;
-  --light-blue: #1adae8;
-  --med-orange: #cf6437;
-  --light-orange: #fcaf02;
-  --dull-red: #d42d45;
-  --red: red;
+  --med-blue: #2E7E8E;
+  --light-blue: #1ADAE8;
+  --med-orange: #DC3A04;
+  --light-orange: #FCAF02;
+  --red: #EB0000;
+  --white: #FFFFFF; 
 
 }
 /* global layout */
@@ -51,7 +52,7 @@ button {
 /* the Welcome screen displaying the gameplay rules and scrore counting */
 #welcome-div {
   background-color: var(--dark-blue);
-  color: white;
+  color: var(--white);
 }
 
 /* the `div` within `#welcome-div` displaying the gameplay instructions */
@@ -106,7 +107,7 @@ button {
 
 /* unified formatting of links in the contentful `divs` within  `#welcome-div` */
 #welcome-div a {
-  color: white;
+  color: var(--white);
 }
 
 /* unified formatting for the big buttons */
@@ -120,7 +121,7 @@ button {
 
 /* the big button on the Welcome screen */
 #start-game-button {
-  background-color: orange;
+  background-color: var(--light-orange);
 }
 
 /* the "popup" screen celebrating selected milestones */
@@ -128,21 +129,16 @@ button {
   display: none;
   /* background-color: rgba(215, 107, 6, 0.9); */
   background: url("../images/balloons.jpg") no-repeat center;
-  color: white;
+  color: var(--white);
 }
 
 /* the text on the milestone "popup" */
 #milestone-div h1 {
-  background-color: orange;
+  background-color: var(--light-orange);
   text-align: center;  
   padding: 1rem;
   border-radius: 5px;
   font-size: 250%;
-}
-
-/* the big button on the milestone popup */
-#continue-game-button {
-  background-color: red;
 }
 
 /* the game area containing the game title, question area, new game button, streak counter and operand selector drop-down */
@@ -152,7 +148,7 @@ button {
   flex-direction: column;
   /* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
   align-items: center;
-  border: solid 2px red;
+  border: solid 2px var(--red);
   border-radius: 20px;
   padding: 2rem;
   }
@@ -166,7 +162,7 @@ button {
   min-width: 250px;
   justify-content: space-between;
   flex-wrap: wrap;
-  border: solid 2px orange;
+  border: solid 2px var(--light-orange);
   border-radius: 10px;
   padding: 1rem;
   margin-bottom: 2rem;
@@ -174,7 +170,7 @@ button {
 
 /* highlighing the user's wrong guess */
 .hilight {
-  color:red;
+  color: var(--red);
   font-weight: bold;
   font-size: 110%;
 }
@@ -195,17 +191,17 @@ button {
 /* the button for checking the user guess */
 #submit-button {
   border-radius: 5px;
-  border-color: red;
-  background-color: orange;
+  border-color: var(--red);
+  background-color: var(--light-orange);
   font-size: 150%;
 }
 
 /* the button for starting a new game */
 #new-game-button {
   border-radius: 20px;
-  border-color: orange;
-  background-color: red;
-  color:white;
+  border-color: var(--light-orange);
+  background-color: var(--red);
+  color: var(--white);
   margin-top: 2rem;
   font-size: 250%;
 }
@@ -214,6 +210,7 @@ button {
 #streak-div {
   display: flex;
   margin-top: 1rem;
+  font-size: large;
 }
 
 /* the number showing the user's perfect streak count */

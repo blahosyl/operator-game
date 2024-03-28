@@ -100,7 +100,35 @@ Testing user stories
 Full testing of functionalities
 
 ### Accessibility testing
+
 Wave
+
+
+|color name 	|HEX code|
+|---			|---	|
+|dark-blue	|#004056| 
+|med-blue		|#2E7E8E| 
+|light-blue	|#1ADAE8|
+|med-orange	|#DC3A04|
+|light-orange	|#FCAF02|
+|red			|#EB0000| 
+|white			|#FFFFFF| 
+|black			|#000000|
+
+
+The paired colors have the following contrasts:
+
+| color 1 |color 2 |contrast | [WCAG AAA](https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/) | comments |
+|---			|---		|:---:		|:---:|--- |
+|dark-blue 	|white 	|11.24:1 	| ✅ |   |
+|orange	 	| dark-blue | 6.03:1 |✅|only used for large text|
+|med-blue 	| white 	| 4.52:1 	| ✅ |only used for large text|
+|red 			| white	 | 4.63:1	| ✅ |only used for large text|
+|med-orange 	| white	| 4.51:1	|✅ |only used for graphical objects|
+|light-orange |black	|11.27:1	|✅	 |	|
+|light-blue 	|black 	|12.23:1	|✅ |	|
+
+
 Web Disability Simulator
 
 ### Bugs

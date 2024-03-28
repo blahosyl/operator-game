@@ -374,11 +374,10 @@ function showMilestones() {
       // change color of streak number
       streakCounter.style.color='black';;
       break;
-    case 3:
+    case 1:
       // set streak milestone color
-      color = 'var(--light-orange)';
-      buttonColor = 'var(--light-blue)';
-      // buttonColor = 'var(--red)';
+      color = 'var(--med-blue)';
+      buttonColor = 'var(--light-orange)';
       // show the `milestoneDiv`
       showMilestone();
       // show streak count on `milestoneDiv`
@@ -389,11 +388,10 @@ function showMilestones() {
       // change color of streak number
       streakCounter.style.color=color;
       break;
-    case 5:
+    case 2:
       // set streak milestone color
       color = 'var(--red)';
-      buttonColor = 'var(--light-orange)';
-      // buttonColor = 'var(--red)';
+      buttonColor = 'var(--light-blue)';
       // show the `milestoneDiv`
       showMilestone();
       // show streak count on `milestoneDiv`
@@ -404,11 +402,10 @@ function showMilestones() {
       // change color of streak number
       streakCounter.style.color=color;
       break;
-    case 10:
+    case 3:
       // set streak milestone color
-      color = 'var(--light-blue)';
+      color = 'var(--med-orange)';
       buttonColor = 'var(--light-orange)';
-      // buttonColor = 'var(--red)';
       // show the `milestoneDiv`
       showMilestone();
       // show streak count on `milestoneDiv`
