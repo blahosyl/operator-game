@@ -62,7 +62,6 @@ padding: 2rem;
   /* elements vertically centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
   justify-content: center;
   height: 100%;
-  background-color: blue;
 }
 
 /* unified formatting of the paragraphs in the contentful `divs` within  `welcome-div` */
