@@ -23,8 +23,7 @@ border-radius: 20px;
 padding: 2rem;
 }
 
-#welcome-div, 
-#score-div {
+#welcome-div {
   background-color: rgba(43, 11, 9, 0.9);
   color: white;
   width: 80vw;
@@ -32,6 +31,8 @@ padding: 2rem;
   position: absolute;
   margin-top: 2vh;
   top: 0;
+  display: flex;
+  flex-direction: column;
   /* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
   align-items: center;
   /* elements vertically centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
@@ -41,9 +42,14 @@ padding: 2rem;
   padding: 2rem;
 }
 
-#welcome-div {
+#gameplay-div {
   display: flex;
   flex-direction: column;
+  flex-direction: column;
+  /* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
+  align-items: center;
+  /* elements vertically centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
+  justify-content: center;
 }
 
 #score-div {

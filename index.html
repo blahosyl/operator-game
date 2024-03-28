@@ -14,41 +14,46 @@
 
 <body>
 
+  <!-- the Welcome screen explaining the gameplay and the scoring rules -->
   <div id="welcome-div">
-    <p>
-      With this game, you can practice the <a href="https://en.wikipedia.org/wiki/Order_of_operations">mathematical order of operations</a>.
-      You will be shown some numbers from 1 to 10, and you will have to select the correct operators to get the equation to work out.
-    </p>
+    <!-- the div explaining the gameplay -->
+    <div id="gameplay-div">
+      <p>
+        With this game, you can practice the <a href="https://en.wikipedia.org/wiki/Order_of_operations">mathematical order of operations</a>.
+        You will be shown some numbers from 1 to 10, and you will have to select the correct operators to get the equation to work out.
+      </p>
 
-    <p>
-      You can change how many numbers are included in the equation with the drop-down menu on the bottom.
-    </p>
+      <p>
+        You can change how many numbers are included in the equation with the drop-down menu on the bottom.
+      </p>
 
-    <p>
-      Right now, you can choose between these operators:
-      <ul>
-        <li>+: addition</li>
-        <li>-: subtraction</li>
-        <li>x: multiplication</li>
-        <li>/: division</li>
-      </ul>
+      <p>
+        Right now, you can choose between these operators:
+        <ul>
+          <li>+: addition</li>
+          <li>-: subtraction</li>
+          <li>x: multiplication</li>
+          <li>/: division</li>
+        </ul>
 
-      <button data-type="submit" id="score-button">See how scoring works</button>
-    </p>
+        <button data-type="submit" id="score-button">See how scoring works</button>
+      </p>
+    </div>
+
+    <!-- the `div` displaying how scoring works, hidden by default -->
+    <div id="score-div">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend feugiat augue, eu finibus mi mollis eget. 
+      </p>
+      <p>
+        Duis vel orci in eros blandit congue vitae a sem. Mauris elementum est id sollicitudin pretium. Donec viverra mi nulla, vel vulputate enim dictum sed. 
+      </p>
+  
+    </div>
+    <!-- the Start Game button -->
     <button data-type="submit" id="start-game-button">Let's Play!</button>
 
   </div>
-
-  <div id="score-div">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend feugiat augue, eu finibus mi mollis eget. 
-    </p>
-    <p>
-      Duis vel orci in eros blandit congue vitae a sem. Mauris elementum est id sollicitudin pretium. Donec viverra mi nulla, vel vulputate enim dictum sed. 
-    </p>
-
-  </div>
-
 
   <!-- the main title of the game -->
   <h1 class="heading">Operator Game</h1>

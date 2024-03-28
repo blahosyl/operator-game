@@ -8,9 +8,11 @@ let streak = 0;
 
 // the welcome screen `div`
 const welcomeDiv = document.getElementById('welcome-div');
+// the `div` where the gameplay rules are displayed
+const gameplayDiv = document.getElementById('gameplay-div');
 // Start Game button
 const startGameButton = document.getElementById('start-game-button')
-// the link to the score `div`
+// the button for showing the score `div`
 const scoreButton = document.getElementById('score-button')
 // the `div` where the scoring rules are displayed
 const scoreDiv = document.getElementById('score-div');
@@ -26,10 +28,10 @@ const newGameButton = document.getElementById('new-game-button')
 
 // event listeners
 
-// when the link is clicked, the `scoreDiv` should replace `welcomeDiv` on the screen
+// when the link is clicked, the `scoreDiv` should replace `gameplayDiv` on the screen
 scoreButton.addEventListener('click',showScoreDiv);
 
-// start the game
+// hide the Welcome screen
 startGameButton.addEventListener('click',startGame);
 
 // New Game button should start a new game
@@ -55,20 +57,19 @@ operatorSelector.addEventListener('change',setOperandOperatorCount);
 //functions
 
 /**
- * Hide the `welcomeDiv` and show the the `scoreDiv`
+ * Hide the `gameplayDiv` and show the the `scoreDiv`
  */
 function showScoreDiv() {
-  welcomeDiv.style.display = 'none';
+  gameplayDiv.style.display = 'none';
   scoreDiv.style.display = 'flex';
   scoreDiv.style.flexDirection = 'column';
 }
 
 /**
- * Start the game, hiding both the `welcomeDiv` and the `scoreDiv`
+ * Hide the `welcomeDiv`
  */
 function startGame() {
 welcomeDiv.style.display = 'none';
-scoreDiv.style.display = 'none';
 }
 
 // generating and displaying operands (numbers)
