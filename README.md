@@ -106,6 +106,7 @@ Web Disability Simulator
 
 - [`form select` element](https://www.w3schools.com/html/html_form_elements.asp)
 - [Get the `value` from a `select` form](https://www.w3schools.com/jsref/prop_select_value.asp)
+- [Select the default value in a `select` form](https://stackoverflow.com/a/3518011)
 - [`form` color picker](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_color)
 - [Call a function within a function](https://stackoverflow.com/a/4524890)
 - [Slice a character off the end of a string](https://stackoverflow.com/a/952945)
