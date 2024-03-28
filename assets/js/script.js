@@ -387,7 +387,7 @@ function showMilestones() {
 }
 
 /**
- * Get the number of operands from the dropdown selector
+ * Get the number of operands from the drop-down selector
  * @returns {number}
  */
 function getOperandNumber() {
@@ -416,20 +416,20 @@ function adjustInstructions() {
 
 
 /**
- * Adjust the number of operators and operands based on the value of the operand dropdown selector
+ * Adjust the number of operators and operands based on the value of the operand drop-down selector
  */
 function setOperandOperatorCount() {
   let questionDiv = document.getElementById('question-area');
   // the first operand shown
   let operand1 = questionDiv.children[0];
-  // the first operator dropdown shown
+  // the first operator drop-down shown
   let operator1 = questionDiv.children[1];
   // the value of the operand selector
   let num = getOperandNumber();
 
   while (getOperands().length +1 <= num){
     // 2 operands appear by default, so:
-    // iterate 2 times less than the number specified by the dropdown
+    // iterate 2 times less than the number specified by the drop-down
     for (i=2; i<num; i++) { 
       // clone the first operand node
       let newOperand = operand1.cloneNode(true);
@@ -446,7 +446,7 @@ function setOperandOperatorCount() {
 
   // if the number of operands is larger than the value of the operand selector 
   while (getOperands().length > num) {
-      // remove the first operator dropdown
+      // remove the first operator drop-down
       questionDiv.children[1].remove();
       // remove the first operand
       questionDiv.children[0].remove();

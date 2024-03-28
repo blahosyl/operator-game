@@ -7,22 +7,6 @@ flex-direction: column;
 align-items: center;
 }
 
-.hilight {
-  color:red;
-  font-size: 110%;
-}
-
-#game-area {
-/* elements in one column */
-display: flex;
-flex-direction: column;
-/* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
-align-items: center;
-border: solid 2px red;
-border-radius: 20px;
-padding: 2rem;
-}
-
 /* "popups" filling the whole screen */
 .popup-div {
   width: 80vw;
@@ -47,17 +31,17 @@ padding: 2rem;
   color: white;
 }
 
-/* the `div` within `welcome-div` displaying the gameplay instructions */
+/* the `div` within `#welcome-div` displaying the gameplay instructions */
 #gameplay-rules-div {
   display: flex;
 }
 
-/* the `div` within `welcome-div` displaying the scoring rules, hidden by default */
+/* the `div` within `#welcome-div` displaying the scoring rules, hidden by default */
 #score-rules-div {
   display: none;
 }
 
-/* unified formatting of the contentful `divs` within  `welcome-div` */
+/* unified formatting of the contentful `divs` within  `#welcome-div` */
 #welcome-div > div {
   overflow: scroll;
   flex-direction: column;
@@ -68,22 +52,22 @@ padding: 2rem;
   height: 100%;
 }
 
-/* unified formatting of the paragraphs in the contentful `divs` within  `welcome-div` */
+/* unified formatting of the paragraphs in the contentful `divs` within  `#welcome-div` */
 #welcome-div > div > p {
   margin: 0.5rem 0;
 }
 
-/* unified formatting of lists in the contentful `divs` within  `welcome-div` */
+/* unified formatting of lists in the contentful `divs` within  `#welcome-div` */
 #welcome-div > div > ul {
   margin: 0.5rem 0;
 }
 
-/* the list of operators in the `gameplay-rules-div` */
+/* the list of operators in the `#gameplay-rules-div` */
 #gameplay-rules-div > ul {
   list-style: none;
 }
 
-/* unified formatting of the small buttons in the contentful `divs` within  `welcome-div` */
+/* unified formatting of the small buttons in the contentful `divs` within  `#welcome-div` */
 #welcome-div > div > button {
   margin-top: auto;  
   margin-bottom: 1rem;
@@ -91,11 +75,12 @@ padding: 2rem;
   font-size: 100%;
 }
 
-/* unified formatting of links in the contentful `divs` within  `welcome-div` */
+/* unified formatting of links in the contentful `divs` within  `#welcome-div` */
 #welcome-div a {
   color: white;
 }
 
+/* unified formatting for the big buttons on "popups" (`#start-game-button`, `#continue-game-button` */
 .popup-big-button {
   margin-top: auto;  
   font-size: 200%;
@@ -104,6 +89,7 @@ padding: 2rem;
   border-radius: 20px;
 }
 
+/* the big button on the Welcome screen */
 #start-game-button {
   background-color: orange;
 }
@@ -115,10 +101,24 @@ padding: 2rem;
   color: white;
 }
 
+/* the big button on the milestone popup */
 #continue-game-button {
   background-color: red;
 }
 
+/* the game area containing the game title, question area, new game button, streak counter and operand selector drop-down */
+#game-area {
+  /* elements in one column */
+  display: flex;
+  flex-direction: column;
+  /* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
+  align-items: center;
+  border: solid 2px red;
+  border-radius: 20px;
+  padding: 2rem;
+  }
+
+/* question area */
 /* question area items should be in a row (where they fit) */
 #question-area {
   /* children should be in a row */
@@ -131,6 +131,12 @@ padding: 2rem;
   border-radius: 10px;
   padding: 1rem;
   margin-bottom: 2rem;
+}
+
+/* highlighing the user's wrong guess */
+.hilight {
+  color:red;
+  font-size: 110%;
 }
 
 /* the operator selector drop-down menus */
@@ -174,13 +180,13 @@ padding: 2rem;
   margin-left: 2px;
 }
 
-/* the `div` containing the operator selector dropdown and its label */
+/* the `div` containing the operator selector drop-down and its label */
 #number-selector-div {
   display: flex;
   margin-top: 1rem;
 }
 
-/* the dropdown for selecting the number of operands */
+/* the drop-down for selecting the number of operands */
 #number-selector {
  margin-left: 2px;
 }
