@@ -6,6 +6,10 @@ let currentChosenOperators = [];
 // counter for streak without errors
 let streak = 0;
 
+// variable to store and return eval with an indirect call
+// source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
+const geval = eval;
+
 // constants (HTML elements)
 
 // Welcome screen
@@ -229,7 +233,7 @@ function concatenateWithOperands(operators) {
 */
 function showResult() {
   let result = document.getElementById('result');
-  result.innerHTML = eval(concatenateWithOperands(currentChosenOperators));
+  result.innerHTML = geval(concatenateWithOperands(currentChosenOperators));
   return result.innerHTML;
 }
 
@@ -276,7 +280,7 @@ function showUserGuess() {
 
   // show the user's guess and its result
   solutionDiv.innerHTML = `Not quite! Your result is:<br>`+
-  `<span class="hilight">`+guess+'='+eval(guess)+`</span>
+  `<span class="hilight">`+guess+'='+geval(guess)+`</span>
   <br>
   Try changing an operator!`;
 }
@@ -286,10 +290,10 @@ function showUserGuess() {
  */
 function checkUserGuess() {
   // the result based on the operands shown and the operators selected by the user
-  let userGuess = eval(concatenateWithOperands(getUserOperators()));
+  let userGuess = geval(concatenateWithOperands(getUserOperators()));
 
   // the correct result based on the operands shown and the randomly generated operators
-  let correctSolution = eval(concatenateWithOperands(currentChosenOperators));
+  let correctSolution = geval(concatenateWithOperands(currentChosenOperators));
   // the `div` containing the solution/congratulation message
 
   if (userGuess === correctSolution) {
@@ -487,7 +491,7 @@ function newGame() {
   showResult();
 
   // show the correct result in the log for development purposes
-  console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+eval(concatenateWithOperands(currentChosenOperators)));
+  console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+geval(concatenateWithOperands(currentChosenOperators)));
 
   // the result should not have more than 2 decimal places
   while (Number.isInteger(showResult()*100) === false) {
