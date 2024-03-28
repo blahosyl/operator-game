@@ -23,11 +23,12 @@ border-radius: 20px;
 padding: 2rem;
 }
 
+/* the Welcome screen displaying the gameplay rules and scrore counting */
 #welcome-div {
   background-color: rgba(43, 11, 9, 0.9);
   color: white;
   width: 80vw;
-  height: 85vh;
+  height: 90vh;
   position: absolute;
   margin-top: 2vh;
   top: 0;
@@ -42,18 +43,49 @@ padding: 2rem;
   padding: 2rem;
 }
 
+/* the `div` within `welcome-div` displaying the gameplay instructions */
 #gameplay-rules-div {
   display: flex;
   flex-direction: column;
-  flex-direction: column;
+}
+
+/* the `div` within `welcome-div` displaying the scoring rules, hidden by default */
+#score-div {
+  display: none;
+}
+
+/* unified formatting of the contentful `divs` within  `welcome-div` */
+#welcome-div > div {
+  overflow: scroll;
   /* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
   align-items: center;
   /* elements vertically centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
   justify-content: center;
+  height: 100%;
+  background-color: blue;
 }
 
-#score-div {
-  display: none;
+/* unified formatting of the paragraphs in the contentful `divs` within  `welcome-div` */
+#welcome-div > div > p {
+  margin: 0.5rem 0;
+}
+
+/* unified formatting of lists in the contentful `divs` within  `welcome-div` */
+#welcome-div > div > ul {
+  margin: 0.5rem 0;
+}
+
+/* unified formatting of the small buttons in the contentful `divs` within  `welcome-div` */
+#welcome-div > div > button {
+  margin-top: auto;  
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-size: 100%;
+}
+
+/* unified formatting of links in the contentful `divs` within  `welcome-div` */
+#welcome-div a {
+  color: white;
 }
 
 #start-game-button {
@@ -63,10 +95,6 @@ padding: 2rem;
   height: 5rem;
   background-color: orange;
   border-radius: 20px;
-}
-
-#welcome-div a {
-  color: white;
 }
 
 /* question area items should be in a row (where they fit) */
