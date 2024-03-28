@@ -119,6 +119,7 @@ Web Disability Simulator
 - [Insert before](https://www.w3schools.com/jsref/met_node_insertbefore.asp)
 - [Change display style of DOM elements with Javasscript](https://www.w3schools.com/jsref/prop_style_display.asp)
 - [Inheriting opacity in CSS](https://css-tricks.com/forums/topic/opacity-of-child-element/), [2](https://stackoverflow.com/questions/5770341/i-do-not-want-to-inherit-the-child-opacity-from-the-parent-in-css)
+- [CSS `overflow`](https://www.w3schools.com/cssref/pr_pos_overflow.php)
 
 ### Content
 
