@@ -406,7 +406,7 @@ function showMilestones() {
       break;
     case 10:
       // set streak milestone color
-      color = 'var(--dark-blue)';
+      color = 'var(--light-blue)';
       buttonColor = 'var(--light-orange)';
       // buttonColor = 'var(--red)';
       // show the `milestoneDiv`

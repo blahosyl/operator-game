@@ -15,6 +15,8 @@ display: flex;
 flex-direction: column;
 /* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
 align-items: center;
+font-family: 'Poppins', sans-serif;
+color: var(--dark-blue);
 }
 
 /* "popups" filling the whole screen */
@@ -90,8 +92,8 @@ align-items: center;
   color: white;
 }
 
-/* unified formatting for the big buttons on "popups" (`#start-game-button`, `#continue-game-button` */
-.popup-big-button {
+/* unified formatting for the big buttons */
+.big-button {
   margin-top: auto;  
   font-size: 200%;
   width: 15rem;
@@ -137,6 +139,15 @@ align-items: center;
   padding: 2rem;
   }
 
+  .heading {
+    font-family: 'Madimi One', sans-serif;
+    font-size: 250%;
+  }
+
+  button {
+    font-family: 'Madimi One', sans-serif;
+  }
+
 /* question area */
 /* question area items should be in a row (where they fit) */
 #question-area {
@@ -155,6 +166,7 @@ align-items: center;
 /* highlighing the user's wrong guess */
 .hilight {
   color:red;
+  font-weight: bold;
   font-size: 110%;
 }
 
@@ -175,17 +187,17 @@ align-items: center;
   border-radius: 5px;
   border-color: red;
   background-color: orange;
-  font-size: 120%;
+  font-size: 150%;
 }
 
 /* the button for starting a new game */
 #new-game-button {
-  border-radius: 5px;
+  border-radius: 20px;
   border-color: orange;
   background-color: red;
   color:white;
   margin-top: 2rem;
-  font-size: 200%;
+  font-size: 250%;
 }
 
 /* the div containing the perfect streak text and count */
@@ -195,7 +207,7 @@ align-items: center;
 }
 
 /* the number showing the user's perfect streak count */
-#streak {
+#streak-counter {
   margin-left: 2px;
 }
 
