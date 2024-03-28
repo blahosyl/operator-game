@@ -97,8 +97,17 @@ align-items: center;
 /* the "popup" screen celebrating selected milestones */
 #milestone-div {
   display: none;
-  background-color: rgba(215, 107, 6, 0.9);
+  /* background-color: rgba(215, 107, 6, 0.9); */
+  background: url("../images/balloons.jpg") no-repeat center;
   color: white;
+}
+
+#milestone-div h1 {
+  background-color: orange;
+  justify-self: center;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 250%;
 }
 
 /* the big button on the milestone popup */
