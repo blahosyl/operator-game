@@ -39,7 +39,7 @@ color: var(--dark-blue);
 
 /* the Welcome screen displaying the gameplay rules and scrore counting */
 #welcome-div {
-  background-color: rgba(43, 11, 9, 0.9);
+  background-color: var(--dark-blue);
   color: white;
 }
 
