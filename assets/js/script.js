@@ -346,18 +346,18 @@ function continueGame() {
  * Trigger extra events at certain perfect streak milestones
  */
 function showMilestones() {
+  let streakDisplay = milestoneDiv.children[0].children[0];
   switch (streak) {
     case 0:
       // change color of streak number
       streakCounter.style.color='black';
       break;
     case 3:
-      // fire an alert (with timeout, so other code executes before it)
-      setTimeout(function () { alert('3 in a row!'); }, 10);
-      // change color of streak number
-      streakCounter.style.color='red';
       // show the `milestoneDiv`
       showMilestone();
+      streakDisplay.textContent = streak;
+      // change color of streak number
+      streakCounter.style.color='red';
       break;
     case 5:
       // fire an alert (with timeout, so other code executes before it)
