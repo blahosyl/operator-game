@@ -49,7 +49,7 @@ padding: 2rem;
 }
 
 /* the `div` within `welcome-div` displaying the scoring rules, hidden by default */
-#score-div {
+#score-rules-div {
   display: none;
 }
 

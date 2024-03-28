@@ -16,7 +16,7 @@ const startGameButton = document.getElementById('start-game-button')
 // the button for showing the score `div`
 const scoreButton = document.getElementById('score-button')
 // the `div` where the scoring rules are displayed
-const scoreDiv = document.getElementById('score-div');
+const scoreRulesDiv = document.getElementById('score-rules-div');
 // the button for showing the gameplay `div`
 const gameplayRulesButton = document.getElementById('gameplay-rules-button')
 // the `div` where the solution/congratulation text is displayed
@@ -33,10 +33,10 @@ const streakCounter = document.getElementById('streak-counter');
 
 // event listeners
 
-// when the button is clicked, the `scoreDiv` should replace `gameplayRulesDiv` on the screen
-scoreButton.addEventListener('click',showScoreDiv);
+// when the button is clicked, the `scoreRulesDiv` should replace `gameplayRulesDiv` on the screen
+scoreButton.addEventListener('click',showScoreRulesDiv);
 
-// when the button is clicked, the `gameplayRulesDiv` should replace `scoreDiv` on the screen
+// when the button is clicked, the `gameplayRulesDiv` should replace `scoreRulesDiv` on the screen
 gameplayRulesButton.addEventListener('click',showGameplayRulesDiv);
 
 // hide the Welcome screen
@@ -65,18 +65,18 @@ operatorSelector.addEventListener('change',setOperandOperatorCount);
 //functions
 
 /**
- * Hide the `gameplayRulesDiv` and show the the `scoreDiv`
+ * Hide the `gameplayRulesDiv` and show the the `scoreRulesDiv`
  */
-function showScoreDiv() {
+function showScoreRulesDiv() {
   gameplayRulesDiv.style.display = 'none';
-  scoreDiv.style.display = 'flex';
+  scoreRulesDiv.style.display = 'flex';
 }
 
 /**
- * Hide the `scoreDiv` and show the the `gameplayRulesDiv`
+ * Hide the `scoreRulesDiv` and show the the `gameplayRulesDiv`
  */
 function showGameplayRulesDiv() {
-  scoreDiv.style.display = 'none';
+  scoreRulesDiv.style.display = 'none';
   gameplayRulesDiv.style.display = 'flex';
 }
 
