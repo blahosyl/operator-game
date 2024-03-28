@@ -21,6 +21,9 @@ const scoreRulesDiv = document.getElementById('score-rules-div');
 const gameplayRulesButton = document.getElementById('gameplay-rules-button')
 // the `div` where the solution/congratulation text is displayed
 
+// Milestones
+const milestoneDiv = document.getElementById('milestone-div');
+
 // Gameplay
 const solutionDiv = document.getElementById('solution');
 // the Check Answer/Submit button
@@ -325,6 +328,21 @@ function refreshStreakCounter() {
 }
 
 /**
+ * Show the `milestoneDiv`
+ */
+function showMilestone() {
+  milestoneDiv.style.display = 'flex';
+  }
+
+/**
+ * Hide the `milestoneDiv`
+ */
+function continueGame() {
+  milestoneDiv.style.display = 'none';
+  }
+  
+
+/**
  * Trigger extra events at certain perfect streak milestones
  */
 function showMilestones() {
@@ -338,6 +356,8 @@ function showMilestones() {
       setTimeout(function () { alert('3 in a row!'); }, 10);
       // change color of streak number
       streakCounter.style.color='red';
+      // show the `milestoneDiv`
+      showMilestone();
       break;
     case 5:
       // fire an alert (with timeout, so other code executes before it)

@@ -23,10 +23,8 @@ border-radius: 20px;
 padding: 2rem;
 }
 
-/* the Welcome screen displaying the gameplay rules and scrore counting */
-#welcome-div {
-  background-color: rgba(43, 11, 9, 0.9);
-  color: white;
+/* "popups" filling the whole screen */
+.popup-div {
   width: 80vw;
   height: 90vh;
   position: absolute;
@@ -41,6 +39,12 @@ padding: 2rem;
   font-size: 120%;
   border-radius: 20px;
   padding: 2rem;
+}
+
+/* the Welcome screen displaying the gameplay rules and scrore counting */
+#welcome-div {
+  background-color: rgba(43, 11, 9, 0.9);
+  color: white;
 }
 
 /* the `div` within `welcome-div` displaying the gameplay instructions */
@@ -99,6 +103,13 @@ padding: 2rem;
   height: 5rem;
   background-color: orange;
   border-radius: 20px;
+}
+
+/* the "popup" screen celebrating selected milestones */
+#milestone-div {
+  display: none;
+  background-color: rgba(215, 107, 6, 0.9);
+  color: white;
 }
 
 /* question area items should be in a row (where they fit) */
