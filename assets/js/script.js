@@ -1,4 +1,6 @@
-// Global variable to hold the chosen operators – solution by tutor Roo
+// Global variables
+
+// variable to hold the chosen operators – solution by tutor Roo
 let currentChosenOperators = [];
 
 // counter for streak without errors
@@ -21,11 +23,6 @@ const scoreRulesDiv = document.getElementById('score-rules-div');
 const gameplayRulesButton = document.getElementById('gameplay-rules-button')
 // the `div` where the solution/congratulation text is displayed
 
-// Milestones
-const milestoneDiv = document.getElementById('milestone-div');
-// Continue Game button
-const continueGameButton = document.getElementById('continue-game-button')
-
 // Gameplay
 const solutionDiv = document.getElementById('solution');
 // the Check Answer/Submit button
@@ -35,8 +32,14 @@ const newGameButton = document.getElementById('new-game-button')
 // the streak counter from the bottom of the page
 const streakCounter = document.getElementById('streak-counter');
 
+// Milestones
+const milestoneDiv = document.getElementById('milestone-div');
+// Continue Game button
+const continueGameButton = document.getElementById('continue-game-button')
 
-// event listeners
+// Event Listeners
+
+// Welcome screen
 
 // when the button is clicked, the `scoreRulesDiv` should replace `gameplayRulesDiv` on the screen
 scoreButton.addEventListener('click',showScoreRulesDiv);
@@ -47,15 +50,14 @@ gameplayRulesButton.addEventListener('click',showGameplayRulesDiv);
 // hide the Welcome screen
 startGameButton.addEventListener('click',startGame);
 
+// Gameplay
+
 // New Game button should start a new game
 // add event listener to New Game button to run the `newGame()` function
 newGameButton.addEventListener('click',newGame);
 
 // add event listener to Submit button to check the user asnwer
 submitButton.addEventListener('click',checkAnswer);
-
-// hide the Milestone "popup" screen
-continueGameButton.addEventListener('click',continueGame);
 
 // get all operator select forms
 let operators = document.getElementsByClassName('operator-selector');
@@ -70,7 +72,12 @@ for (operator of operators) {
 let operatorSelector = document.getElementById('number-selector');
 operatorSelector.addEventListener('change',setOperandOperatorCount);
 
-//functions
+// Milestones
+
+// hide the Milestone "popup" screen
+continueGameButton.addEventListener('click',continueGame);
+
+//Functions
 
 /**
  * Hide the `gameplayRulesDiv` and show the the `scoreRulesDiv`
@@ -359,6 +366,7 @@ function showMilestones() {
     case 3:
       // show the `milestoneDiv`
       showMilestone();
+      // show streak count on `milestoneDiv`
       streakDisplay.textContent = streak;
       // change color of streak number
       streakCounter.style.color='red';
