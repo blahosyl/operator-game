@@ -7,11 +7,11 @@ let streak = 0;
 // constants (HTML elements)
 
 // the welcome screen `div`
-let welcomeDiv = document.getElementById('welcome-div');
+const welcomeDiv = document.getElementById('welcome-div');
 // Start Game button
 const startGameButton = document.getElementById('start-game-button')
 // the link to the score `div`
-const scoreLink = document.getElementById('score-link')
+const scoreButton = document.getElementById('score-button')
 // the `div` where the scoring rules are displayed
 const scoreDiv = document.getElementById('score-div');
 // the `div` where the solution/congratulation text is displayed
@@ -26,10 +26,11 @@ const newGameButton = document.getElementById('new-game-button')
 
 // event listeners
 
-scoreLink.addEventListener('click',showScoreDiv);
+// when the link is clicked, the `scoreDiv` should replace `welcomeDiv` on the screen
+scoreButton.addEventListener('click',showScoreDiv);
 
+// start the game
 startGameButton.addEventListener('click',startGame);
-
 
 // New Game button should start a new game
 // add event listener to New Game button to run the `newGame()` function
@@ -53,12 +54,18 @@ operatorSelector.addEventListener('change',setOperandOperatorCount);
 
 //functions
 
+/**
+ * Hide the `welcomeDiv` and show the the `scoreDiv`
+ */
 function showScoreDiv() {
   welcomeDiv.style.display = 'none';
   scoreDiv.style.display = 'flex';
   scoreDiv.style.flexDirection = 'column';
 }
 
+/**
+ * Start the game, hiding both the `welcomeDiv` and the `scoreDiv`
+ */
 function startGame() {
 welcomeDiv.style.display = 'none';
 scoreDiv.style.display = 'none';

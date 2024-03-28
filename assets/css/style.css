@@ -50,9 +50,7 @@ padding: 2rem;
   display: none;
 }
 
-
-
-#welcome-div button {
+#start-game-button {
   font-size: 200%;
   width: 15rem;
   height: 5rem;
