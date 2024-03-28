@@ -128,6 +128,8 @@ Web Disability Simulator
 
 #### Images
 
+Milestone image by <a href="https://www.freepik.com/free-ai-image/colorful-balloons-decor-background_77741605.htm#page=3&position=9&from_view=search&track=ais&uuid=777890df-6c6e-4ecf-90da-7587aff2328e">vector_corp on Freepik</a>.
+
 #### Videos
 
 ### Readme
