@@ -6,30 +6,38 @@ let streak = 0;
 
 // constants (HTML elements)
 
+// Welcome screen
 // the welcome screen `div`
 const welcomeDiv = document.getElementById('welcome-div');
 // the `div` where the gameplay rules are displayed
-const gameplayDiv = document.getElementById('gameplay-div');
+const gameplayRulesDiv = document.getElementById('gameplay-rules-div');
 // Start Game button
 const startGameButton = document.getElementById('start-game-button')
 // the button for showing the score `div`
 const scoreButton = document.getElementById('score-button')
 // the `div` where the scoring rules are displayed
 const scoreDiv = document.getElementById('score-div');
+// the button for showing the gameplay `div`
+const gameplayRulesButton = document.getElementById('gameplay-rules-button')
 // the `div` where the solution/congratulation text is displayed
+
+// Gameplay
 const solutionDiv = document.getElementById('solution');
 // the Check Answer/Submit button
 const submitButton = document.getElementById('submit-button')
 // the New Game button
 const newGameButton = document.getElementById('new-game-button')
 // the streak counter from the bottom of the page
- const streakCounter = document.getElementById('streak-counter');
+const streakCounter = document.getElementById('streak-counter');
 
 
 // event listeners
 
-// when the link is clicked, the `scoreDiv` should replace `gameplayDiv` on the screen
+// when the button is clicked, the `scoreDiv` should replace `gameplayRulesDiv` on the screen
 scoreButton.addEventListener('click',showScoreDiv);
+
+// when the button is clicked, the `gameplayRulesDiv` should replace `scoreDiv` on the screen
+gameplayRulesButton.addEventListener('click',showGameplayRulesDiv);
 
 // hide the Welcome screen
 startGameButton.addEventListener('click',startGame);
@@ -57,12 +65,21 @@ operatorSelector.addEventListener('change',setOperandOperatorCount);
 //functions
 
 /**
- * Hide the `gameplayDiv` and show the the `scoreDiv`
+ * Hide the `gameplayRulesDiv` and show the the `scoreDiv`
  */
 function showScoreDiv() {
-  gameplayDiv.style.display = 'none';
+  gameplayRulesDiv.style.display = 'none';
   scoreDiv.style.display = 'flex';
   scoreDiv.style.flexDirection = 'column';
+}
+
+/**
+ * Hide the `scoreDiv` and show the the `gameplayRulesDiv`
+ */
+function showGameplayRulesDiv() {
+  scoreDiv.style.display = 'none';
+  gameplayRulesDiv.style.display = 'flex';
+  gameplayRulesDiv.style.flexDirection = 'column';
 }
 
 /**
