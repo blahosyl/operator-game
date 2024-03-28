@@ -27,7 +27,9 @@
 ## Features
 
 >[!TIP]
->To facilitate assessment/testing, uncomment one or more of the lines in [`script.js`](assets/js/script.js) marked as follows: `// ASSESSMENT uncomment the next line for testing/assessment`
+>To facilitate assessment/testing, uncomment one or more of the lines in [`script.js`](assets/js/script.js) marked as follows:
+>
+>`// ASSESSMENT uncomment the next line for testing/assessment`
 
 ### Features present on all pages
 
@@ -85,7 +87,9 @@ Am I Responsive? – to show the website image on a range of devices
 ## Testing
 
 >[!TIP]
->To facilitate assessment/testing, uncomment one or more of the lines in [`script.js`](assets/js/script.js) marked as follows: `// ASSESSMENT uncomment the next line for testing/assessment`
+>To facilitate assessment/testing, uncomment one or more of the lines in [`script.js`](assets/js/script.js) marked as follows:
+>
+> `// ASSESSMENT uncomment the next line for testing/assessment`
 
 ### Automated testing
 W3C validator
