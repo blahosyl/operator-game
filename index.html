@@ -43,6 +43,7 @@
           <li><span class="operator">&divide;</span> division</li>
         </ul>
 
+      <!-- button taking the user to the Score Rules screen -->
       <button data-type="submit" id="score-button">See how scoring works</button>
 
     </div>
@@ -73,7 +74,7 @@
          go for it – that's how you'll learn even more! 💪
       </p>
    
-
+      <!-- button taking the user back to the Gameplay Rules screen -->
       <button data-type="submit" id="gameplay-rules-button">See how gameplay works</button>
   
     </div>
@@ -83,6 +84,7 @@
 
   </div>
 
+  <!-- "popup" for certain milestones – hidden by default -->
   <div id="milestone-div" class="popup-div">
     <h1>
         Wow, <span>X</span> in a row!
@@ -103,6 +105,20 @@
     <!-- contains the operands, operators and the expected result -->
     <div id="question-area">
 
+      <!-- an operand -->
+      <span class="operand">1</span>
+
+      <!-- operator drop-down menu -->
+      <form action="/action_page.php">
+        <select class="operator-selector" name="operator1">
+          <option value="+">+</option>
+          <option value="-">&minus;</option>
+          <option value="*">&times;</option>
+          <option value="/">&divide;</option>
+        </select>
+      </form>
+      
+      <!-- an operand -->
       <span class="operand">1</span>
 
       <!-- operator drop-down menu -->
@@ -115,24 +131,17 @@
         </select>
       </form>
 
+      <!-- an operand -->
       <span class="operand">1</span>
 
-      <!-- operator drop-down menu -->
-      <form action="/action_page.php">
-        <select class="operator-selector" name="operator1">
-          <option value="+">+</option>
-          <option value="-">&minus;</option>
-          <option value="*">&times;</option>
-          <option value="/">&divide;</option>
-        </select>
-      </form>
-
-      <span class="operand">1</span>
-
+      <!-- equal sign -->
       <span>=</span>
+
+      <!-- the correct result -->
       <span id="result">1</span>
     </div>  <!-- end of `question-area` -->
 
+    <!-- this is where the evaluation message appears after checking the answer -->
     <div id="solution"></div>
 
     <!-- Submit button -->
@@ -149,7 +158,7 @@
     <span id="streak-counter">0</span>
   </div>
 
-  <!-- number selector -->
+  <!-- number selector: how many numbers should the game include -->
   <div id="number-selector-div">
     <label for="number-selector">Select the number of operands:</label>
     <form action="/action_page.php">

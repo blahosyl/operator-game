@@ -19,6 +19,17 @@ font-family: 'Poppins', sans-serif;
 color: var(--dark-blue);
 }
 
+/* headings */
+.heading {
+  font-family: 'Madimi One', sans-serif;
+  font-size: 250%;
+}
+
+/* buttons */
+button {
+  font-family: 'Madimi One', sans-serif;
+}
+
 /* "popups" filling the whole screen */
 .popup-div {
   width: 80vw;
@@ -46,6 +57,12 @@ color: var(--dark-blue);
 /* the `div` within `#welcome-div` displaying the gameplay instructions */
 #gameplay-rules-div {
   display: flex;
+}
+
+/* operators in text  */
+.operator {
+  font-family: 'Bungee Spice', sans-serif;
+  font-size: 120%;
 }
 
 /* the `div` within `#welcome-div` displaying the scoring rules, hidden by default */
@@ -114,6 +131,7 @@ color: var(--dark-blue);
   color: white;
 }
 
+/* the text on the milestone "popup" */
 #milestone-div h1 {
   background-color: orange;
   text-align: center;  
@@ -137,15 +155,6 @@ color: var(--dark-blue);
   border: solid 2px red;
   border-radius: 20px;
   padding: 2rem;
-  }
-
-  .heading {
-    font-family: 'Madimi One', sans-serif;
-    font-size: 250%;
-  }
-
-  button {
-    font-family: 'Madimi One', sans-serif;
   }
 
 /* question area */
@@ -175,11 +184,6 @@ color: var(--dark-blue);
   padding: 0.2rem;
   margin-block-end: 0;
   font-family: 'Bungee Spice', sans-serif;
-}
-
-.operator {
-  font-family: 'Bungee Spice', sans-serif;
-  font-size: 120%;
 }
 
 /* the div to display the result (correct or not) */
