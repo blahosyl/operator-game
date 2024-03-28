@@ -74,6 +74,11 @@ padding: 2rem;
   margin: 0.5rem 0;
 }
 
+/* the list of operators in the `gameplay-rules-div` */
+#gameplay-rules-div > ul {
+  list-style: none;
+}
+
 /* unified formatting of the small buttons in the contentful `divs` within  `welcome-div` */
 #welcome-div > div > button {
   margin-top: auto;  
