@@ -417,6 +417,8 @@ function showMilestones() {
       streakCounter.style.color=color;
       break;
   }
+  // run new game after milestone "popup"
+  newGame();
 }
 
 /**
