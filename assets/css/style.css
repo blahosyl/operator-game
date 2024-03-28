@@ -57,6 +57,7 @@ padding: 2rem;
 }
 
 #start-game-button {
+  margin-top: auto;  
   font-size: 200%;
   width: 15rem;
   height: 5rem;
