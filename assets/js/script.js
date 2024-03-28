@@ -411,7 +411,6 @@ function adjustInstructions() {
   } else {
     instructions.innerHTML = 'Choose the correct operators to get the result shown';
   }
-  console.log(instructions);
 }
 
 
