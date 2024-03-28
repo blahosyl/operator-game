@@ -46,7 +46,6 @@ padding: 2rem;
 /* the `div` within `welcome-div` displaying the gameplay instructions */
 #gameplay-rules-div {
   display: flex;
-  flex-direction: column;
 }
 
 /* the `div` within `welcome-div` displaying the scoring rules, hidden by default */
@@ -57,6 +56,7 @@ padding: 2rem;
 /* unified formatting of the contentful `divs` within  `welcome-div` */
 #welcome-div > div {
   overflow: scroll;
+  flex-direction: column;
   /* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
   align-items: center;
   /* elements vertically centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */

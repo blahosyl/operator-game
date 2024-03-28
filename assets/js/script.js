@@ -70,7 +70,6 @@ operatorSelector.addEventListener('change',setOperandOperatorCount);
 function showScoreDiv() {
   gameplayRulesDiv.style.display = 'none';
   scoreDiv.style.display = 'flex';
-  scoreDiv.style.flexDirection = 'column';
 }
 
 /**
@@ -79,7 +78,6 @@ function showScoreDiv() {
 function showGameplayRulesDiv() {
   scoreDiv.style.display = 'none';
   gameplayRulesDiv.style.display = 'flex';
-  gameplayRulesDiv.style.flexDirection = 'column';
 }
 
 /**
