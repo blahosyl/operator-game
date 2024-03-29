@@ -160,8 +160,8 @@ Web Disability Simulator
 - [Inheriting opacity in CSS](https://css-tricks.com/forums/topic/opacity-of-child-element/), [2](https://stackoverflow.com/questions/5770341/i-do-not-want-to-inherit-the-child-opacity-from-the-parent-in-css)
 - [CSS `overflow`](https://www.w3schools.com/cssref/pr_pos_overflow.php)
 - [Image color picker](https://imagecolorpicker.com/)
-- Google Fonts
-- FontAwesome
+- [Iterate over a string](https://buzzcoder.gitbooks.io/codecraft-javascript/content/string/loop-through-a-string.html)
+- [`replace()` method](https://www.freecodecamp.org/news/javascript-replace-how-to-replace-a-string-or-substring-in-js/)
 
 ### Content
 

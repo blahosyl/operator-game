@@ -278,9 +278,20 @@ function showUserGuess() {
   let userOperators = getUserOperators();
   let guess = concatenateWithOperands(userOperators);
 
+  // in the text displayed to the user, change "-","*" and "/" 
+  // to "&minus", "&times;" and "&divide;", respectively
+  // ("+" is the same character as "&plus;"", so doesn't need to be changed")
+  // start out with the concatenated string of operators and operands
+  let formattedGuess = guess;
+  // change each character that is "-","*" or "/" 
+  for (let i =0; i < formattedGuess.length; i++) {
+      formattedGuess = formattedGuess.replace("-", "&minus;");
+      formattedGuess = formattedGuess.replace("*", "&times;");
+      formattedGuess = formattedGuess.replace("/", "&divide;");
+    }
   // show the user's guess and its result
   solutionDiv.innerHTML = `Not quite! Your result is:<br>`+
-  `<span class="hilight">`+guess+'='+geval(guess)+`</span>
+  `<span class="hilight">`+formattedGuess+'='+geval(guess)+`</span>
   <br>
   Try changing an operator!`;
 }
