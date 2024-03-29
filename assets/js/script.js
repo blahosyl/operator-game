@@ -68,7 +68,8 @@ let operatorSelector = document.getElementById('number-selector');
 operatorSelector.addEventListener('change',setOperandOperatorCount);
 
 // get all operator select forms
-let operators = document.getElementsByClassName('operator-selector');
+let operatorSelectors = document.getElementsByClassName('operator-selector');
+// event listeners for `operatorSelectors` are triggered inside `setOperandOperatorCount()`
 
 // Milestones
 
@@ -502,9 +503,9 @@ function setOperandOperatorCount() {
   // when any of them are changed, the solution text is cleared
   // IMPORTANT: this has to be here instead of the beginning of the file,
   // otherwise the event listeners are only added to the operator drop-downs that are present in the HTML
-  for (let operator of operators) {
-   operator.addEventListener('change',clearSolutionText);
-   operator.addEventListener('change',enableSubmitButton);
+  for (let i of operatorSelectors) {
+   i.addEventListener('change',clearSolutionText);
+   i.addEventListener('change',enableSubmitButton);
   }
 
   // start a new game after changing the number of operands
@@ -525,8 +526,8 @@ function newGame() {
   submitButton.textContent='Check Answer';
 
   // set operator menus back to '+'
-  for (let operator of operators) {
-    operator.value = ('+');
+  for (let i of operatorSelectors) {
+    i.value = ('+');
   }
 
   // show operands in the question area
