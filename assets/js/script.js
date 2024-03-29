@@ -131,8 +131,10 @@ for (let i = 0; i<length; i++) {
 function eliminateZero(array,bound) {
   // make sure the number is not 0
   for (let i in array) {
-    while (array[i] === 0) {
+     if (array.hasOwnProperty(i)) { //`if` statement suggested by mentor to eliminate JSHint warning. Does not change functionality.
+      while (array[i] === 0) {
       array[i] = Math.floor(Math.random()*bound);
+      }
     }
   }
   return array;
@@ -378,7 +380,7 @@ function showMilestones() {
   switch (streak) {
     case 0:
       // change color of streak number
-      streakCounter.style.color='black';;
+      streakCounter.style.color='black';
       break;
     case 1:
       // set streak milestone color
