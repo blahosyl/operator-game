@@ -387,6 +387,8 @@ function showMilestones() {
       continueGameButton.style.backgroundColor=buttonColor;
       // change color of streak number
       streakCounter.style.color=color;
+      // run new game after milestone "popup"
+      newGame();
       break;
     case 2:
       // set streak milestone color
@@ -401,6 +403,8 @@ function showMilestones() {
       continueGameButton.style.backgroundColor=buttonColor;
       // change color of streak number
       streakCounter.style.color=color;
+      // run new game after milestone "popup"
+      newGame();
       break;
     case 3:
       // set streak milestone color
@@ -415,10 +419,10 @@ function showMilestones() {
       continueGameButton.style.backgroundColor=buttonColor;
       // change color of streak number
       streakCounter.style.color=color;
-      break;
+      // run new game after milestone "popup"
+      newGame();
+      break;     
   }
-  // run new game after milestone "popup"
-  newGame();
 }
 
 /**
