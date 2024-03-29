@@ -63,18 +63,12 @@ newGameButton.addEventListener('click',newGame);
 // add event listener to Submit button to check the user asnwer
 submitButton.addEventListener('click',checkAnswer);
 
-// get all operator select forms
-let operators = document.getElementsByClassName('operator-selector');
-// add event listener to each operator select form:
-// when any of them are changed, the solution text is cleared
-for (let operator of operators) {
-  operator.addEventListener('change',clearSolutionText);
-  operator.addEventListener('change',enableSubmitButton);
-}
-
 // when the operator selector is changed, add the correcponding number of operand+operator pairs
 let operatorSelector = document.getElementById('number-selector');
 operatorSelector.addEventListener('change',setOperandOperatorCount);
+
+// get all operator select forms
+let operators = document.getElementsByClassName('operator-selector');
 
 // Milestones
 
@@ -503,6 +497,15 @@ function setOperandOperatorCount() {
 
   // adjust the instruction text based on the number of operands
   adjustInstructions();
+
+  // add event listener to each operator select form:
+  // when any of them are changed, the solution text is cleared
+  // IMPORTANT: this has to be here instead of the beginning of the file,
+  // otherwise the event listeners are only added to the operator drop-downs that are present in the HTML
+  for (let operator of operators) {
+   operator.addEventListener('change',clearSolutionText);
+   operator.addEventListener('change',enableSubmitButton);
+  }
 
   // start a new game after changing the number of operands
   newGame();
