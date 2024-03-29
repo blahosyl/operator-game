@@ -499,15 +499,6 @@ function setOperandOperatorCount() {
   // adjust the instruction text based on the number of operands
   adjustInstructions();
 
-  // add event listener to each operator select form:
-  // when any of them are changed, the solution text is cleared
-  // IMPORTANT: this has to be here instead of the beginning of the file,
-  // otherwise the event listeners are only added to the operator drop-downs that are present in the HTML
-  for (let i of operatorSelectors) {
-   i.addEventListener('change',clearSolutionText);
-   i.addEventListener('change',enableSubmitButton);
-  }
-
   // start a new game after changing the number of operands
   newGame();
 }
@@ -524,6 +515,15 @@ function newGame() {
 
   // Submit button should have initial text
   submitButton.textContent='Check Answer';
+
+  // add event listener to each operator select form:
+  // when any of them are changed, the solution text is cleared
+  // IMPORTANT: this has to be here instead of the beginning of the file,
+  // otherwise the event listeners are only added to the operator drop-downs that are present in the HTML
+  for (let i of operatorSelectors) {
+    i.addEventListener('change',clearSolutionText);
+    i.addEventListener('change',enableSubmitButton);
+   }
 
   // set operator menus back to '+'
   for (let i of operatorSelectors) {
