@@ -37,7 +37,7 @@ a {
 }
 
 /* "popups" filling the whole screen */
-.popup-div {
+.popup {
   width: 80vw;
   height: 90vh;
   position: absolute;
@@ -55,13 +55,13 @@ a {
 }
 
 /* the Welcome screen displaying the gameplay rules and scrore counting */
-#welcome-div {
+#welcome-section {
   background-color: var(--dark-blue);
   color: var(--white);
 }
 
-/* the `div` within `#welcome-div` displaying the gameplay instructions */
-#gameplay-rules-div {
+/* the `div` within `#welcome-section` displaying the gameplay instructions */
+#gameplay-rules-section {
   display: flex;
 }
 
@@ -71,13 +71,13 @@ a {
   font-size: 120%;
 }
 
-/* the `div` within `#welcome-div` displaying the scoring rules, hidden by default */
-#score-rules-div {
+/* the `div` within `#welcome-section` displaying the scoring rules, hidden by default */
+#score-rules-section {
   display: none;
 }
 
-/* unified formatting of the contentful `divs` within  `#welcome-div` */
-#welcome-div > div {
+/* unified formatting of the contentful `divs` within  `#welcome-section` */
+#welcome-section > section {
   overflow: scroll;
   flex-direction: column;
   /* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
@@ -87,31 +87,31 @@ a {
   height: 100%;
 }
 
-/* unified formatting of the paragraphs in the contentful `divs` within  `#welcome-div` */
-#welcome-div > div > p {
+/* unified formatting of the paragraphs in the contentful `divs` within  `#welcome-section` */
+#welcome-section > section > p {
   margin: 0.5rem 0;
 }
 
-/* unified formatting of lists in the contentful `divs` within  `#welcome-div` */
-#welcome-div > div > ul {
+/* unified formatting of lists in the contentful `divs` within  `#welcome-section` */
+#welcome-section > section > ul {
   margin: 0.5rem 0;
 }
 
-/* the list of operators in the `#gameplay-rules-div` */
-#gameplay-rules-div > ul {
+/* the list of operators in the `#gameplay-rules-section` */
+#gameplay-rules-section > ul {
   list-style: none;
 }
 
-/* unified formatting of the small buttons in the contentful `divs` within  `#welcome-div` */
-#welcome-div > div > button {
+/* unified formatting of the small buttons in the contentful `divs` within  `#welcome-section` */
+#welcome-section > section > button {
   margin-top: auto;  
   margin-bottom: 1rem;
   border-radius: 8px;
   font-size: 100%;
 }
 
-/* unified formatting of links in the contentful `divs` within  `#welcome-div` */
-#welcome-div a {
+/* unified formatting of links in the contentful `divs` within  `#welcome-section` */
+#welcome-section a {
   color: var(--white);
 }
 
@@ -130,14 +130,14 @@ a {
 }
 
 /* the "popup" screen celebrating selected milestones */
-#milestone-div {
+#milestone-section {
   display: none;
   background: url("../images/balloons.jpg") no-repeat center;
   color: var(--white);
 }
 
 /* the text on the milestone "popup" */
-#milestone-div h1 {
+#milestone-section h1 {
   background-color: var(--light-orange);
   text-align: center;  
   padding: 1rem;

@@ -20,9 +20,9 @@
 <body>
 
   <!-- the Welcome screen explaining the gameplay and the scoring rules -->
-  <div id="welcome-div" class="popup-div">
+  <section id="welcome-section" class="popup" aria-label="The welcome screen with the explanation of the gameplay and scoring">
     <!-- the div explaining the gameplay -->
-    <div id="gameplay-rules-div">
+    <section id="gameplay-rules-section" aria-label="The section explaining how to play the game">
       <p>
         With this game, you can practice the <a href="https://en.wikipedia.org/wiki/Order_of_operations">mathematical order of operations</a>.
         You will be shown some numbers from 1 to 10, and you have to select the correct operators to get the equation to work out.
@@ -46,10 +46,10 @@
       <!-- button taking the user to the Score Rules screen -->
       <button data-type="submit" id="score-button">See how scoring works</button>
 
-    </div>
+      </section>
 
     <!-- the `div` displaying how scoring works, hidden by default -->
-    <div id="score-rules-div">
+    <section id="score-rules-section" aria-label="The section explaining scoring in the game">
       <p>
         We all need less stress and more positive reinforcement in our lives, 
         so this game only counts your correct guesses – 
@@ -77,28 +77,28 @@
       <!-- button taking the user back to the Gameplay Rules screen -->
       <button data-type="submit" id="gameplay-rules-button">See how gameplay works</button>
   
-    </div>
+    </section>
 
     <!-- the Start Game button -->
     <button data-type="submit" id="start-game-button" class="big-button">Let's Play!</button>
 
-  </div>
+  </section>
 
   <!-- "popup" for certain milestones – hidden by default -->
-  <div id="milestone-div" class="popup-div">
+  <section id="milestone-section" class="popup" aria-label="A congratulatory message that pops up at certain streak milestones">
     <h1>
         Wow, <span>X</span> in a row!
     </h1>
     <!-- the Continue Game button -->
     <button data-type="submit" id="continue-game-button" class="big-button">Continue</button>
 
-  </div>
+  </section>
 
   <!-- the main title of the game -->
   <h1 class="heading">Operator Game</h1>
 
   <!-- game area including the instuctions, the question to be solved and the submit button -->
-  <div id="game-area">
+  <section id="game-area" aria-label="The area for playing the game">
 
     <p>Choose the correct operators to make the equation true</p>
 
@@ -147,7 +147,7 @@
     <!-- Submit button -->
     <button data-type="submit" id="submit-button">Check Answer</button>
 
-  </div><!-- end of `game-area` -->
+  </section><!-- end of `game-area` -->
 
   <!-- New Puzzle/New Game button -->
   <button data-type="submit" id="new-game-button" class="big-button">New Puzzle</button>

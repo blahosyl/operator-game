@@ -14,15 +14,15 @@ const geval = eval;
 
 // Welcome screen
 // the welcome screen `div`
-const welcomeDiv = document.getElementById('welcome-div');
+const welcomeSection = document.getElementById('welcome-section');
 // the `div` where the gameplay rules are displayed
-const gameplayRulesDiv = document.getElementById('gameplay-rules-div');
+const gameplayRulesSection = document.getElementById('gameplay-rules-section');
 // Start Game button
 const startGameButton = document.getElementById('start-game-button');
 // the button for showing the score `div`
 const scoreButton = document.getElementById('score-button');
 // the `div` where the scoring rules are displayed
-const scoreRulesDiv = document.getElementById('score-rules-div');
+const scoreRulesSection = document.getElementById('score-rules-section');
 // the button for showing the gameplay `div`
 const gameplayRulesButton = document.getElementById('gameplay-rules-button');
 // the `div` where the solution/congratulation text is displayed
@@ -37,7 +37,7 @@ const newGameButton = document.getElementById('new-game-button');
 const streakCounter = document.getElementById('streak-counter');
 
 // Milestones
-const milestoneDiv = document.getElementById('milestone-div');
+const milestoneSection = document.getElementById('milestone-section');
 // Continue Game button
 const continueGameButton = document.getElementById('continue-game-button');
 
@@ -45,10 +45,10 @@ const continueGameButton = document.getElementById('continue-game-button');
 
 // Welcome screen
 
-// when the button is clicked, the `scoreRulesDiv` should replace `gameplayRulesDiv` on the screen
+// when the button is clicked, the `scoreRulesSection` should replace `gameplayRulesSection` on the screen
 scoreButton.addEventListener('click',showScoreRulesDiv);
 
-// when the button is clicked, the `gameplayRulesDiv` should replace `scoreRulesDiv` on the screen
+// when the button is clicked, the `gameplayRulesSection` should replace `scoreRulesSection` on the screen
 gameplayRulesButton.addEventListener('click',showGameplayRulesDiv);
 
 // hide the Welcome screen
@@ -79,26 +79,26 @@ continueGameButton.addEventListener('click',continueGame);
 //Functions
 
 /**
- * Hide the `gameplayRulesDiv` and show the the `scoreRulesDiv`
+ * Hide the `gameplayRulesSection` and show the the `scoreRulesSection`
  */
 function showScoreRulesDiv() {
-  gameplayRulesDiv.style.display = 'none';
-  scoreRulesDiv.style.display = 'flex';
+  gameplayRulesSection.style.display = 'none';
+  scoreRulesSection.style.display = 'flex';
 }
 
 /**
- * Hide the `scoreRulesDiv` and show the the `gameplayRulesDiv`
+ * Hide the `scoreRulesSection` and show the the `gameplayRulesSection`
  */
 function showGameplayRulesDiv() {
-  scoreRulesDiv.style.display = 'none';
-  gameplayRulesDiv.style.display = 'flex';
+  scoreRulesSection.style.display = 'none';
+  gameplayRulesSection.style.display = 'flex';
 }
 
 /**
- * Hide the `welcomeDiv`
+ * Hide the `welcomeSection`
  */
 function startGame() {
-welcomeDiv.style.display = 'none';
+welcomeSection.style.display = 'none';
 }
 
 // generating and displaying operands (numbers)
@@ -352,17 +352,17 @@ function refreshStreakCounter() {
 }
 
 /**
- * Show the `milestoneDiv`
+ * Show the `milestoneSection`
  */
 function showMilestone() {
-  milestoneDiv.style.display = 'flex';
+  milestoneSection.style.display = 'flex';
   }
 
 /**
- * Hide the `milestoneDiv`
+ * Hide the `milestoneSection`
  */
 function continueGame() {
-  milestoneDiv.style.display = 'none';
+  milestoneSection.style.display = 'none';
   }
 
 /**
@@ -370,9 +370,9 @@ function continueGame() {
  */
 function showMilestones() {
   // get the message on the milestone div
-  let streakText = milestoneDiv.children[0];
+  let streakText = milestoneSection.children[0];
   // get the `span` for the streak count
-  let streakDisplay = milestoneDiv.children[0].children[0];
+  let streakDisplay = milestoneSection.children[0].children[0];
   // color variable for the streakText background color and the color of streakText
   let color;
   // color variable for the Continue Game button
@@ -386,9 +386,9 @@ function showMilestones() {
       // set streak milestone color
       color = 'var(--med-blue)';
       buttonColor = 'var(--light-orange)';
-      // show the `milestoneDiv`
+      // show the `milestoneSection`
       showMilestone();
-      // show streak count on `milestoneDiv`
+      // show streak count on `milestoneSection`
       streakDisplay.textContent = streak;
       streakText.style.backgroundColor=color;
       // change color of Continue button
@@ -402,9 +402,9 @@ function showMilestones() {
       // set streak milestone color
       color = 'var(--red)';
       buttonColor = 'var(--light-blue)';
-      // show the `milestoneDiv`
+      // show the `milestoneSection`
       showMilestone();
-      // show streak count on `milestoneDiv`
+      // show streak count on `milestoneSection`
       streakDisplay.textContent = streak;
       streakText.style.backgroundColor=color;
       // change color of Continue button
@@ -418,9 +418,9 @@ function showMilestones() {
       // set streak milestone color
       color = 'var(--med-orange)';
       buttonColor = 'var(--light-orange)';
-      // show the `milestoneDiv`
+      // show the `milestoneSection`
       showMilestone();
-      // show streak count on `milestoneDiv`
+      // show streak count on `milestoneSection`
       streakDisplay.textContent = streak;
       streakText.style.backgroundColor=color;
       // change color of Continue button
