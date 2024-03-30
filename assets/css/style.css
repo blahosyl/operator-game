@@ -129,7 +129,7 @@ a {
 /* the "popup" screen celebrating selected milestones */
 #milestone-section {
   display: none;
-  background: url("../images/balloons.jpg") no-repeat center;
+  background: url("../images/balloons.webp") no-repeat center center/cover;
   color: var(--white);
 }
 

@@ -68,8 +68,7 @@ JavaScript, HTML, CSS
 Google Dev Tools – troubleshoot, test responsivity and styling
 <!--TinyPNG – compress images
 -->
-<!--Birne – resize images and convert to `webp` format
--->
+- [Birme](https://www.birme.net/) – resize images and convert to `webp` format
 - [Favicon.io](https://favicon.io) – create the favicon
 - [Flaticon](https://www.flaticon.com/) image for favicon
 - Am I Responsive? – show the website image on a range of devices
