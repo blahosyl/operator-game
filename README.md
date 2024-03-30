@@ -140,7 +140,9 @@ Web Disability Simulator
 
 ## Credits
 
-### Code
+### Study materials
+
+The following resources were used to learn/double check general, atomic functionalities/syntax:
 
 - [`form select` element](https://www.w3schools.com/html/html_form_elements.asp)
 - [Get the `value` from a `select` form](https://www.w3schools.com/jsref/prop_select_value.asp)
@@ -163,6 +165,17 @@ Web Disability Simulator
 - [Iterate over a string](https://buzzcoder.gitbooks.io/codecraft-javascript/content/string/loop-through-a-string.html)
 - [`replace()` method](https://www.freecodecamp.org/news/javascript-replace-how-to-replace-a-string-or-substring-in-js/)
 - [Box shadows](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+
+### Code
+
+The following sources contributed code or suggestions to specific functions within the project:
+
+JS
+
+1 x mentor
+2 x tutors
+
+Other mentor suggestions: see GitHub Issues
 
 ### Content
 
