@@ -229,7 +229,7 @@ a {
   margin-left: 2px;
 }
 
-/* the `div` containing the operator selector drop-down and its label */
+/* the `div` containing the operand selector drop-down and its label */
 #number-selector-div {
   display: flex;
   flex-wrap: wrap;

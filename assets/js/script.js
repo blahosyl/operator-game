@@ -65,9 +65,9 @@ newGameButton.addEventListener('click',newGame);
 // add event listener to Submit button to check the user asnwer
 submitButton.addEventListener('click',checkAnswer);
 
-// when the operator selector is changed, add the correcponding number of operand+operator pairs
-let operatorSelector = document.getElementById('number-selector');
-operatorSelector.addEventListener('change',setOperandOperatorCount);
+// when the operand selector is changed, add the correcponding number of operand+operator pairs
+let operandSelector = document.getElementById('number-selector');
+operandSelector.addEventListener('change',setOperandOperatorCount);
 
 // get all operator select forms
 let operatorSelectors = document.getElementsByClassName('operator-selector');
@@ -300,7 +300,7 @@ function showUserGuess() {
 * Check the user's guess against the correct solution
 */
 function checkUserGuess() {
-  // the result based on the operands shown and the operators selected by the user
+  // the user guess based on the operands shown and the operators selected by the user
   let userGuess = geval(concatenateWithOperands(getUserOperators()));
 
   // the correct result based on the operands shown and the randomly generated operators
@@ -457,7 +457,7 @@ function adjustInstructions() {
   let gameArea = document.getElementById('game-area');
   // the first paragraph within it
   let instructions = gameArea.children[0];
-  // the number of operands chose by the user
+  // the number of operands chosen by the user
   let num = getOperandNumber();
   if (num == 2) { // this needs to be `==`, not `====`, type conversion needed
     instructions.innerHTML = 'Choose the correct operator to get the result shown';
