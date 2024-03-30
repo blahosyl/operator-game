@@ -31,19 +31,31 @@
 >
 >`// ASSESSMENT uncomment the next line for testing/assessment`
 
-### Features present on all pages
+### Welcome screen
 
-#### Logo
+#### Gameplay rules section
 
-#### Nav bar
+#### Scoring rules section
 
-#### Footer with social media links
+### Game area
 
-### Home page
+#### Question area
 
-### About page
+#### Result area
 
-### Contact page
+#### Check Answer button
+
+#### Milestone "popup"
+
+ specify why I use inline styles for buttons
+
+Only for the milestones
+
+### New Game/New Puzzle button 
+
+### Perfect streak counter
+
+### Operator selector toggle
 
 ### Future implementations
 
