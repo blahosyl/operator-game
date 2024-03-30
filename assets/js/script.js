@@ -478,7 +478,7 @@ function setOperandOperatorCount() {
   // the value of the operand selector
   let num = getOperandNumber();
 
-  while (getOperands().length +1 <= num){
+  while (getOperands().length < num){
     // 2 operands appear by default, so:
     // iterate 2 times less than the number specified by the drop-down
     for (let i=2; i<num; i++) {
