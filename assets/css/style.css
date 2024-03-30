@@ -139,8 +139,15 @@ a {
   text-align: center;  
   padding: 1rem;
   border-radius: 5px;
+  box-shadow: -10px -10px 8px var(--white);
   font-size: 250%;
 }
+
+/* the button on the milestone "popup" */
+#continue-game-button {
+  box-shadow: 5px 5px 2px var(--white);
+}
+
 
 /* the game area containing the game title, question area, new game button, streak counter and operand selector drop-down */
 #game-area {
