@@ -134,7 +134,7 @@ a {
 }
 
 /* the text on the milestone "popup" */
-#milestone-section h1 {
+#milestone-text {
   background-color: var(--light-orange);
   text-align: center;  
   padding: 1rem;
