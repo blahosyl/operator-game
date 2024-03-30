@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="manifest" href="assets/favicon/site.webmanifest">
-  
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -28,18 +28,18 @@
 
   <!-- the Welcome screen explaining the gameplay and the scoring rules -->
   <section id="welcome-section" class="popup" aria-label="The welcome screen with the explanation of the gameplay and scoring">
-    
+
     <!-- the section explaining the gameplay -->
     <section id="gameplay-rules-section" aria-label="The section explaining how to play the game">
-      
+
       <p>
-        With this game, you can practice the <a href="https://en.wikipedia.org/wiki/Order_of_operations" 
-         target="_blank" rel="noopener" aria-label="Wikipedia article on the order of mathematical operations (opens in a new tab)">
-         mathematical order of operations</a>.
+        With this game, you can practice the <a href="https://en.wikipedia.org/wiki/Order_of_operations"
+        target="_blank" rel="noopener" aria-label="Wikipedia article on the order of mathematical operations (opens in a new tab)">
+        mathematical order of operations</a>.
       </p>
 
       <p>
-        Select the correct operator(s) from the drop-down menu(s)to get the equation to work out, 
+        Select the correct operator(s) from the drop-down menu(s)to get the equation to work out,
         then click Check Answer to see if your guess was correct.
       </p>
 
@@ -51,12 +51,12 @@
         You can choose between these operators:
       </p>
 
-        <ul>
-          <li><span class="operator">+</span> addition</li>
-          <li><span class="operator">&minus;</span> subtraction</li>
-          <li><span class="operator">&times;</span> multiplication</li>
-          <li><span class="operator">&divide;</span> division</li>
-        </ul>
+      <ul>
+        <li><span class="operator">+</span> addition</li>
+        <li><span class="operator">&minus;</span> subtraction</li>
+        <li><span class="operator">&times;</span> multiplication</li>
+        <li><span class="operator">&divide;</span> division</li>
+      </ul>
 
       <!-- button taking the user to the Score Rules screen -->
       <button data-type="submit" id="score-button">See how scoring works</button>
@@ -66,12 +66,12 @@
     <!-- the section displaying how scoring works, hidden by default -->
     <section id="score-rules-section" aria-label="The section explaining scoring in the game">
       <p>
-        We all need less stress and more positive reinforcement in our lives, 
-        so this game only counts your correct guesses in a row – 
+        We all need less stress and more positive reinforcement in our lives,
+        so this game only counts your correct guesses in a row –
         who cares how many times you got it wrong, let's celebrate the wins! 🎉
       </p>
       <p>
-        Keep an eye out for special surprises at certain milestones 👀  
+        Keep an eye out for special surprises at certain milestones 👀
       </p>
       <br>
       <p>
@@ -81,17 +81,17 @@
         Don't worry, you can skip it without ruining your streak: just press the New Puzzle button,
         or adjust how many numbers you want to play with using the drop-down menu at the bottom.
       </p>
-      <p>       
+      <p>
         Both of those give you a new puzzle while keeping your streak 🤗
       </p>
       <p>
         But if you have the spoons to challenge yourself and don't mind getting it wrong sometimes,
-         go for it – that's how you'll learn even more! 💪
+        go for it – that's how you'll learn even more! 💪
       </p>
-   
+
       <!-- button taking the user back to the Gameplay Rules screen -->
       <button data-type="submit" id="gameplay-rules-button">See how gameplay works</button>
-  
+
     </section><!-- end of `score-rules-section` -->
 
     <!-- the Start Game button -->
@@ -102,7 +102,7 @@
   <!-- "popup" for certain milestones – hidden by default -->
   <section id="milestone-section" class="popup" aria-label="A congratulatory message that pops up at certain streak milestones">
     <div id="milestone-text">
-        Wow, <span>X</span> in a row!
+      Wow, <span>X</span> in a row!
     </div>
     <!-- the Continue Game button -->
     <button data-type="submit" id="continue-game-button" class="big-button">Continue</button>
@@ -132,7 +132,7 @@
           <option value="/">&divide;</option>
         </select>
       </form>
-      
+
       <!-- an operand -->
       <span class="operand">1</span>
 
@@ -170,7 +170,7 @@
 
   <!-- perfect streak counter -->
   <div id="streak-div">
-    Your perfect streak: 
+    Your perfect streak:
     <span id="streak-counter">0</span>
   </div>
 

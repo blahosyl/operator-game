@@ -81,26 +81,26 @@ continueGameButton.addEventListener('click',continueGame);
 //Functions
 
 /**
- * Hide the `gameplayRulesSection` and show the the `scoreRulesSection`
- */
+* Hide the `gameplayRulesSection` and show the the `scoreRulesSection`
+*/
 function showScoreRulesDiv() {
   gameplayRulesSection.style.display = 'none';
   scoreRulesSection.style.display = 'flex';
 }
 
 /**
- * Hide the `scoreRulesSection` and show the the `gameplayRulesSection`
- */
+* Hide the `scoreRulesSection` and show the the `gameplayRulesSection`
+*/
 function showGameplayRulesDiv() {
   scoreRulesSection.style.display = 'none';
   gameplayRulesSection.style.display = 'flex';
 }
 
 /**
- * Hide the `welcomeSection`
- */
+* Hide the `welcomeSection`
+*/
 function startGame() {
-welcomeSection.style.display = 'none';
+  welcomeSection.style.display = 'none';
 }
 
 // generating and displaying operands (numbers)
@@ -114,7 +114,7 @@ welcomeSection.style.display = 'none';
 function generateRandomNumbers(bound) {
   let randomNumbers = [];
   let length = getOperands().length;
-for (let i = 0; i<length; i++) {
+  for (let i = 0; i<length; i++) {
     // generate random integer between 0 and `bound-1`
     let randomNumber = Math.floor(Math.random()*bound);
     // add the random integer to the array `randomNumbers`
@@ -133,9 +133,9 @@ for (let i = 0; i<length; i++) {
 function eliminateZero(array,bound) {
   // make sure the number is not 0
   for (let i in array) {
-     if (array.hasOwnProperty(i)) { //`if` statement suggested by mentor to eliminate JSHint warning. Does not change functionality.
+    if (array.hasOwnProperty(i)) { //`if` statement suggested by mentor to eliminate JSHint warning. Does not change functionality.
       while (array[i] === 0) {
-      array[i] = Math.floor(Math.random()*bound);
+        array[i] = Math.floor(Math.random()*bound);
       }
     }
   }
@@ -181,10 +181,10 @@ function getOperands() {
 // end of generating and displaying operands (numbers)
 
 /**
- * Pick random operators from an array.
- * These are not shown to the user.
- * @return {array} an array random operators with the length equal to the length of the array of operands
- */
+* Pick random operators from an array.
+* These are not shown to the user.
+* @return {array} an array random operators with the length equal to the length of the array of operands
+*/
 function generateRandomOperators() {
   // generate an array of random integers between 0 and 3 (inclusive)
   let randomOperatorNumbers = generateRandomNumbers(4);
@@ -203,32 +203,32 @@ function generateRandomOperators() {
 }
 
 /**
- * Alternately concatenate the operands shown with an array of operators.
- * @param {array} operators the array of operators chosen.  
- * The operators can be the ones chosen by the user or the randomly generated ones.
- * @returns {string} a concatenated string of the operands shown and the operators specified
- */
+* Alternately concatenate the operands shown with an array of operators.
+* @param {array} operators the array of operators chosen.
+* The operators can be the ones chosen by the user or the randomly generated ones.
+* @returns {string} a concatenated string of the operands shown and the operators specified
+*/
 function concatenateWithOperands(operators) {
   // define empty string for user answer
   let concatenatedString = '';
   // add a dummy operator at the end of the operator array
   // to make its length equal to the array of operators
   operators.push('X');
-    // alternately add a number and an operator to the string
-    let operands = getOperands();
-    let length = operands.length;
-    for (let i = 0; i<length; i++) {
-      concatenatedString += operands[i];
-      concatenatedString += operators[i];
-    }
-    // cut off the dummy operator from the end of the string
-    concatenatedString = concatenatedString.slice(0, -1);
-    return concatenatedString;
+  // alternately add a number and an operator to the string
+  let operands = getOperands();
+  let length = operands.length;
+  for (let i = 0; i<length; i++) {
+    concatenatedString += operands[i];
+    concatenatedString += operators[i];
+  }
+  // cut off the dummy operator from the end of the string
+  concatenatedString = concatenatedString.slice(0, -1);
+  return concatenatedString;
 }
 
 /**
- * Show the expected result in the question area
- * @return {number} The correct solution of the puzzle
+* Show the expected result in the question area
+* @return {number} The correct solution of the puzzle
 */
 function showResult() {
   let result = document.getElementById('result');
@@ -236,8 +236,8 @@ function showResult() {
   return result.innerHTML;
 }
 
-/** 
- * Check the answer submitted by the user
+/**
+* Check the answer submitted by the user
 */
 function checkAnswer() {
   // concatenate the operands with the operators selected by the user
@@ -254,9 +254,9 @@ function checkAnswer() {
 }
 
 /**
- * Get the operators chosen by the user
- * @return {array} the array of operators chosen by the user
- */
+* Get the operators chosen by the user
+* @return {array} the array of operators chosen by the user
+*/
 function getUserOperators() {
   // get the array of all operators selected by the user
   let userOperators = document.getElementsByClassName('operator-selector');
@@ -270,24 +270,24 @@ function getUserOperators() {
 }
 
 /**
- * Display the result of the user's incorrect guess
- */
+* Display the result of the user's incorrect guess
+*/
 function showUserGuess() {
   // get the concatenated string of operands and user-selected operators
   let userOperators = getUserOperators();
   let guess = concatenateWithOperands(userOperators);
 
-  // in the text displayed to the user, change "-","*" and "/" 
+  // in the text displayed to the user, change "-","*" and "/"
   // to "&minus", "&times;" and "&divide;", respectively
   // ("+" is the same character as "&plus;"", so doesn't need to be changed")
   // start out with the concatenated string of operators and operands
   let formattedGuess = guess;
-  // change each character that is "-","*" or "/" 
+  // change each character that is "-","*" or "/"
   for (let i =0; i < formattedGuess.length; i++) {
-      formattedGuess = formattedGuess.replace("-", "&minus;");
-      formattedGuess = formattedGuess.replace("*", "&times;");
-      formattedGuess = formattedGuess.replace("/", "&divide;");
-    }
+    formattedGuess = formattedGuess.replace("-", "&minus;");
+    formattedGuess = formattedGuess.replace("*", "&times;");
+    formattedGuess = formattedGuess.replace("/", "&divide;");
+  }
   // show the user's guess and its result
   solutionDiv.innerHTML = `Not quite! Your result is:
   <br>
@@ -297,8 +297,8 @@ function showUserGuess() {
 }
 
 /**
- * Check the user's guess against the correct solution
- */
+* Check the user's guess against the correct solution
+*/
 function checkUserGuess() {
   // the result based on the operands shown and the operators selected by the user
   let userGuess = geval(concatenateWithOperands(getUserOperators()));
@@ -310,14 +310,14 @@ function checkUserGuess() {
   if (userGuess === correctSolution) {
     // display congratulations message
     solutionDiv.innerHTML = `Congratulations, that is correct!
-     <br>
-      🎉🎉🎉🎉
+    <br>
+    🎉🎉🎉🎉
     `;
     // disable Submit button
     submitButton.disabled = true;
     // increase perfect streak counter
     streak += 1;
-  } else {  
+  } else {
     // show the result of the user's guess
     showUserGuess();
     // change text on Submit button
@@ -330,24 +330,24 @@ function checkUserGuess() {
 }
 
 /**
- * Clear the `solution` div
- */
+* Clear the `solution` div
+*/
 function clearSolutionText() {
   // set the contents of the `solution` `div` to empty
   solutionDiv.innerHTML = '';
 }
 
 /**
- * Enable the Submit button
- * Made into a separate function so that an event listener could trigger it
- */
+* Enable the Submit button
+* Made into a separate function so that an event listener could trigger it
+*/
 function enableSubmitButton() {
   submitButton.disabled = false;
 }
 
 /**
- * Refresh the perfect streak counter in the HTML
- */
+* Refresh the perfect streak counter in the HTML
+*/
 function refreshStreakCounter() {
   // set its content to the value of the global variable `streak`
   streakCounter.textContent=streak;
@@ -355,22 +355,22 @@ function refreshStreakCounter() {
 }
 
 /**
- * Show the `milestoneSection`
- */
+* Show the `milestoneSection`
+*/
 function showMilestone() {
   milestoneSection.style.display = 'flex';
-  }
+}
 
 /**
- * Hide the `milestoneSection`
- */
+* Hide the `milestoneSection`
+*/
 function continueGame() {
   milestoneSection.style.display = 'none';
-  }
+}
 
 /**
- * Trigger extra events at certain perfect streak milestones
- */
+* Trigger extra events at certain perfect streak milestones
+*/
 function showMilestones() {
   // get the message on the milestone div
   let streakText = milestoneSection.children[0];
@@ -382,76 +382,76 @@ function showMilestones() {
   let buttonColor;
   switch (streak) {
     case 0:
-      //change the color of the streak div back to default
-      streakDiv.style.backgroundColor='var(--white)';
-      break;
+    //change the color of the streak div back to default
+    streakDiv.style.backgroundColor='var(--white)';
+    break;
     case 1:
-      // set streak milestone color
-      color = 'var(--med-blue)';
-      buttonColor = 'var(--light-orange)';
-      // show the `milestoneSection`
-      showMilestone();
-      // show streak count on `milestoneSection`
-      streakDisplay.textContent = streak;
-      // change background color of the milestone "popup" text
-      streakText.style.backgroundColor=color;
-      // change background color of Continue button
-      continueGameButton.style.backgroundColor = buttonColor;
-      // change background background color of the streak div
-      streakDiv.style.backgroundColor = buttonColor;
-      // run new game after milestone "popup"
-      newGame();
-      break;
+    // set streak milestone color
+    color = 'var(--med-blue)';
+    buttonColor = 'var(--light-orange)';
+    // show the `milestoneSection`
+    showMilestone();
+    // show streak count on `milestoneSection`
+    streakDisplay.textContent = streak;
+    // change background color of the milestone "popup" text
+    streakText.style.backgroundColor=color;
+    // change background color of Continue button
+    continueGameButton.style.backgroundColor = buttonColor;
+    // change background background color of the streak div
+    streakDiv.style.backgroundColor = buttonColor;
+    // run new game after milestone "popup"
+    newGame();
+    break;
     case 2:
-      // set streak milestone color
-      color = 'var(--red)';
-      buttonColor = 'var(--light-blue)';
-      // show the `milestoneSection`
-      showMilestone();
-      // show streak count on `milestoneSection`
-      streakDisplay.textContent = streak;
-      // change background color of the milestone "popup" text
-      streakText.style.backgroundColor=color;
-      // change color of Continue button
-      continueGameButton.style.backgroundColor = buttonColor;
-      // change background color of the streak div
-      streakDiv.style.backgroundColor = buttonColor;
-      // run new game after milestone "popup"
-      newGame();
-      break;
+    // set streak milestone color
+    color = 'var(--red)';
+    buttonColor = 'var(--light-blue)';
+    // show the `milestoneSection`
+    showMilestone();
+    // show streak count on `milestoneSection`
+    streakDisplay.textContent = streak;
+    // change background color of the milestone "popup" text
+    streakText.style.backgroundColor=color;
+    // change color of Continue button
+    continueGameButton.style.backgroundColor = buttonColor;
+    // change background color of the streak div
+    streakDiv.style.backgroundColor = buttonColor;
+    // run new game after milestone "popup"
+    newGame();
+    break;
     case 3:
-      // set streak milestone color
-      color = 'var(--med-orange)';
-      buttonColor = 'var(--peach)';
-      // show the `milestoneSection`
-      showMilestone();
-      // show streak count on `milestoneSection`
-      streakDisplay.textContent = streak;
-      // change background color of the milestone "popup" text
-      streakText.style.backgroundColor=color;
-      // change background color of Continue button
-      continueGameButton.style.backgroundColor = buttonColor;
-      // change background color of the streak div
-      streakDiv.style.backgroundColor = buttonColor;
-      // run new game after milestone "popup"
-      newGame();
-      break;     
+    // set streak milestone color
+    color = 'var(--med-orange)';
+    buttonColor = 'var(--peach)';
+    // show the `milestoneSection`
+    showMilestone();
+    // show streak count on `milestoneSection`
+    streakDisplay.textContent = streak;
+    // change background color of the milestone "popup" text
+    streakText.style.backgroundColor=color;
+    // change background color of Continue button
+    continueGameButton.style.backgroundColor = buttonColor;
+    // change background color of the streak div
+    streakDiv.style.backgroundColor = buttonColor;
+    // run new game after milestone "popup"
+    newGame();
+    break;
   }
 }
 
 /**
- * Get the number of operands from the drop-down selector
- * @returns {number}
- */
+* Get the number of operands from the drop-down selector
+* @returns {number}
+*/
 function getOperandNumber() {
   let operandNumber = document.getElementById('number-selector').value;
   return operandNumber;
 }
 
 /**
- * Adjust the instruction text in the game area depending on the number of operands:
- * singular "operator" for 2 operands, plural "operators" for 3 or more operands
- */
+* Adjust the instruction text in the game area depending on the number of operands:
+* singular "operator" for 2 operands, plural "operators" for 3 or more operands
+*/
 function adjustInstructions() {
   // get the `game-area` from the HTML
   let gameArea = document.getElementById('game-area');
@@ -467,8 +467,8 @@ function adjustInstructions() {
 }
 
 /**
- * Adjust the number of operators and operands based on the value of the operand drop-down selector
- */
+* Adjust the number of operators and operands based on the value of the operand drop-down selector
+*/
 function setOperandOperatorCount() {
   let questionDiv = document.getElementById('question-area');
   // the first operand shown
@@ -481,7 +481,7 @@ function setOperandOperatorCount() {
   while (getOperands().length +1 <= num){
     // 2 operands appear by default, so:
     // iterate 2 times less than the number specified by the drop-down
-    for (let i=2; i<num; i++) { 
+    for (let i=2; i<num; i++) {
       // clone the first operand node
       let newOperand = operand1.cloneNode(true);
       // clone the first operator node
@@ -493,14 +493,14 @@ function setOperandOperatorCount() {
       // has to be added after adding the operator
       questionDiv.insertBefore(newOperand, questionDiv.children[0]);
     }
-}
+  }
 
-  // if the number of operands is larger than the value of the operand selector 
+  // if the number of operands is larger than the value of the operand selector
   while (getOperands().length > num) {
-      // remove the first operator drop-down
-      questionDiv.children[1].remove();
-      // remove the first operand
-      questionDiv.children[0].remove();
+    // remove the first operator drop-down
+    questionDiv.children[1].remove();
+    // remove the first operand
+    questionDiv.children[0].remove();
   }
 
   // adjust the instruction text based on the number of operands
@@ -530,7 +530,7 @@ function newGame() {
   for (let i of operatorSelectors) {
     i.addEventListener('change',clearSolutionText);
     i.addEventListener('change',enableSubmitButton);
-   }
+  }
 
   // set operator menus back to '+'
   for (let i of operatorSelectors) {
@@ -539,7 +539,7 @@ function newGame() {
 
   // show operands in the question area
   showRandomOperands(11);
- 
+
   // reset operator numbers
   currentChosenOperators = [];// with the help of tutor Roo (refactored)
   // show the operators in the console log for development purposes

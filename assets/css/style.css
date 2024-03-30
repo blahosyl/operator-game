@@ -7,18 +7,18 @@
   --med-orange: #DC3A04;
   --light-orange: #FCAF02;
   --red: #EB0000;
-  --white: #FFFFFF; 
+  --white: #FFFFFF;
 
 }
 /* global layout */
 body {
-/* elements in one column */
-display: flex;
-flex-direction: column;
-/* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
-align-items: center;
-font-family: 'Poppins', sans-serif;
-color: var(--dark-blue);
+  /* elements in one column */
+  display: flex;
+  flex-direction: column;
+  /* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark-blue);
 }
 
 /* headings */
@@ -134,7 +134,7 @@ a {
 /* the text on the milestone "popup" */
 #milestone-text {
   background-color: var(--light-orange);
-  text-align: center;  
+  text-align: center;
   padding: 1rem;
   border-radius: 5px;
   box-shadow: -10px -10px 8px var(--white);
@@ -157,7 +157,7 @@ a {
   border: solid 8px var(--red);
   border-radius: 20px;
   padding: 2rem;
-  }
+}
 
 /* question area */
 /* question area items should be in a row (where they fit) */
@@ -239,7 +239,7 @@ a {
 
 /* the drop-down for selecting the number of operands */
 #number-selector {
- margin-left: 2px;
+  margin-left: 2px;
 }
 
 /* Media Queries */
@@ -252,7 +252,7 @@ a {
     width: 80%;
     height: 95%;
   }
-  
+
   /* the section within `#welcome-section` displaying the scoring rules, hidden by default */
   #score-rules-section {
     padding-top: 10rem;
@@ -274,5 +274,3 @@ a {
     padding-top: 11rem;
   }
 }
-
-
