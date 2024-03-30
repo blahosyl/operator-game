@@ -38,8 +38,8 @@ a {
 
 /* "popups" filling the whole screen */
 .popup {
-  width: 80vw;
-  height: 90vh;
+  width: 90%;
+  height: 90%;
   position: absolute;
   margin-top: 0.5%;
   top: 0;
@@ -59,7 +59,7 @@ a {
   color: var(--white);
 }
 
-/* the `div` within `#welcome-section` displaying the gameplay instructions */
+/* the section within `#welcome-section` displaying the gameplay instructions */
 #gameplay-rules-section {
   display: flex;
 }
@@ -70,7 +70,7 @@ a {
   font-size: 120%;
 }
 
-/* the `div` within `#welcome-section` displaying the scoring rules, hidden by default */
+/* the section within `#welcome-section` displaying the scoring rules, hidden by default */
 #score-rules-section {
   display: none;
 }
@@ -238,22 +238,34 @@ a {
 
 /* Media Queries */
 
-/* very narrow screens */
-@media screen and (max-width: 290px) and (max-height: 705px) {
-
-  #gameplay-rules-section {
-    padding-top: 4rem;
-  }
-
-  #score-rules-section {
-    padding-top: 20rem;
-  }
-}
-
 /*  narrow screens */
 @media screen and (max-width: 380px) {
 
+  /* "popups" filling the whole screen */
+  .popup {
+    width: 80%;
+    height: 95%;
+  }
+    
   #score-rules-section {
     padding-top: 10rem;
   }
 }
+
+/* very narrow screens */
+@media screen and (max-width: 290px) and (max-height: 705px) {
+
+  /* "popups" filling the whole screen */
+  .popup {
+    width: 80%;
+    height: 110%;
+  }
+
+
+  /* the section within `#welcome-section` displaying the scoring rules, hidden by default */
+  #score-rules-section {
+    padding-top: 11rem;
+  }
+}
+
+
