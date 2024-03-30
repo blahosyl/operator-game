@@ -226,6 +226,8 @@ a {
 /* the `div` containing the operator selector drop-down and its label */
 #number-selector-div {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 1rem;
 }
 
