@@ -162,6 +162,7 @@ Web Disability Simulator
 - [Image color picker](https://imagecolorpicker.com/)
 - [Iterate over a string](https://buzzcoder.gitbooks.io/codecraft-javascript/content/string/loop-through-a-string.html)
 - [`replace()` method](https://www.freecodecamp.org/news/javascript-replace-how-to-replace-a-string-or-substring-in-js/)
+- [Box shadows](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
 
 ### Content
 
