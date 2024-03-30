@@ -161,8 +161,17 @@ Full testing of functionalities
 
 ### Accessibility testing
 
-Wave
+#### Manual accessibility testing
 
+The [WebAIM](https://webaim.org/resources/contrastchecker/) was used to ensure that the text and background color of each section provides sufficient contrast for legibility.
+
+In the instances where this was not the case, the colors themselves or their arrangement was changed to ensure that accessibility standards are met. Related issues are [#41](https://github.com/blahosyl/operator-game/issues/41) and [#15](https://github.com/blahosyl/operator-game/issues/15), as well as [this commit](https://github.com/blahosyl/operator-game/commit/f2fad4e27e714602503d1abe5dffd858d1ce7f65).
+
+The resulting color scheme is as follows:
+
+![Color palette](readme-pics/color-palette.png)
+
+The color variable names used in the project are as follows:
 
 |color name 	|HEX code|
 |---			|---	|
