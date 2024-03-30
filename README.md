@@ -62,23 +62,17 @@ JavaScript, HTML, CSS
 <!--Balsamiq – wireframes
 -->
 
-Git – version control
-
-GitHub – store the source files
-
-<!--Google Fonts - import fonts used on the website
--->
+- Git – version control
+- GitHub – store the source files
+- Google Fonts - import fonts used on the website
 Google Dev Tools – troubleshoot, test responsivity and styling
-
-<!--FontAwsome – icons
--->
 <!--TinyPNG – compress images
 -->
 <!--Birne – resize images and convert to `webp` format
 -->
-<!--Favicon.io – create the favicon
--->
-Am I Responsive? – to show the website image on a range of devices
+- [Favicon.io](https://favicon.io) – create the favicon
+- [Flaticon](https://www.flaticon.com/) image for favicon
+- Am I Responsive? – show the website image on a range of devices
 
 <!--Shields.io – add badges to README
 -->
@@ -182,6 +176,8 @@ Other mentor suggestions: see GitHub Issues
 ### Media
 
 #### Images
+
+Favicon: [Mathematics icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/mathematics), modified to fit the color scheme by my, converted to `ico` format with [Favicon.io](https://favicon.io/)
 
 Milestone image by <a href="https://www.freepik.com/free-ai-image/colorful-balloons-decor-background_77741605.htm#page=3&position=9&from_view=search&track=ais&uuid=777890df-6c6e-4ecf-90da-7587aff2328e">vector_corp on Freepik</a>.
 
