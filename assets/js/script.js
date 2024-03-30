@@ -237,6 +237,22 @@ function showResult() {
 }
 
 /**
+* Get the operators chosen by the user
+* @return {array} the array of operators chosen by the user
+*/
+function getUserOperators() {
+  // get the array of all operators selected by the user
+  let userOperators = document.getElementsByClassName('operator-selector');
+  // empty array to add operator values to
+  let userOperatorValues = [];
+  // add each operator value selected by the user to the empty array
+  for (let i=0; i<userOperators.length; i++) {
+    userOperatorValues.push(userOperators[i].value);
+  }
+  return userOperatorValues;
+}
+
+/**
 * Check the answer submitted by the user
 */
 function checkAnswer() {
@@ -251,22 +267,6 @@ function checkAnswer() {
 
   // Trigger extra events at certain perfect streak milestones
   showMilestones();
-}
-
-/**
-* Get the operators chosen by the user
-* @return {array} the array of operators chosen by the user
-*/
-function getUserOperators() {
-  // get the array of all operators selected by the user
-  let userOperators = document.getElementsByClassName('operator-selector');
-  // empty array to add operator values to
-  let userOperatorValues = [];
-  // add each operator value selected by the user to the empty array
-  for (let i=0; i<userOperators.length; i++) {
-    userOperatorValues.push(userOperators[i].value);
-  }
-  return userOperatorValues;
 }
 
 /**
