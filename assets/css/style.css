@@ -149,7 +149,7 @@ a {
   flex-direction: column;
   /* elements horizontally centered (watch out: for `flex-direction: column;`, horizontal and vertical alignment commands are swapped ) */
   align-items: center;
-  border: solid 2px var(--red);
+  border: solid 8px var(--red);
   border-radius: 20px;
   padding: 2rem;
   }
@@ -160,12 +160,11 @@ a {
   /* children should be in a row */
   display: flex;
   /* elements horizontally spread out */
-  min-width: 250px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  border: solid 2px var(--light-orange);
+  border: solid 4px var(--light-orange);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 0.5rem;
   margin-bottom: 2rem;
 }
 
@@ -174,6 +173,11 @@ a {
   color: var(--red);
   font-weight: bold;
   font-size: 110%;
+}
+
+/* all children of the question-area */
+#question-area > * {
+  margin: 0.3rem;
 }
 
 /* the operator selector drop-down menus */
