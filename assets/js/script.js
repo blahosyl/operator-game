@@ -382,7 +382,7 @@ function showMilestones() {
   let buttonColor;
   switch (streak) {
     case 0:
-      // change color of streak number
+      //change the color of the streak div back to default
       streakDiv.style.backgroundColor='var(--white)';
       break;
     case 1:
@@ -393,10 +393,11 @@ function showMilestones() {
       showMilestone();
       // show streak count on `milestoneSection`
       streakDisplay.textContent = streak;
+      // change background color of the milestone "popup" text
       streakText.style.backgroundColor=color;
-      // change color of Continue button
+      // change background color of Continue button
       continueGameButton.style.backgroundColor = buttonColor;
-      // change color of the streak div
+      // change background background color of the streak div
       streakDiv.style.backgroundColor = buttonColor;
       // run new game after milestone "popup"
       newGame();
@@ -409,10 +410,11 @@ function showMilestones() {
       showMilestone();
       // show streak count on `milestoneSection`
       streakDisplay.textContent = streak;
+      // change background color of the milestone "popup" text
       streakText.style.backgroundColor=color;
       // change color of Continue button
       continueGameButton.style.backgroundColor = buttonColor;
-      // change color of the streak div
+      // change background color of the streak div
       streakDiv.style.backgroundColor = buttonColor;
       // run new game after milestone "popup"
       newGame();
@@ -425,10 +427,11 @@ function showMilestones() {
       showMilestone();
       // show streak count on `milestoneSection`
       streakDisplay.textContent = streak;
+      // change background color of the milestone "popup" text
       streakText.style.backgroundColor=color;
-      // change color of Continue button
+      // change background color of Continue button
       continueGameButton.style.backgroundColor = buttonColor;
-      // change color of the streak div
+      // change background color of the streak div
       streakDiv.style.backgroundColor = buttonColor;
       // run new game after milestone "popup"
       newGame();
@@ -462,7 +465,6 @@ function adjustInstructions() {
     instructions.innerHTML = 'Choose the correct operators to get the result shown';
   }
 }
-
 
 /**
  * Adjust the number of operators and operands based on the value of the operand drop-down selector

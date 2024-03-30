@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- metadata tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -26,8 +28,10 @@
 
   <!-- the Welcome screen explaining the gameplay and the scoring rules -->
   <section id="welcome-section" class="popup" aria-label="The welcome screen with the explanation of the gameplay and scoring">
-    <!-- the div explaining the gameplay -->
+    
+    <!-- the section explaining the gameplay -->
     <section id="gameplay-rules-section" aria-label="The section explaining how to play the game">
+      
       <p>
         With this game, you can practice the <a href="https://en.wikipedia.org/wiki/Order_of_operations" 
          target="_blank" rel="noopener" aria-label="Wikipedia article on the order of mathematical operations (opens in a new tab)">
@@ -57,9 +61,9 @@
       <!-- button taking the user to the Score Rules screen -->
       <button data-type="submit" id="score-button">See how scoring works</button>
 
-      </section>
+    </section><!-- end of `gameplay-rules-section` -->
 
-    <!-- the `div` displaying how scoring works, hidden by default -->
+    <!-- the section displaying how scoring works, hidden by default -->
     <section id="score-rules-section" aria-label="The section explaining scoring in the game">
       <p>
         We all need less stress and more positive reinforcement in our lives, 
@@ -88,12 +92,12 @@
       <!-- button taking the user back to the Gameplay Rules screen -->
       <button data-type="submit" id="gameplay-rules-button">See how gameplay works</button>
   
-    </section>
+    </section><!-- end of `score-rules-section` -->
 
     <!-- the Start Game button -->
     <button data-type="submit" id="start-game-button" class="big-button">Let's Play!</button>
 
-  </section>
+  </section><!-- end of `welcome-section` -->
 
   <!-- "popup" for certain milestones – hidden by default -->
   <section id="milestone-section" class="popup" aria-label="A congratulatory message that pops up at certain streak milestones">
@@ -103,7 +107,7 @@
     <!-- the Continue Game button -->
     <button data-type="submit" id="continue-game-button" class="big-button">Continue</button>
 
-  </section>
+  </section><!-- end of `milestone-section` -->
 
   <!-- the main title of the game -->
   <h1 class="heading">Operator Game</h1>
@@ -150,6 +154,7 @@
 
       <!-- the correct result -->
       <span id="result">1</span>
+
     </div>  <!-- end of `question-area` -->
 
     <!-- this is where the evaluation message appears after checking the answer -->
@@ -186,5 +191,7 @@
 
   <!-- load JavaScrip file -->
   <script src="assets/js/script.js"></script>
+
 </body>
+
 </html>
