@@ -3,6 +3,7 @@
   --dark-blue: #004056;
   --med-blue: #2E7E8E;
   --light-blue: #1ADAE8;
+  --peach: #FCBFAB;
   --med-orange: #DC3A04;
   --light-orange: #FCAF02;
   --red: #EB0000;
@@ -223,6 +224,7 @@ a {
   display: flex;
   margin-top: 1rem;
   font-size: large;
+  padding: 0.2rem;
 }
 
 /* the number showing the user's perfect streak count */

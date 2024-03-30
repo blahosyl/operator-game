@@ -114,6 +114,7 @@ Wave
 |dark-blue	|#004056| 
 |med-blue		|#2E7E8E| 
 |light-blue	|#1ADAE8|
+|peach			|#FCBFAB|
 |med-orange	|#DC3A04|
 |light-orange	|#FCAF02|
 |red			|#EB0000| 
@@ -132,6 +133,10 @@ The paired colors have the following contrasts:
 |med-orange 	| white	| 4.51:1	|✅ |only used for graphical objects|
 |light-orange |black	|11.27:1	|✅	 |	|
 |light-blue 	|black 	|12.23:1	|✅ |	|
+|light-blue 	|dark-blue|6.55:1	|✅ |	|
+|peach		 	|dark-blue|7.05:1	|✅ |	|
+
+
 
 
 Web Disability Simulator

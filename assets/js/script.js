@@ -33,8 +33,10 @@ const solutionDiv = document.getElementById('solution');
 const submitButton = document.getElementById('submit-button');
 // the New Game button
 const newGameButton = document.getElementById('new-game-button');
-// the streak counter from the bottom of the page
+// the streak counter at the bottom of the page
 const streakCounter = document.getElementById('streak-counter');
+// the div containing the perfect streak text and counter at the bottom of the page
+const streakDiv = document.getElementById('streak-div');
 
 // Milestones
 const milestoneSection = document.getElementById('milestone-section');
@@ -380,7 +382,7 @@ function showMilestones() {
   switch (streak) {
     case 0:
       // change color of streak number
-      streakCounter.style.color='black';
+      streakDiv.style.backgroundColor='var(--white)';
       break;
     case 1:
       // set streak milestone color
@@ -392,9 +394,9 @@ function showMilestones() {
       streakDisplay.textContent = streak;
       streakText.style.backgroundColor=color;
       // change color of Continue button
-      continueGameButton.style.backgroundColor=buttonColor;
-      // change color of streak number
-      streakCounter.style.color=color;
+      continueGameButton.style.backgroundColor = buttonColor;
+      // change color of the streak div
+      streakDiv.style.backgroundColor = buttonColor;
       // run new game after milestone "popup"
       newGame();
       break;
@@ -408,25 +410,25 @@ function showMilestones() {
       streakDisplay.textContent = streak;
       streakText.style.backgroundColor=color;
       // change color of Continue button
-      continueGameButton.style.backgroundColor=buttonColor;
-      // change color of streak number
-      streakCounter.style.color=color;
+      continueGameButton.style.backgroundColor = buttonColor;
+      // change color of the streak div
+      streakDiv.style.backgroundColor = buttonColor;
       // run new game after milestone "popup"
       newGame();
       break;
     case 3:
       // set streak milestone color
       color = 'var(--med-orange)';
-      buttonColor = 'var(--light-orange)';
+      buttonColor = 'var(--peach)';
       // show the `milestoneSection`
       showMilestone();
       // show streak count on `milestoneSection`
       streakDisplay.textContent = streak;
       streakText.style.backgroundColor=color;
       // change color of Continue button
-      continueGameButton.style.backgroundColor=buttonColor;
-      // change color of streak number
-      streakCounter.style.color=color;
+      continueGameButton.style.backgroundColor = buttonColor;
+      // change color of the streak div
+      streakDiv.style.backgroundColor = buttonColor;
       // run new game after milestone "popup"
       newGame();
       break;     
