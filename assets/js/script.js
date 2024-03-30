@@ -289,8 +289,9 @@ function showUserGuess() {
       formattedGuess = formattedGuess.replace("/", "&divide;");
     }
   // show the user's guess and its result
-  solutionDiv.innerHTML = `Not quite! Your result is:<br>`+
-  `<span class="hilight">`+formattedGuess+'='+geval(guess)+`</span>
+  solutionDiv.innerHTML = `Not quite! Your result is:
+  <br>
+  <span class="hilight">${formattedGuess}=${geval(guess)}</span>
   <br>
   Try changing an operator!`;
 }
