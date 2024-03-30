@@ -235,14 +235,13 @@ The following resources were used to learn/double check general, atomic function
 
 The following sources contributed code or suggestions to specific functions within the project:
 
-JS
-
-1 x mentor
-2 x tutors
-
-Other mentor suggestions: see GitHub Issues
+- Lewis from the tutoring team helped me solve [this issue](https://github.com/blahosyl/operator-game/issues/30).
+- Roo from the tutoring team helped me solve [this issue](https://github.com/blahosyl/operator-game/issues/5).
+- Rory Patrick Sheridan, my mentor, helped me solve this [JSHint warning](https://github.com/blahosyl/operator-game/issues/38), and gave me the tips and and heads up described in [these issues](https://github.com/blahosyl/operator-game/issues?q=is%3Aissue+label%3Amentor).
 
 ### Content
+
+All text content was written by me.
 
 ### Media
 
@@ -250,9 +249,7 @@ Other mentor suggestions: see GitHub Issues
 
 Favicon: [Mathematics icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/mathematics), modified to fit the color scheme by my, converted to `ico` format with [Favicon.io](https://favicon.io/)
 
-Milestone image by <a href="https://www.freepik.com/free-ai-image/colorful-balloons-decor-background_77741605.htm#page=3&position=9&from_view=search&track=ais&uuid=777890df-6c6e-4ecf-90da-7587aff2328e">vector_corp on Freepik</a>.
-
-#### Videos
+Milestone image by [vector_corp on Freepik](https://www.freepik.com/free-ai-image/colorful-balloons-decor-background_77741605.htm#page=3&position=9&from_view=search&track=ais&uuid=777890df-6c6e-4ecf-90da-7587aff2328e).
 
 ### Readme
 
@@ -265,7 +262,10 @@ Milestone image by <a href="https://www.freepik.com/free-ai-image/colorful-ballo
 - [Horizon Photo](https://github.com/Ri-Dearg/horizon-photo/blob/master/README.md#mobile-testing) by Rory Patrick Sheridan- [The README of my first Code Institute project](https://github.com/blahosyl/academic-publishing)
 
 
-
 ### Acknowledgements
 
-Peter Litauszki for giving me the idea for this project.
+I would like to thank Peter Litauszki for giving me the idea for this project, and for being an enthusiastic tester.
+
+I am also grateful to my mentor Rory Patrick Sheridan for his super-useful advice and great insights!
+
+Last but definitely not least, I would like to thank [Lewis](https://github.com/blahosyl/operator-game/issues/3) and Roo from the tutoring team for their efficient and friendly help when I got stumped.
