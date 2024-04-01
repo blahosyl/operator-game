@@ -68,6 +68,12 @@ The [Milestone image](assets/images/balloons.webp) is the only image used in the
 
 #### Wireframes
 
+Given that the visual part of this game is relatively simple while the JavaScript part is more complex, only one wireframe was made of the [Game Area](#game-area) and the [New Game button](#new-game-button).
+
+![Game wireframe](readme-pics/wireframe.png)
+
+The [Welcome screen](#welcome-screen) and the [Milestone "popups"](#milestone-popups) were created without prior wireframing.
+
 ### Flow
 
 #### Scoring rules
