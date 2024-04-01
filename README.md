@@ -1,6 +1,20 @@
 
 # Operator game
 
+This interactive game lets users practice the mathematical order of operations for learning or fun. 
+
+Users are shown an equation with the operators missing, and they have to guess the correct operators to make the equation true.
+
+The game has a fully [responsive](#responsivity) and [accessible](#accessibility-testing) desgin, and [a kinder scoring mechanism](#scoring-rules), making it suitable for users of a variety of ages and abilities.
+
+Extra features include the user being able to [select the difficulty level](#operator-selector-toggle) and [celebratory "popups" at certain milestones](#milestone-"popups").
+
+Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
+
+![The Operator Game is responsive](testing/automated-testing/responsivity/amiresponsive-showcase.png)
+
+[View the deployed game on Github Pages](https://blahosyl.github.io/operator-game/)
+
 
 ## User Experience (UX)
 
@@ -16,13 +30,19 @@
 
 ## Design
 
-### Color scheme
+### Visual design
 
-### Typography
+#### Color scheme
 
-### Imagery
+#### Typography
 
-### Wireframes
+#### Imagery
+
+#### Wireframes
+
+### Flow
+
+#### Scoring rules
 
 ## Features
 
@@ -38,7 +58,7 @@
 
 The game is fully responsive for all device emulators available in Chrome Developer tools, and adjusts to narrow viewports including 280 px in width.
 
-![The Operator Game is responsive](testing/automated-testing/responsivity/amiresponsive-mix.png)
+![The Operator Game is responsive](testing/automated-testing/responsivity/amiresponsive-showcase.png)
 
 ### Welcome screen
 
@@ -83,7 +103,7 @@ This button hides the welcome screen and reveals the actual game screen. The tex
 
 #### Check Answer button
 
-#### Milestone "popup"
+#### Milestone "popups"
 
  specify why I use inline styles for buttons
 
