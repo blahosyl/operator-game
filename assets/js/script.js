@@ -27,6 +27,8 @@ const scoreRulesSection = document.getElementById('score-rules-section');
 const gameplayRulesButton = document.getElementById('gameplay-rules-button');
 
 // Gameplay
+// the button for showing the welcome screen again
+const welcomeScreenButton = document.getElementById('welcome-screen-button');
 // the `div` where the solution/congratulation text is displayed
 const solutionDiv = document.getElementById('solution');
 // the Check Answer/Submit button
@@ -65,6 +67,9 @@ newGameButton.addEventListener('click',newGame);
 // add event listener to Submit button to check the user asnwer
 submitButton.addEventListener('click',checkAnswer);
 
+// show the Welcome screen
+welcomeScreenButton.addEventListener('click',showWelcomeScreen);
+
 // when the operand selector is changed, add the correcponding number of operand+operator pairs
 let operandSelector = document.getElementById('number-selector');
 operandSelector.addEventListener('change',setOperandOperatorCount);
@@ -97,10 +102,19 @@ function showGameplayRulesDiv() {
 }
 
 /**
-* Hide the `welcomeSection`
+* Hide the `welcomeSection` and show the `welcomeScreenButton`
 */
 function startGame() {
   welcomeSection.style.display = 'none';
+  welcomeScreenButton.style.display = 'inline';
+}
+
+/**
+* Show the `welcomeSection` and hide the `welcomeScreenButton`
+*/
+function showWelcomeScreen() {
+  welcomeSection.style.display = 'flex';
+  welcomeScreenButton.style.display = 'none';
 }
 
 // generating and displaying operands (numbers)
@@ -355,17 +369,19 @@ function refreshStreakCounter() {
 }
 
 /**
-* Show the `milestoneSection`
+* Show the `milestoneSection` and hide the `welcomeScreenButton`
 */
 function showMilestone() {
   milestoneSection.style.display = 'flex';
+  welcomeScreenButton.style.display = 'none';
 }
 
 /**
-* Hide the `milestoneSection`
+* Hide the `milestoneSection` and show the `welcomeScreenButton`
 */
 function continueGame() {
   milestoneSection.style.display = 'none';
+  welcomeScreenButton.style.display = 'inline';
 }
 
 /**

@@ -242,6 +242,11 @@ a {
   margin-left: 2px;
 }
 
+#welcome-screen-button {
+  margin-top: 1rem;
+  display: none;
+}
+
 /* Media Queries */
 
 /*  narrow screens */
