@@ -66,6 +66,10 @@ result maxed at 2 decimal places
 >This will show the randomly selected operators and/or the correct equation in the console.
 
 
+>[!TIP]
+>Only screenshots of features are included in this section. For videos of how each feature works, see the [Full testing of functionalities](#full-testing-of-functionalities) section.
+
+
 ### Responsivity
 
 The game is fully responsive for all device emulators available in Chrome Developer tools, and adjusts to narrow viewports including 280 px in width.
@@ -200,7 +204,7 @@ The Submit button also triggers [Milestone "popups"](milestone-"popups") when th
 
 ### Milestone "popups"
 
-Certain perfect streak milestones trigger a celebratory "popup". Currently these are streaks of 3, 5, and 10 correct guesses in a row.
+Certain perfect streak milestones trigger a celebratory "popup". Currently, these are at 3, 5, and 10 correct guesses in a row.
 
 At these points, clicking the Submit button activates the Milestone event. This consists of 2 parts:
 
