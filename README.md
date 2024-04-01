@@ -261,7 +261,19 @@ While this game is relatively minimalistic, there are several additional customi
 
 ### Accessibility
 
-aria labels, alt text, colour scheme, font choices
+The game avoids visual clutter, such as excessive borders and shadows, elements of very different shapes, color gradients, transparency, background images behind normal text, and auto-moving elements of all kinds. 
+
+These elements tend to cause problems for a variety of users (e.g. those with visual impairment, executive functioning impairment, vertigo, etc.), so steering clear of these chimes in perfectly with accessibility goals.
+
+The content of the site is structured with semantic tags, and Aria labels are used for sections without headings.
+
+Alt text is used for embedded visual elements.
+
+The color scheme was designed to ensure sufficient contrast for legibility, and modified where necessary to ensure that color combinations meet [WCAG AAA](https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/) standards (see the [Accessibility testing](#accessibility-testing) section for more detail).
+
+The fonts used in the game are easy to read, prioritizing legibility over eccentricity. 
+
+External links open in a new tab.
 
 ## Technologies used
 
