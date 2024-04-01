@@ -27,9 +27,11 @@
 ## Features
 
 >[!TIP]
->To facilitate assessment/testing, uncomment one or more of the lines in [`script.js`](assets/js/script.js) marked as follows:
+>To facilitate assessment/testing, uncomment one or more of the lines in [`script.js`](assets/js/script.js) following a comment like this:
 >
 >`// ASSESSMENT uncomment the next line for testing/assessment`
+>
+>This will show the randomly selected operators and/or the correct equation in the console.
 
 ### Welcome screen
 
@@ -147,9 +149,12 @@ The site was deployed on GitHub pages using the steps below. You can follow the 
 ## Testing
 
 >[!TIP]
->To facilitate assessment/testing, uncomment one or more of the lines in [`script.js`](assets/js/script.js) marked as follows:
+>To facilitate assessment/testing, uncomment one or more of the lines in [`script.js`](assets/js/script.js) following a comment like this:
 >
 > `// ASSESSMENT uncomment the next line for testing/assessment`
+> 
+> This will show the randomly selected operators and/or the correct equation in the console.
+
 
 ### Automated testing
 W3C validator
