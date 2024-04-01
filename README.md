@@ -193,10 +193,39 @@ The site was deployed on GitHub pages using the steps below. You can follow the 
 > 
 > This will show the randomly selected operators and/or the correct equation in the console.
 
+Issues and bugs are tracked in [Github Issues](https://github.com/blahosyl/operator-game/issues).
+
 
 ### Automated testing
-W3C validator
-Lighthouse
+
+#### HTML validation with theW3C validator
+
+The `html` file of the project was regularly tested by the [W3C validator](https://validator.w3.org/). The issues discovered during validation are tracked in [GitHub Issues](https://github.com/blahosyl/enlightened-publishing/issues).
+
+In the current version of the site, [no errors or warnings were found during validation](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fblahosyl.github.io%2Foperator-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
+
+![HTML: no issues or warnings](testing/automated-testing/w3c-html/html-validation.png)
+
+
+#### CSS validation with Jigsaw
+
+The  `css` file of the project was regularly tested by [Jigsaw](https://jigsaw.w3.org/css-validator/). The issues discovered during validation are tracked in [GitHub Issues](https://github.com/blahosyl/enlightened-publishing/issues).
+
+In the current version of the site, [no errors or warnings were found during validation](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fblahosyl.github.io%2Foperator-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
+
+
+![CSS: no issues or warnings](testing/automated-testing/jigsaw-css/css-validation.png)
+
+#### JSHint
+
+The  `js` file of the project was regularly tested by [JSHint](https://jshint.com/). The issues discovered during validation are tracked in [GitHub Issues](https://github.com/blahosyl/enlightened-publishing/issues).
+
+In the current version of the site, no errors or warnings were found during validation.
+
+
+![JS: no issues or warnings](testing/automated-testing/jshint-js/js-validation.png)
+
+#### Lighthouse
 
 ### Manual testing
 Testing user stories
