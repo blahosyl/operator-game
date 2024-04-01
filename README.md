@@ -259,7 +259,13 @@ Full testing of functionalities
 
 ### Accessibility testing
 
+#### Automated accessibility testing
+
+The process and results of automated accessibility testing can be found in the section [Lighthouse accessibility testing](#lighthouse-accessibility-testing).
+
 #### Manual accessibility testing
+
+##### Color contrast testing
 
 The [WebAIM](https://webaim.org/resources/contrastchecker/) was used to ensure that the text and background color of each section provides sufficient contrast for legibility.
 
@@ -299,9 +305,30 @@ The paired colors have the following contrasts:
 |peach		 	|dark-blue|7.05:1	|✅ |	|
 
 
+##### Web Disability Simulator
+
+The [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/) was used to check the site for a variety of conditions. The site was found to be fully functional for these conditions:
+
+- Sight
+	- Total color blindness
+	- Yellow-Blue color blindness
+	- Red-Green color blindness
+	- Sunshine
+- Mobility
+	- Parkinsons (keyboard navigation)
 
 
-Web Disability Simulator
+In addition, the design accommodates the following conditions with some of its properties:
+
+- Read and write
+	- Dyslexia
+		- avoid long blocks of text
+		- use proper spacing and line height
+		- avoid fonts with complicated and complex characters
+- Concentration
+	- give the website a simple and clean design
+	- avoid animations or auto-playing elements
+	- avoid having too much content on the same page
 
 ### Bugs
 #### Known bugs
