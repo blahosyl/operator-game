@@ -50,6 +50,12 @@ Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
 #### Scoring rules
 
+#### Difficulty level
+
+number of integers
+operators: only [+,-, *, /]
+result maxed at 2 decimal places
+
 ## Features
 
 >[!TIP]
@@ -103,23 +109,108 @@ This button hides the welcome screen and reveals the actual game screen. The tex
 
 ### Game Area
 
+The game area includes the following elements:
+
+- a short instruction line on how to play
+- the [Question Area](#question-area) displaying the puzzle to be solved
+- the [Solution Area](#solution-area) where the feedback message is shown when the user clicks the [**Check Answer**](#submit-button) button
+- the [**Check Answer**](#submit-button) button that displays the appropriate message in the [Solution Area](#solution-area)
+
+![The Game Area](readme-pics/game-area-empty.png)
+
+The game area is responsive on all tested devices. 
+
+![The Game Area is responsive](testing/automated-testing/responsivity/amiresponsive-wrong-answer.png)
+
 #### Question Area
 
-#### Result Area
+The Question Area displays an equation without the appropriate operator(s). Instead of each of the operators, a drop-down selector is shown, where the user can select the correct operator to make the equation true.
 
-#### Check Answer button
+![The Question Area](readme-pics/question-area.png)
 
-#### Milestone "popups"
+The numbers (operands) are selected randomly from the range of integers between 1 and 10 (inclusive). The operators are selected from the array ["+/, "-", "*", "/"].
 
- specify why I use inline styles for buttons
+The operator **+** is shown on each drop-down selector by default. It is reset whenever a new puzzle is generated, but not when the user guess is wrong, so that they can keep track of the guesses they tried more easily.
 
-Only for the milestones
 
-### New Game/New Puzzle button 
+The difficulty of the puzzle is capped by making sure the result only has a maximum of 2 decimal places. Wheever this is not the case, a new equation is created.
 
-### Perfect streak counter
+[video]
 
-### Operator selector toggle
+By default, the equation has 3 operands and 2 operators. The number of operands and operators in the equation can be changed by the [Operand selector toggle](#operand-selector-toggle).
+
+The question area is also responsive, and adapts to very narrow viewports with a maximum width of 280 px.
+
+![The Question Area on a 280 px wide viewport](readme-pics/question-area-very-narrow.png)
+
+#### Solution Area
+
+The Solution Area is empty by default, and its content is added by JavaScript when the [**Check Answer**](#submit-button) button is clicked. The content varies depending on whether the user got the answer right, and what guess they submitted.
+
+##### Correct guess
+
+If the user's guess is correct, a congratulatory message appears with some celebratory emojis, and the [**Check Answer**](#submit-button) button is disabled.
+
+![The Solution Area after a correct quess](readme-pics/solution-area-correct.png)
+
+The [Perfect Streak counter](#perfect-Streak-counter) is incremented by 1 on a correct guess.
+
+The user can then play a new game by clicing the [New Game button](#new-game-button).
+
+##### Incorrect guess
+
+If the user's quess is incorrect, another message appears, containing the euqation using the operators selected by the users and its result. The user is also instructed to change an operator.
+
+![The Solution Area after an inorrect quess](readme-pics/solution-area-wrong.png)
+
+The [**Check Answer**](#submit-button) button is also disabled in this case, but it is enabled again when the user changes any of the operators. Changing an operator also clears the Solution Area.
+
+![The Solution Area after an inorrect quess](readme-pics/submit-button-re-enabled.png)
+
+
+The [Perfect Streak counter](#perfect-Streak-counter) is reset to 0 on an incorrect guess.
+
+#### Submit button
+
+The Submit button appears at the bottom of the [Game Area](#game-area), and bears the text "Check Answer" by default.
+
+![The Submit button by default](readme-pics/submit-button-default.png)
+
+
+When the Submit button is clicked, the app compares the result of the user's guess with the correct results of the equation.
+
+It also populates the [Solution Area](#solution-area) with content depending on whether the user's guess was correct.
+
+![The Solution Area after an inorrect quess](readme-pics/solution-area-wrong.png)
+
+
+The Submit button is disabled once it has been pressed. It is enabled again in the following cases:
+
+- when the user changes an operator
+- when a new game is run
+- when the page is reloeaded
+- when the [**Continue**](#continue-button) button on the Milestone "popup" is clicked
+
+When the Submit button is re-enabled within a game, its text content changes to "Check Again".
+
+![The Solution Area after an inorrect quess](readme-pics/submit-button-re-enabled.png)
+
+The Submit button also triggers [Milestone "popups"](milestone-"popups") when the [Perfect Streak counter](#perfect-streak-counter) reaches certain values.
+
+### Milestone "popups"
+
+ specify why I use inline styles for buttons and text
+ Only for the milestones
+
+ 
+#### Continue button
+
+
+### New Game button 
+
+### Perfect Streak counter
+
+### Operand selector toggle
 
 ### Welcome screen button
 
