@@ -465,6 +465,7 @@ Click to play the video
 |The Welcome screen appears by default |The Welcome screen appears when the page is (re-)loaded |✅|
 
 Click to play the video
+
 [Welcome screen appears on page load](https://github.com/blahosyl/operator-game/assets/26421503/9a100d4a-63fd-4ef5-b74a-9c7d0d0887b4)
 
 |Functionality	|Expected behavior	| result|
@@ -518,7 +519,7 @@ Click to play the video
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
 |The New Game button resets the Game Area |When the user clicks the New Game button, a new equation is generated, the Solution Area is cleared and the Submit button is re-enabled |✅|
-|The New Game button does **not** resets elements outside the Game Area |When the user clicks the New Game button, the Perfect Streak counter and the operand selector are **not** changed |✅|
+|The New Game button does **not** reset elements outside the Game Area |When the user clicks the New Game button, the Perfect Streak counter and the operand selector are **not** changed |✅|
 |The Submit button is re-enabled when a new game starts |When the user clicks the New Game button and a new game starts, the Submit button is re-enabled |✅|
 
 [New Game button test](
@@ -563,11 +564,11 @@ Click to play the video
 |The number of operands in the Question Area increases on user input |When the operand toggle is increased by the user, the Question Area displays a new equation with the selected number of operands and one less operator drop-down selector |✅|
 |The number of operands in the Question Area descreases on user input |When the operand toggle is increased by the user, the Question Area displays a new equation with the selected number of operands and one less operator drop-down selector |✅|
 |The Operand selector toggle does **not** reset elements outside the Game Area |When the user changes the value of the Operand selector toggle, the Perfect Streak counter is **not** changed |✅|
+|The Operand selector toggle never results in an equation with more than 2 decimal places|When the solution has more than 2 decimal places, a new equation is generated without further action|✅|
 
 Click to play the video
 
 [Operand Selector toggle test](https://github.com/blahosyl/operator-game/assets/26421503/3a88b3df-78f7-4ea8-980f-5e999e4cb160)
-
 
 
 ##### Welcome Screen button testing
@@ -578,6 +579,7 @@ Click to play the video
 |The Welcome Screen button disappears when the Welcome Screen is shown |When the Welcome Screen button is clicked by the user, the Welcome Screen button disappears |✅|
 |The Welcome Screen button disappears when a Milestone "popup" is shown |When a Milestone "popup" is triggered by the user, the Welcome Screen button disappears |✅|
 |The Welcome Screen button appears with the Game Area |When the Game Area is visible, the Welcome Screen button appears |✅|
+|The Welcome Screen button does **not** reset the Game Area |When the Welcome Screen button is clicked, the Game Area remains unchanged |✅|
 
 Click to play the video
 
