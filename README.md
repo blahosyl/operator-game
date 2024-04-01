@@ -437,41 +437,57 @@ The current performance score is 100 on both [mobile](testing/automated-testing/
 |:---				|:---					| :---: |
 |The Welcome screen is responsive	 |Elements get realigned to fit the viewport size |✅|
 
-[video]
+Click to play the video
+
+https://github.com/blahosyl/operator-game/assets/26421503/6da41494-7f39-4491-9f0e-c564f69d5719
+
 
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
 |The Gameplay screen is responsive |Elements get realigned to fit the viewport size |✅|
 
-[video]
+Click to play the video
+
+https://github.com/blahosyl/operator-game/assets/26421503/1b505c30-69f5-4194-8914-07d36674d590
 
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
 |The Milestone "popup"	is responsive|Elements get realigned to fit the viewport size |✅|
 
-[video]
+Click to play the video
+
+https://github.com/blahosyl/operator-game/assets/26421503/99d975ee-eb60-471a-8910-7c1f012a5525
 
 ##### Welcome screen testing
 
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
-|The Welcome screen appears by default |The Welcome screen appears when the page is (re-)loeaded |✅|
+|The Welcome screen appears by default |The Welcome screen appears when the page is (re-)loaded |✅|
 
-[video]
+Click to play the video
+
+
 
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
 |The small button in the Gameplay Rules section switches to the Scoring Rules section |When the button is clicked, the Gameplay Rules section is hidden and the Scoring Rules section appears	|✅|
 |The small button in the Scoring Rules section switches to the Gameplay Rules section |When the button is clicked, the Scoring Rules section is hidden and the Gameplay Rules section appears |✅|
 
-[video]
+Click to play the video
+
+https://github.com/blahosyl/operator-game/assets/26421503/a183d615-d378-4609-bbd2-08e429da7eca
+
 
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
 |The big button in the Welcome section starts the game |When the button is clicked, the Welcome section is hidden and the Game Area appears |✅|
 |The Question Area displays a random puzle |When the game starts, a randomly generated equation appears |✅|
 
-[video]
+Click to play the video
+
+https://github.com/blahosyl/operator-game/assets/26421503/ceb791f1-68ff-418b-ab3a-d6d752c3f667
+
+
 
 ##### Game Area testing
 
@@ -482,7 +498,7 @@ The current performance score is 100 on both [mobile](testing/automated-testing/
 |The Submit button is disabled on a guess |When when the Submit button is pressed, the button is disabled until further action |✅|
 
 
-[video]
+Click to play the video
 
 
 |Functionality	|Expected behavior	| result|
@@ -494,6 +510,10 @@ The current performance score is 100 on both [mobile](testing/automated-testing/
 |The Submit button is re-enabled when the page is re-loaded |When the user reloads the page, the Submit button is re-enabled |✅|
 |The background color of the Perfect Streak text is reset at an incorrect guess |The background color of the Perfect Streak text set back to white after an incorrect guess |✅|
 
+Click to play the video
+
+https://github.com/blahosyl/operator-game/assets/26421503/a754a88b-349e-4be0-a644-c83a4f83971b
+
 
 ##### New Game button testing
 
@@ -504,8 +524,10 @@ The current performance score is 100 on both [mobile](testing/automated-testing/
 |The Submit button is re-enabled when a new game starts |When the user clicks the New Game button and a new game starts, the Submit button is re-enabled |✅|
 |The Question Area never displays an equation with more than 2 decimal places |When the solution has more than 2 decimal places, a new equation is generated without further action |✅|
 
+Click to play the video
 
-[video]
+https://github.com/blahosyl/operator-game/assets/26421503/37ef4343-2c72-4e57-a21d-616c1c15b65e
+
 
 ##### Milestone "popups" testing
 
@@ -515,6 +537,12 @@ The current performance score is 100 on both [mobile](testing/automated-testing/
 |Each Milestone "popup" has a different color scheme |The background color of the Milestone text and the Continue button is different for each milestone |✅|
 |Each Milestone "popup" changes the background color of the Perfect Streak text |The background color of the Perfect Streak text is the same as the background color of the last Continue button |✅|
 |The Submit button is re-enabled after a Milestone "popup" |When the user clicks the Continue button on a Milestone "popup", the Submit button is re-enabled |✅|
+
+Click to play the video
+
+
+https://github.com/blahosyl/operator-game/assets/26421503/d026e7f8-1b37-4e4b-8486-e2ca3af602b8
+
 
 ##### Perfect streak counter testing
 
@@ -532,7 +560,11 @@ The current performance score is 100 on both [mobile](testing/automated-testing/
 |The number of operands in the Question Area descreases on user input |When the operand toggle is increased by the user, the Question Area displays a new equation with the selected number of operands and one less operator drop-down selector |✅|
 |The Operand selector toggle does **not** reset elements outside the Game Area |When the user changes the value of the Operand selector toggle, the Perfect Streak counter is **not** changed |✅|
 
-[video]
+Click to play the video
+
+https://github.com/blahosyl/operator-game/assets/26421503/3a88b3df-78f7-4ea8-980f-5e999e4cb160
+
+
 
 ##### Welcome Screen button testing
 
@@ -543,7 +575,9 @@ The current performance score is 100 on both [mobile](testing/automated-testing/
 |The Welcome Screen button disappears when a Milestone "popup" is shown |When a Milestone "popup" is triggered by the user, the Welcome Screen button disappears |✅|
 |The Welcome Screen button appears with the Game Area |When the Game Area is visible, the Welcome Screen button appears |✅|
 
-[video]
+Click to play the video
+
+https://github.com/blahosyl/operator-game/assets/26421503/e834a5fb-741a-4785-b4a2-4100e23742ce
 
 
 ### Accessibility testing
