@@ -465,7 +465,7 @@ Click to play the video
 |The Welcome screen appears by default |The Welcome screen appears when the page is (re-)loaded |✅|
 
 Click to play the video
-[Welcome screen appears on page load]()
+[Welcome screen appears on page load](https://github.com/blahosyl/operator-game/assets/26421503/9a100d4a-63fd-4ef5-b74a-9c7d0d0887b4)
 
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
@@ -486,8 +486,6 @@ Click to play the video
 
 [Start Game test](https://github.com/blahosyl/operator-game/assets/26421503/ceb791f1-68ff-418b-ab3a-d6d752c3f667)
 
-
-
 ##### Game Area testing
 
 
@@ -496,10 +494,10 @@ Click to play the video
 |The Solution Area displays a congratulatory message on a correct guess |When the user's guess is equal to the solution when the Submit button is pressed, a congratulatory message appears |✅|
 |The Submit button is disabled on a guess |When when the Submit button is pressed, the button is disabled until further action |✅|
 
-
 Click to play the video
-[Correct guess test]()
 
+[Correct guess test](
+https://github.com/blahosyl/operator-game/assets/26421503/26ef5d43-7e68-4245-abf3-ca9788567e33)
 
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
@@ -523,7 +521,8 @@ Click to play the video
 |The New Game button does **not** resets elements outside the Game Area |When the user clicks the New Game button, the Perfect Streak counter and the operand selector are **not** changed |✅|
 |The Submit button is re-enabled when a new game starts |When the user clicks the New Game button and a new game starts, the Submit button is re-enabled |✅|
 
-[New Game button test]()
+[New Game button test](
+https://github.com/blahosyl/operator-game/assets/26421503/af9c1a4e-14d5-427a-9f9b-587f7f8839d3)
 
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
