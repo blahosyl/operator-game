@@ -246,6 +246,19 @@ This button is hidden whenever the [Welcome screen](#welcome-screen) or a [Miles
 
 ### Future implementations
 
+While this game is relatively minimalistic, there are several additional customisation options that were beyond the scope of the current project:
+
+- **the number of operands**: This can easily be changed by modifying the `"number-selector"` form in the HTML code to include larger numbers. The only concern  here is that the [Question area](#question-area) might look overcrowded and take up too much space on smaller screens.
+- **the range of operands**: This is also easily changed by modifying "11" in the function `showRandomOperands(11)` in the [Javascript code](assets/js/script.js) to an integer of our choice. 
+	- As a further enhancement, a drop-down similar to the [Operand Selector toggle](#operand-selector-toggle) could let the user choose the upper bound of the generated operands themselves.
+- **negative operands**: By rewriting the function `generateRandomNumbers()` in the [Javascript code](assets/js/script.js) so that each operand is multiplied by either `1` or `-1` randomly, negative operands can be included in the game. The function `eliminateZero()` would still make sure 0 is not one of the operands.
+- **the range of operators**: Exponentiation is fairly straightforward to add by modifying the function `generateRandomOperators()` in the [Javascript code](assets/js/script.js) so that the `operators` array includes `**` for exponentiation.
+	- Including roots and parentheses in the equation would require some more rewriting of the concatenation and evaluation rules of the game.
+- **color palettes**: A different kind of customisation option would be to enable the user to choose their preferred color palette. There are 2 different ways of implementing this:
+	1. Users can select any color for certain elements in the game. This can be implemented with a some  color picker `form` elements. However, additional care has to be taken when selecting which elemts the user can change, to ensure that [sufficient color contrasts are maintained](#color-contrast-testing).
+	2. Users can select between pre-defined color palettes, changing several elements at once. Naturally, [color contrast testing](#color-contrast-testing) would also need to be done as part of implementing this feature.
+- **a timer option**: This is a very popular option for small games and quizzes, however, it is contrary to the ["kinder scoring" approach](#scoring-rules) taken in this game. Therefore, I would only choose to implement a timer as an opt-in, non-default option for this game.
+
 ### Accessibility
 
 aria labels, alt text, colour scheme, font choices
