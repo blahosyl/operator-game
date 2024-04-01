@@ -190,7 +190,7 @@ The Submit button is disabled once it has been pressed. It is enabled again in t
 
 - when the user changes an operator
 - when a new game is run
-- when the page is reloeaded
+- when the page is reloaded
 - when the [**Continue**](#continue-button) button on the Milestone "popup" is clicked
 
 When the Submit button is re-enabled within a game, its text content changes to "Check Again".
@@ -431,6 +431,119 @@ The current performance score is 100 on both [mobile](testing/automated-testing/
 
 #### Full testing of functionalities
 
+##### Responsivity testing
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|The Welcome screen is responsive	 |Elements get realigned to fit the viewport size |✅|
+
+[video]
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|The Gameplay screen is responsive |Elements get realigned to fit the viewport size |✅|
+
+[video]
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|The Milestone "popup"	is responsive|Elements get realigned to fit the viewport size |✅|
+
+[video]
+
+##### Welcome screen testing
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|The Welcome screen appears by default |The Welcome screen appears when the page is (re-)loeaded |✅|
+
+[video]
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|The small button in the Gameplay Rules section switches to the Scoring Rules section |When the button is clicked, the Gameplay Rules section is hidden and the Scoring Rules section appears	|✅|
+|The small button in the Scoring Rules section switches to the Gameplay Rules section |When the button is clicked, the Scoring Rules section is hidden and the Gameplay Rules section appears |✅|
+
+[video]
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|The big button in the Welcome section starts the game |When the button is clicked, the Welcome section is hidden and the Game Area appears |✅|
+|The Question Area displays a random puzle |When the game starts, a randomly generated equation appears |✅|
+
+[video]
+
+##### Game Area testing
+
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|The Solution Area displays a congratulatory message on a correct guess |When the user's guess is equal to the solution when the Submit button is pressed, a congratulatory message appears |✅|
+|The Submit button is disabled on a guess |When when the Submit button is pressed, the button is disabled until further action |✅|
+
+
+[video]
+
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|The Solution Area displays a message with the user's result on an incorrect guess |When the user's guess is not equal to the solution when the Submit button is pressed, a message appears with the user's result and instructions to change an operator |✅|
+|The Solution Area is cleared when an operator is changed |When the user changes an operator after a guess, the Solution Area is cleared |✅|
+|The Submit button is re-enabled when an operator is changed |When the user changes an operator after a guess, the button is re-enabled |✅|
+|If Submit button text changes when an operator is changed |When the user changes an operator after a guess, the button text is changed to "Check Again" |✅|
+|The Submit button is re-enabled when the page is re-loaded |When the user reloads the page, the Submit button is re-enabled |✅|
+|The background color of the Perfect Streak text is reset at an incorrect guess |The background color of the Perfect Streak text set back to white after an incorrect guess |✅|
+
+
+##### New Game button testing
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|The New Game button resets the Game Area |When the user clicks the New Game button, a new equation is generated, the Solution Area is cleared and the Submit button is re-enabled |✅|
+|The New Game button does **not** resets elements outside the Game Area |When the user clicks the New Game button, the Perfect Streak counter and the operand selector are **not** changed |✅|
+|The Submit button is re-enabled when a new game starts |When the user clicks the New Game button and a new game starts, the Submit button is re-enabled |✅|
+|The Question Area never displays an equation with more than 2 decimal places |When the solution has more than 2 decimal places, a new equation is generated without further action |✅|
+
+
+[video]
+
+##### Milestone "popups" testing
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|Certain Perfect Streak milestones trigger a "popup" |When the Perfect Streak counter reaches 3, 5 and 10, a "popup" with a picture of balloons appears |✅|
+|Each Milestone "popup" has a different color scheme |The background color of the Milestone text and the Continue button is different for each milestone |✅|
+|Each Milestone "popup" changes the background color of the Perfect Streak text |The background color of the Perfect Streak text is the same as the background color of the last Continue button |✅|
+|The Submit button is re-enabled after a Milestone "popup" |When the user clicks the Continue button on a Milestone "popup", the Submit button is re-enabled |✅|
+
+##### Perfect streak counter testing
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|The Perfect streak counter is increased by 1 on a correct guess |When the user's guess is equal to the solution when the Submit button is pressed, the Perfect Streak counter is increased by 1 |✅|
+|The Perfect streak counter is reset to 0 on an incorrect guess |When the user's guess is not equal to the solution when the Submit button is pressed, the Perfect Streak counter is reset to 0 |✅|
+
+
+##### Operand selector toggle testing
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|The number of operands in the Question Area increases on user input |When the operand toggle is increased by the user, the Question Area displays a new equation with the selected number of operands and one less operator drop-down selector |✅|
+|The number of operands in the Question Area descreases on user input |When the operand toggle is increased by the user, the Question Area displays a new equation with the selected number of operands and one less operator drop-down selector |✅|
+|The Operand selector toggle does **not** reset elements outside the Game Area |When the user changes the value of the Operand selector toggle, the Perfect Streak counter is **not** changed |✅|
+
+[video]
+
+##### Welcome Screen button testing
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
+|The Welcome Screen button triggers the Welcome Screen |When the Welcome Screen button is clicked by the user, the Welcome Screen appears |✅|
+|The Welcome Screen button disappears when the Welcome Screen is shown |When the Welcome Screen button is clicked by the user, the Welcome Screen button disappears |✅|
+|The Welcome Screen button disappears when a Milestone "popup" is shown |When a Milestone "popup" is triggered by the user, the Welcome Screen button disappears |✅|
+|The Welcome Screen button appears with the Game Area |When the Game Area is visible, the Welcome Screen button appears |✅|
+
+[video]
 
 
 ### Accessibility testing
