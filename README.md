@@ -40,6 +40,14 @@ Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
 #### Color scheme
 
+The color scheme started out very minimalistic, with only a red and orange border marking the [Game Area](#game-area) and [Question Area](#question-area), respectively. The design remained this minimalistic until the Javascript functions and logic was mostly finished.
+
+The [image](#imagery) selected for the [Milestone "popups"](#milestone-popups) inspired the development of the color scheme to its current form. An [image color picker](https://redketchup.io/color-picker) was used to pick colors, which were then used for text elements and backgrounds. 
+
+After this, color contrasts were checked and adjusted (see the [Color contrast testing](#color-contrast-testing) section), resulting in the following color palette:
+
+![Color palette](readme-pics/color-palette.png)
+
 #### Typography
 
 #### Imagery
@@ -296,8 +304,6 @@ External links open in a new tab.
 
 ### Frameworks,  Libraries & Programs Used
 
-### Frameworks,  Libraries & Programs Used
-
 - [Am I Responsive?](https://ui.dev/amiresponsive) – to show the website on a range of devices
 - [Balsamiq](https://balsamiq.com/) – wireframes
 - [Birme](https://www.birme.net/) – resize images and convert to `webp` format
@@ -319,6 +325,7 @@ External links open in a new tab.
 - [Preview](https://support.apple.com/guide/preview/welcome/mac) – cropping images
 - [PythonTutor](https://pythontutor.com/) – debugging Javascript Code
 - [WebAIM](https://webaim.org/resources/contrastchecker/) – color contrast checking
+- [Redketchup.io](https://redketchup.io/color-picker) - color picker from image
 - [Shields.io](https://shields.io/) – add badges to README
 
 ## Deployment
