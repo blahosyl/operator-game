@@ -426,8 +426,12 @@ The current performance score is 100 on both [mobile](testing/automated-testing/
 
 
 ### Manual testing
-Testing user stories
-Full testing of functionalities
+
+#### Testing user stories
+
+#### Full testing of functionalities
+
+
 
 ### Accessibility testing
 
