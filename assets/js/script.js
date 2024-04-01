@@ -25,9 +25,9 @@ const scoreButton = document.getElementById('score-button');
 const scoreRulesSection = document.getElementById('score-rules-section');
 // the button for showing the gameplay `div`
 const gameplayRulesButton = document.getElementById('gameplay-rules-button');
-// the `div` where the solution/congratulation text is displayed
 
 // Gameplay
+// the `div` where the solution/congratulation text is displayed
 const solutionDiv = document.getElementById('solution');
 // the Check Answer/Submit button
 const submitButton = document.getElementById('submit-button');
