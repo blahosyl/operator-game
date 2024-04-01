@@ -38,6 +38,8 @@ Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
 ### Visual design
 
+The intention was to create a visual impression that is retro-inspired but still modern and minimalistic. The design uses rounded rectangles that hark back to the 70ies, bold colors and chunky fonts.
+
 #### Color scheme
 
 The color scheme started out very minimalistic, with only a red and orange border marking the [Game Area](#game-area) and [Question Area](#question-area), respectively. The design remained this minimalistic until the Javascript functions and logic was mostly finished.
@@ -49,6 +51,13 @@ After this, color contrasts were checked and adjusted (see the [Color contrast t
 ![Color palette](readme-pics/color-palette.png)
 
 #### Typography
+
+The project uses 3 [Google Fonts](https://fonts.google.com/):
+
+- [Madimi One](https://fonts.google.com/specimen/Madimi+One) is used for headings and buttons. It is a rounded an interesting font fitting the retro-inspired theme, but it is still easy to read.
+- [Bungee Spice](https://fonts.google.com/specimen/Bungee+Spice) is used for displaying operators. Since operators are the main focus of the game, this bold, colorful font highlights them perfectly, and also fits the color scheme.
+- [Poppins](https://fonts.google.com/specimen/Poppins) is used for most text. This font is relatively simple and easy to read, and its proportions harmonize with Madimi One.
+
 
 #### Imagery
 
