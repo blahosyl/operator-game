@@ -168,7 +168,7 @@ The [**Check Answer**](#submit-button) button is also disabled in this case, but
 ![The Solution Area after an inorrect quess](readme-pics/submit-button-re-enabled.png)
 
 
-The [Perfect Streak counter](#perfect-Streak-counter) is reset to 0 on an incorrect guess.
+The [Perfect Streak counter](#perfect-Streak-counter) is reset to 0 on an incorrect guess, including [Milestone "popups"](milestone-"popups") and their effects on the [Perfect Streak counter](#perfect-streak-counter).
 
 #### Submit button
 
@@ -200,8 +200,7 @@ The Submit button also triggers [Milestone "popups"](milestone-"popups") when th
 ### Milestone "popups"
 
  specify why I use inline styles for buttons and text
- Only for the milestones
-
+ Only for the milestones and the [Perfect Streak counter](#perfect-streak-counter)
  
 #### Continue button
 
@@ -210,11 +209,20 @@ The Submit button also triggers [Milestone "popups"](milestone-"popups") when th
 
 The New Game button is located directly below the [Game Area](#game-area) and bears the text "New Puzzle" (since "New Game" was found confusing by some testers regarding how the [Perfect Streak counter](#perfect-streak-counter) works).
 
-Clicking the New Game button resets the [Game Area](#game-area) to its defaults and generates a new puzzle, but it does not reset the [Perfect Streak counter](#perfect-streak-counter) or the [Operand selector toggle](#sperand-selector-toggle) and its effect.
+Clicking the New Game button resets the [Game Area](#game-area) to its defaults and generates a new puzzle, but it does **not** reset the [Perfect Streak counter](#perfect-streak-counter) or the [Operand selector toggle](#sperand-selector-toggle) and its effect (see the [Scoring rules](#scoring-rules) section for the reasoning why).
 
 ![The New Game button](readme-pics/new-game-button.png)
 
 ### Perfect Streak counter
+
+The Perfect Streak counter records and displays the length of the user's consecutive correct guesses. It is only resent when the user submits an incorrect guess or reloads the page, but not when the user generates a new puzzle with the [New Game button](#new-game-button) or changes the difficulty level with the [Operand selector toggle](#sperand-selector-toggle) without solving the current puzzle (see the [Scoring rules](#scoring-rules) section for the reasoning why).
+
+![The Perfect Streak counter by default](readme-pics/perfect-streak-counter.png)
+
+The Perfect Streak counter changes background color in connection with the [Milestone "popups"](#milestone-"popups"): it gets a new background color after every milestone. This color effect is reset when the streak counter is reset.
+
+![The Perfect Streak counter changed color](readme-pics/perfect-streak-counter-color.png)
+
 
 ### Operand Selector toggle
 
