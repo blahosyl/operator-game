@@ -401,7 +401,7 @@ function showMilestones() {
     //change the color of the streak div back to default
     streakDiv.style.backgroundColor='var(--white)';
     break;
-    case 1:
+    case 3:
     // set streak milestone color
     color = 'var(--med-blue)';
     buttonColor = 'var(--light-orange)';
@@ -418,7 +418,7 @@ function showMilestones() {
     // run new game after milestone "popup"
     newGame();
     break;
-    case 2:
+    case 5:
     // set streak milestone color
     color = 'var(--red)';
     buttonColor = 'var(--light-blue)';
@@ -435,7 +435,7 @@ function showMilestones() {
     // run new game after milestone "popup"
     newGame();
     break;
-    case 3:
+    case 10:
     // set streak milestone color
     color = 'var(--med-orange)';
     buttonColor = 'var(--peach)';
