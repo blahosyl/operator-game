@@ -27,9 +27,24 @@ body {
   font-size: 250%;
 }
 
-/* buttons */
+/* all buttons */
 button {
   font-family: 'Madimi One', sans-serif;
+}
+
+/* unified formatting for the big buttons */
+.big-button {
+  font-size: 200%;
+  width: 15rem;
+  height: 5rem;
+  border-radius: 20px;
+}
+
+/* unified formatting for the small buttons */
+.small-button {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-size: 100%;
 }
 
 /* links in text (404 page) */
@@ -99,24 +114,9 @@ a {
   list-style: none;
 }
 
-/* unified formatting of the small buttons in the sections within  `#welcome-section` */
-#welcome-section > section > button {
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  font-size: 100%;
-}
-
 /* unified formatting of links in the sections within  `#welcome-section` */
 #welcome-section a {
   color: var(--white);
-}
-
-/* unified formatting for the big buttons */
-.big-button {
-  font-size: 200%;
-  width: 15rem;
-  height: 5rem;
-  border-radius: 20px;
 }
 
 /* the big button on the Welcome screen */
