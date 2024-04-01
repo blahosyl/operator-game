@@ -33,17 +33,53 @@
 >
 >This will show the randomly selected operators and/or the correct equation in the console.
 
+
+### Responsivity
+
+The game is fully responsive for all device emulators available in Chrome Developer tools, and adjusts to narrow viewports including 280 px in width.
+
+![The Operator Game is responsive](testing/automated-testing/responsivity/amiresponsive-mix.png)
+
 ### Welcome screen
 
-#### Gameplay rules section
+The **Welcome** screen is the first element the user sees. It is visually different from the main game screen, and can be hidden completely by pressing the [Start Game button](#start-game-button) at the end of the Welcome Screen, and shown again by pressing the [Welcome Screen button](#welcome-screen-button) at the very bottom of the main game screen.
 
-#### Scoring rules section
 
-### Game area
+The **Welcome** screen contains the following elements:
 
-#### Question area
+- [the section describing of how gameplay works](#gameplay-rules-section), 
+- [the section describing of how scoring works](#scoring-rules-section), 
+- [the **Start Game** button](#start-game-button) with the text "Let's Play!"
 
-#### Result area
+The [second section](#scoring-rules-section) is hidden by default, and only the [first section](#gameplay-rules-section) and the [**Start Game** button](#start-game-button) is shown on page load.
+
+The Welcome Screen is responsive on all devices. On small viewports, the the text inside the Welcome Screen sections is set to scroll.
+
+![The Welcome Screen is responsive](testing/automated-testing/responsivity/amiresponsive-welcome-screen-gameplay.png)
+
+
+#### Gameplay Rules section
+
+This section explains the purpose of the game and how it is played. It also contains a small button to switch to the [Scoring Rules section](#scoring-rules-section) within the Welcome Screen.
+
+![The Gameplay Rules section](readme-pics/gameplay-rules-section.png)
+
+
+#### Scoring Rules section
+
+This section explains how the scoring works in the game and why it works the way it does. It also contains a small button to switch to the [Gameplay Rules section](#gameplay-rules-section) within the Welcome Screen.
+
+![The Scoring Rules section](readme-pics/scoring-rules-section.png)
+
+#### Start Game button
+
+This button hides the welcome screen and reveals the actual game screen. The text on the button has been changed from "Start Game" to a "Let's Play!", as this is deemed more engaging for the user.
+
+### Game Area
+
+#### Question Area
+
+#### Result Area
 
 #### Check Answer button
 
@@ -58,6 +94,8 @@ Only for the milestones
 ### Perfect streak counter
 
 ### Operator selector toggle
+
+### Welcome screen button
 
 ### Future implementations
 
