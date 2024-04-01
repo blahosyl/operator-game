@@ -135,6 +135,8 @@ The operator **+** is shown on each drop-down selector by default. It is reset w
 
 The difficulty of the puzzle is capped by making sure the result only has a maximum of 2 decimal places. Wheever this is not the case, a new equation is created.
 
+Negative integers are allowed for the solution of the equation, but not for the operands.
+
 [video]
 
 By default, the equation has 3 operands and 2 operators. The number of operands and operators in the equation can be changed by the [Operand selector toggle](#operand-selector-toggle).
@@ -226,7 +228,21 @@ The Perfect Streak counter changes background color in connection with the [Mile
 
 ### Operand Selector toggle
 
-### Welcome screen button
+The Operand Selector toggle lets the user choose the difficulty level of the game by selecting the number of operands in the equation they have to solve. The number of operator drop-down selectors is adjusted accordingly (it is one less than the number of operands).
+
+The Operand Selector toggle currently offers a range between 2 and 6 (inclusive). It is set to 3 by default.
+
+![The Operand Selector toggle](readme-pics/operand-selector-toggle.png)
+
+When the Operand Selector toggle is changed, the equation template is adjusted to consist of the number of operands selected by the user. This also resets the [Game Area](#game-area) to its defaults and generates a new puzzle, but it does **not** reset the [Perfect Streak counter](#perfect-streak-counter) or the [Operand selector toggle](#sperand-selector-toggle) and its effect (see the [Scoring rules](#scoring-rules) section for the reasoning why).
+
+### Welcome Screen button
+
+This is the last element of the gameplay screen. Its fucntion is to enable the user to show the [Welcome screen](#welcome-screen) again, in case they want to double-chekc the rules. Its text content is "Show the rules again".
+
+![The Welcome Screen button](readme-pics/welcome-screen-button.png)
+
+This button is hidden whenever the [Welcome screen](#welcome-screen) or a [Milestone "popup"](#milestone-"popups") is shown.
 
 ### Future implementations
 
