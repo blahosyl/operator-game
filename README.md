@@ -566,6 +566,7 @@ Milestone image by [vector_corp on Freepik](https://www.freepik.com/free-ai-imag
 - [Travel World](https://github.com/PedroCristo/portfolio_project_1/) by Pedro Cristo
 - [Sourdough Bakes](https://github.com/siobhanlgorman) by Siobhan Gorman
 - [Horizon Photo](https://github.com/Ri-Dearg/horizon-photo/blob/master/README.md#mobile-testing) by Rory Patrick Sheridan- [The README of my first Code Institute project](https://github.com/blahosyl/academic-publishing)
+- [Academic Publishing](https://github.com/blahosyl/academic-publishing/) by myself
 
 
 ### Acknowledgements
