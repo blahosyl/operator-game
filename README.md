@@ -198,16 +198,22 @@ Issues and bugs are tracked in [Github Issues](https://github.com/blahosyl/opera
 
 ### Automated testing
 
-#### HTML validation with theW3C validator
+#### Code validation
 
-The `html` file of the project was regularly tested by the [W3C validator](https://validator.w3.org/). The issues discovered during validation are tracked in [GitHub Issues](https://github.com/blahosyl/enlightened-publishing/issues).
+The [`html`]#(html-validation-with-the-w3c-validator), [`css`](#css-validation-with-jigsaw) and [`js`](#javascript-validation-with-jshint) files of the project were periodically validated throughout development.
+
+The issues discovered during validation are tracked in GitHub Issues [#37](https://github.com/blahosyl/enlightened-publishing/issues/37) and [#38](https://github.com/blahosyl/enlightened-publishing/issues/38).
+
+##### HTML validation with the W3C validator
+
+The `html` file of the project was regularly tested by the [W3C validator](https://validator.w3.org/). 
 
 In the current version of the site, [no errors or warnings were found during validation](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fblahosyl.github.io%2Foperator-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
 
 ![HTML: no issues or warnings](testing/automated-testing/w3c-html/html-validation.png)
 
 
-#### CSS validation with Jigsaw
+##### CSS validation with Jigsaw
 
 The  `css` file of the project was regularly tested by [Jigsaw](https://jigsaw.w3.org/css-validator/). The issues discovered during validation are tracked in [GitHub Issues](https://github.com/blahosyl/enlightened-publishing/issues).
 
@@ -216,7 +222,7 @@ In the current version of the site, [no errors or warnings were found during val
 
 ![CSS: no issues or warnings](testing/automated-testing/jigsaw-css/css-validation.png)
 
-#### JSHint
+##### JavaScript validation with JSHint
 
 The  `js` file of the project was regularly tested by [JSHint](https://jshint.com/). The issues discovered during validation are tracked in [GitHub Issues](https://github.com/blahosyl/enlightened-publishing/issues).
 
@@ -226,6 +232,26 @@ In the current version of the site, no errors or warnings were found during vali
 ![JS: no issues or warnings](testing/automated-testing/jshint-js/js-validation.png)
 
 #### Lighthouse
+
+##### Lighthouse performance testing
+
+Lighthouse performance tests were carried out throughout development (selected tests can be found in the folders [`lighthouse-performance`](testing/automated-testing/lighthouse-performance)) and [`lighthouse-full`](testing/automated-testing/lighthouse-full)). No significant issues were found.
+
+The current performance score is [90 on mobile](testing/automated-testing/lighthouse-full/mobile/blahosyl.github.io-20240401T134642.html) and [100 on desktop](testing/automated-testing/lighthouse-full/desktop/blahosyl.github.io-20240401T134508.html).
+
+##### Lighthouse accessibility testing
+
+Lighthouse accessibility tests were carried out throughout development (selected tests can be found in the folders [`lighthouse-accessibility`](testing/automated-testing/lighthouse-accessibility)) and [`lighthouse-full`](testing/automated-testing/lighthouse-full)). 
+
+On issue was found, which was fixed in [this commit](https://github.com/blahosyl/operator-game/commit/f05ec2ee280be0389fb87750e6a2e98705d1c5fd).
+
+
+The current performance score is 100 on both [mobile](testing/automated-testing/lighthouse-full/mobile/blahosyl.github.io-20240401T134642.html) and [desktop](testing/automated-testing/lighthouse-full/desktop/blahosyl.github.io-20240401T134508.html).
+
+![Accessibility score: 100](readme-pics/lighthouse-full-mobile.png)
+
+![Accessibility score: 100](readme-pics/lighthouse-full-desktop.png)
+
 
 ### Manual testing
 Testing user stories
