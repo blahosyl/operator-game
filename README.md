@@ -193,7 +193,7 @@ The Submit button is disabled once it has been pressed. It is enabled again in t
 
 When the Submit button is re-enabled within a game, its text content changes to "Check Again".
 
-![The Solution Area after an inorrect quess](readme-pics/submit-button-re-enabled.png)
+![The Submit button text changes after being re-enabled](readme-pics/submit-button-re-enabled.png)
 
 The Submit button also triggers [Milestone "popups"](milestone-"popups") when the [Perfect Streak counter](#perfect-streak-counter) reaches certain values.
 
@@ -208,9 +208,15 @@ The Submit button also triggers [Milestone "popups"](milestone-"popups") when th
 
 ### New Game button 
 
+The New Game button is located directly below the [Game Area](#game-area) and bears the text "New Puzzle" (since "New Game" was found confusing by some testers regarding how the [Perfect Streak counter](#perfect-streak-counter) works).
+
+Clicking the New Game button resets the [Game Area](#game-area) to its defaults and generates a new puzzle, but it does not reset the [Perfect Streak counter](#perfect-streak-counter) or the [Operand selector toggle](#sperand-selector-toggle) and its effect.
+
+![The New Game button](readme-pics/new-game-button.png)
+
 ### Perfect Streak counter
 
-### Operand selector toggle
+### Operand Selector toggle
 
 ### Welcome screen button
 
