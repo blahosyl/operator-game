@@ -7,7 +7,7 @@ Users are shown an equation with the operators missing, and they have to guess t
 
 The game has a fully [responsive](#responsivity) and [accessible](#accessibility-testing) desgin, and [a kinder scoring mechanism](#scoring-rules), making it suitable for users of a variety of ages and abilities.
 
-Extra features include the user being able to [select the difficulty level](#operator-selector-toggle) and [celebratory "popups" at certain milestones](#milestone-"popups").
+Extra features include the user being able to [select the difficulty level](#operator-selector-toggle) and [celebratory "popups" at certain milestones](#milestone-popups).
 
 Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
@@ -202,7 +202,7 @@ When the Submit button is re-enabled within a game, its text content changes to 
 
 The Submit button also triggers [Milestone "popups"](milestone-"popups") when the [Perfect Streak counter](#perfect-streak-counter) reaches certain values.
 
-### Milestone "popups"
+### Milestone popups
 
 Certain perfect streak milestones trigger a celebratory "popup". Currently, these are at 3, 5, and 10 correct guesses in a row.
 
@@ -231,7 +231,7 @@ The Perfect Streak counter records and displays the length of the user's consecu
 
 ![The Perfect Streak counter by default](readme-pics/perfect-streak-counter.png)
 
-The Perfect Streak counter changes background color in connection with the [Milestone "popups"](#milestone-"popups"): it gets a new background color after every milestone. This color effect is reset when the streak counter is reset.
+The Perfect Streak counter changes background color in connection with the [Milestone "popups"](#milestone-popups): it gets a new background color after every milestone. This color effect is reset when the streak counter is reset.
 
 ![The Perfect Streak counter changed color](readme-pics/perfect-streak-counter-color.png)
 
@@ -252,7 +252,7 @@ This is the last element of the gameplay screen. Its fucntion is to enable the u
 
 ![The Welcome Screen button](readme-pics/welcome-screen-button.png)
 
-This button is hidden whenever the [Welcome screen](#welcome-screen) or a [Milestone "popup"](#milestone-"popups") is shown.
+This button is hidden whenever the [Welcome screen](#welcome-screen) or a [Milestone "popup"](#milestone-popups) is shown.
 
 ### Future implementations
 
