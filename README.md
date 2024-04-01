@@ -61,6 +61,11 @@ The project uses 3 [Google Fonts](https://fonts.google.com/):
 
 #### Imagery
 
+The [Milestone image](assets/images/balloons.webp) is the only image used in the game. I chose it because it is cheerful but not overly busy: it mainly has shades of 4 colors: teal, red, orange and pink, which tones down the large number of balloons and pompoms on it.
+
+![The Milestone image: lots of balloons and pompoms in shades of 4 teal, red, orange and pink on a dark teal background](assets/images/balloons.webp)
+
+
 #### Wireframes
 
 ### Flow
