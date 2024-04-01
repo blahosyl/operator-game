@@ -15,6 +15,12 @@ Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
 [View the deployed game on Github Pages](https://blahosyl.github.io/operator-game/)
 
+<!--Shield.io badges-->
+
+![GitHub last commit](https://img.shields.io/github/last-commit/blahosyl/operator-game?color=red)
+![GitHub contributors](https://img.shields.io/github/contributors/blahosyl/operator-game?color=orange)
+![GitHub language count](https://img.shields.io/github/languages/count/blahosyl/operator-game?color=black)
+
 
 ## User Experience (UX)
 
@@ -157,7 +163,7 @@ aria labels, alt text, colour scheme, font choices
 - [Preview](https://support.apple.com/guide/preview/welcome/mac) – cropping images
 - [PythonTutor](https://pythontutor.com/) – debugging Javascript Code
 - [WebAIM](https://webaim.org/resources/contrastchecker/) – color contrast checking
-- Shields.io – add badges to README
+- [Shields.io](https://shields.io/) – add badges to README
 
 ## Deployment
 
@@ -222,13 +228,13 @@ Issues and bugs are tracked in [Github Issues](https://github.com/blahosyl/opera
 
 The [`html`]#(html-validation-with-the-w3c-validator), [`css`](#css-validation-with-jigsaw) and [`js`](#javascript-validation-with-jshint) files of the project were periodically validated throughout development.
 
-The issues discovered during validation are tracked in GitHub Issues [#37](https://github.com/blahosyl/enlightened-publishing/issues/37) and [#38](https://github.com/blahosyl/enlightened-publishing/issues/38).
+The issues discovered during validation are tracked in GitHub Issues [#37](https://github.com/blahosyl/operator-game/issues/37) and [#38](https://github.com/blahosyl/operator-game/issues/38).
 
 ##### HTML validation with the W3C validator
 
 The `html` file of the project was regularly tested by the [W3C validator](https://validator.w3.org/). 
 
-In the current version of the site, [no errors or warnings were found during validation](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fblahosyl.github.io%2Foperator-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
+In the current version of the site, [no errors or warnings were found during validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fblahosyl.github.io%2Foperator-game).
 
 ![HTML: no issues or warnings](testing/automated-testing/w3c-html/html-validation.png)
 
