@@ -185,7 +185,6 @@ It also populates the [Solution Area](#solution-area) with content depending on 
 
 ![The Solution Area after an inorrect quess](readme-pics/solution-area-wrong.png)
 
-
 The Submit button is disabled once it has been pressed. It is enabled again in the following cases:
 
 - when the user changes an operator
@@ -201,11 +200,18 @@ The Submit button also triggers [Milestone "popups"](milestone-"popups") when th
 
 ### Milestone "popups"
 
- specify why I use inline styles for buttons and text
- Only for the milestones and the [Perfect Streak counter](#perfect-streak-counter)
- 
-#### Continue button
+Certain perfect streak milestones trigger a celebratory "popup". Currently these are streaks of 3, 5, and 10 correct guesses in a row.
 
+At these points, clicking the Submit button activates the Milestone event. This consists of 2 parts:
+
+1. a "popup" appears with a background picture of colorful balloons, a congratularory text showing the perfect streak length, and a Continue button to return to the game.
+2. The [Perfect Streak counter](#perfect-streak-counter) gets a colored background.
+
+![A Milestone "popup"](readme-pics/milestone-popup.png)
+
+The background color of the Milestone text and the Continue button is different for each milestone. The background color of the Perfect Streak text is the same as the background color of the last Continue button.
+
+These color effects use inline HTML styles assigned by the Javascript code. Apart from changing the `display` property of element, this is the only case of using inline styles in this project.
 
 ### New Game button 
 
