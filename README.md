@@ -439,16 +439,16 @@ The current performance score is 100 on both [mobile](testing/automated-testing/
 
 Click to play the video
 
-https://github.com/blahosyl/operator-game/assets/26421503/6da41494-7f39-4491-9f0e-c564f69d5719
+[Welcome screen responsivity test](https://github.com/blahosyl/operator-game/assets/26421503/6da41494-7f39-4491-9f0e-c564f69d5719)
 
 
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
-|The Gameplay screen is responsive |Elements get realigned to fit the viewport size |✅|
+|The Game Area screen is responsive |Elements get realigned to fit the viewport size |✅|
 
 Click to play the video
 
-https://github.com/blahosyl/operator-game/assets/26421503/1b505c30-69f5-4194-8914-07d36674d590
+[Game Area responsivity test](https://github.com/blahosyl/operator-game/assets/26421503/1b505c30-69f5-4194-8914-07d36674d590)
 
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
@@ -456,7 +456,7 @@ https://github.com/blahosyl/operator-game/assets/26421503/1b505c30-69f5-4194-891
 
 Click to play the video
 
-https://github.com/blahosyl/operator-game/assets/26421503/99d975ee-eb60-471a-8910-7c1f012a5525
+[Milestone "popup" responsivity test](https://github.com/blahosyl/operator-game/assets/26421503/99d975ee-eb60-471a-8910-7c1f012a5525)
 
 ##### Welcome screen testing
 
@@ -465,8 +465,7 @@ https://github.com/blahosyl/operator-game/assets/26421503/99d975ee-eb60-471a-891
 |The Welcome screen appears by default |The Welcome screen appears when the page is (re-)loaded |✅|
 
 Click to play the video
-
-
+[Welcome screen appears on page load]()
 
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
@@ -475,7 +474,7 @@ Click to play the video
 
 Click to play the video
 
-https://github.com/blahosyl/operator-game/assets/26421503/a183d615-d378-4609-bbd2-08e429da7eca
+[Testing the small buttons on the welcome screen](https://github.com/blahosyl/operator-game/assets/26421503/a183d615-d378-4609-bbd2-08e429da7eca)
 
 
 |Functionality	|Expected behavior	| result|
@@ -485,7 +484,7 @@ https://github.com/blahosyl/operator-game/assets/26421503/a183d615-d378-4609-bbd
 
 Click to play the video
 
-https://github.com/blahosyl/operator-game/assets/26421503/ceb791f1-68ff-418b-ab3a-d6d752c3f667
+[Start Game test](https://github.com/blahosyl/operator-game/assets/26421503/ceb791f1-68ff-418b-ab3a-d6d752c3f667)
 
 
 
@@ -499,6 +498,7 @@ https://github.com/blahosyl/operator-game/assets/26421503/ceb791f1-68ff-418b-ab3
 
 
 Click to play the video
+[Correct guess test]()
 
 
 |Functionality	|Expected behavior	| result|
@@ -512,7 +512,7 @@ Click to play the video
 
 Click to play the video
 
-https://github.com/blahosyl/operator-game/assets/26421503/a754a88b-349e-4be0-a644-c83a4f83971b
+[Incorrect guess test](https://github.com/blahosyl/operator-game/assets/26421503/a754a88b-349e-4be0-a644-c83a4f83971b)
 
 
 ##### New Game button testing
@@ -522,11 +522,16 @@ https://github.com/blahosyl/operator-game/assets/26421503/a754a88b-349e-4be0-a64
 |The New Game button resets the Game Area |When the user clicks the New Game button, a new equation is generated, the Solution Area is cleared and the Submit button is re-enabled |✅|
 |The New Game button does **not** resets elements outside the Game Area |When the user clicks the New Game button, the Perfect Streak counter and the operand selector are **not** changed |✅|
 |The Submit button is re-enabled when a new game starts |When the user clicks the New Game button and a new game starts, the Submit button is re-enabled |✅|
+
+[New Game button test]()
+
+|Functionality	|Expected behavior	| result|
+|:---				|:---					| :---: |
 |The Question Area never displays an equation with more than 2 decimal places |When the solution has more than 2 decimal places, a new equation is generated without further action |✅|
 
 Click to play the video
 
-https://github.com/blahosyl/operator-game/assets/26421503/37ef4343-2c72-4e57-a21d-616c1c15b65e
+[New Game decimals test](https://github.com/blahosyl/operator-game/assets/26421503/37ef4343-2c72-4e57-a21d-616c1c15b65e)
 
 
 ##### Milestone "popups" testing
@@ -541,7 +546,7 @@ https://github.com/blahosyl/operator-game/assets/26421503/37ef4343-2c72-4e57-a21
 Click to play the video
 
 
-https://github.com/blahosyl/operator-game/assets/26421503/d026e7f8-1b37-4e4b-8486-e2ca3af602b8
+[Milestone "popup" test](https://github.com/blahosyl/operator-game/assets/26421503/d026e7f8-1b37-4e4b-8486-e2ca3af602b8)
 
 
 ##### Perfect streak counter testing
@@ -562,7 +567,7 @@ https://github.com/blahosyl/operator-game/assets/26421503/d026e7f8-1b37-4e4b-848
 
 Click to play the video
 
-https://github.com/blahosyl/operator-game/assets/26421503/3a88b3df-78f7-4ea8-980f-5e999e4cb160
+[Operand Selector toggle test](https://github.com/blahosyl/operator-game/assets/26421503/3a88b3df-78f7-4ea8-980f-5e999e4cb160)
 
 
 
@@ -577,7 +582,7 @@ https://github.com/blahosyl/operator-game/assets/26421503/3a88b3df-78f7-4ea8-980
 
 Click to play the video
 
-https://github.com/blahosyl/operator-game/assets/26421503/e834a5fb-741a-4785-b4a2-4100e23742ce
+[Welcome Screen button test](https://github.com/blahosyl/operator-game/assets/26421503/e834a5fb-741a-4785-b4a2-4100e23742ce)
 
 
 ### Accessibility testing
