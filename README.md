@@ -5,7 +5,7 @@ This interactive game lets users practice the mathematical order of operations f
 
 Users are shown an equation with the operators missing, and they have to guess the correct operators to make the equation true.
 
-The game has a fully [responsive](#responsivity) and [accessible](#accessibility-testing) desgin, and [a kinder scoring mechanism](#scoring-rules), making it suitable for users of a variety of ages and abilities.
+The game has a fully [responsive](#responsivity) and [accessible](#accessibility-testing) design, and [a kinder scoring mechanism](#scoring-rules), making it suitable for users of a variety of ages and abilities.
 
 Extra features include the user being able to [select the difficulty level](#operand-selector-toggle) and [celebratory "popups" at certain milestones](#milestone-popups).
 
@@ -26,7 +26,7 @@ Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
 This game lets users guess the correct operators in an equation with randomly generated integers, and see if their guess is correct. There are no limits on the number of guesses or the length of game play.
 
-Furthermore, since a new, random equation is generated each time, the game can be played a large number of times without the puzzles repeating (unlike a fixed-question trivia game where the users are more likely to memorise all questions).
+Furthermore, since a new, random equation is generated each time, the game can be played a large number of times without the puzzles repeating (unlike a fixed-question trivia game where the users are more likely to memorize all questions).
 
 #### User stories for all users
 
@@ -75,18 +75,18 @@ After this, color contrasts were checked and adjusted (see the [Color contrast t
 
 The project uses 3 [Google Fonts](https://fonts.google.com/):
 
-- [Madimi One](https://fonts.google.com/specimen/Madimi+One) is used for headings and buttons. It is a rounded an interesting font fitting the retro-inspired theme, but it is still easy to read.
+- [Madimi One](https://fonts.google.com/specimen/Madimi+One) is used for headings and buttons. It is a rounded and interesting font fitting the retro-inspired theme, but it is still easy to read.
 - [Bungee Spice](https://fonts.google.com/specimen/Bungee+Spice) is used for displaying operators. Since operators are the main focus of the game, this bold, colorful font highlights them perfectly, and also fits the color scheme.
 - [Poppins](https://fonts.google.com/specimen/Poppins) is used for most text. This font is relatively simple and easy to read, and its proportions harmonize with Madimi One.
 
 
 #### Imagery
 
-The [Milestone image](assets/images/balloons.webp) is the only image used in the game. I chose it because it is cheerful but not overly busy: it mainly has shades of 4 colors: teal, red, orange and pink, which tones down the large number of balloons and pompoms on it.
+The [Milestone image](assets/images/balloons.webp) is the only image used in the game. I chose it because it is cheerful but not overly busy: it mainly has shades of 4 colors: teal, red, orange and pink, which tones down the large number of balloons and pom poms on it.
 
-![The Milestone image: lots of balloons and pompoms in shades of 4 teal, red, orange and pink on a dark teal background](assets/images/balloons.webp)
+![The Milestone image: lots of balloons and pom poms in shades of 4 teal, red, orange and pink on a dark teal background](assets/images/balloons.webp)
 
-The [favicon](assets/favicon/android-chrome-192x192.png) used for the project depicts the four operators with  rounded square backgrounds. This was selected because it is explictly referencing the main purpose of the game and also fits the desgin theme. The favicon's color was changed to fit the color palette.
+The [favicon](assets/favicon/android-chrome-192x192.png) used for the project depicts the four operators with  rounded square backgrounds. This was selected because it is explicitly referencing the main purpose of the game and also fits the design theme. The favicon's color was changed to fit the color palette.
 
 ![Color palette](assets/favicon/android-chrome-192x192.png)
 
@@ -132,11 +132,11 @@ The user can adjust the level of difficulty by [selecting how many operands the 
 
 #### Scoring rules
 
-The whole game is designed around minimizing stress and only using positive reinforcement. There are no times limits, a decreasing number of "lives" or competition against another player or the computer. These cause unnecessary stress and frustration, and are especially hostile towards people who are neurodivergent or live with mental health issues.
+The whole game is designed around minimizing stress and only using positive reinforcement. There are no time limits, a decreasing number of "lives" or competition against another player or the computer. These cause unnecessary stress and frustration, and are especially hostile towards people who are neurodivergent or live with mental health issues.
 
 Instead, the game encourages personal growth without measuring ourselves against others, and the agency to set the difficulty of the puzzle to what we can handle at a given time.
 
-Accordingly, incorrect guesses are not counted. The only couter is one of correct answers in a row (the [Perfect Streak counter](#perfect-streak-counter)). This is only reset when the user makes an incorrect guess. Crucially, if the user chooses to skip a puzzle by clikcing the [New Game button](#new-game-button) or reduces the difficulty of the puzzle with the [Operand selector toggle](#operand-selector-toggle), their streak is maintained.
+Accordingly, incorrect guesses are not counted. The only counter is one of correct answers in a row (the [Perfect Streak counter](#perfect-streak-counter)). This is only reset when the user makes an incorrect guess. Crucially, if the user chooses to skip a puzzle by clicking the [New Game button](#new-game-button) or reduces the difficulty of the puzzle with the [Operand selector toggle](#operand-selector-toggle), their streak is maintained.
 
 ## Features
 
@@ -171,7 +171,7 @@ The **Welcome** screen contains the following elements:
 
 The [second section](#scoring-rules-section) is hidden by default, and only the [first section](#gameplay-rules-section) and the [**Start Game** button](#start-game-button) is shown on page load.
 
-The Welcome Screen is responsive on all devices. On small viewports, the the text inside the Welcome Screen sections is set to scroll.
+The Welcome Screen is responsive on all devices. On small viewports, the text inside the Welcome Screen sections is set to scroll.
 
 ![The Welcome Screen is responsive](testing/automated-testing/responsivity/amiresponsive-welcome-screen-gameplay.png)
 
@@ -237,21 +237,21 @@ The Solution Area is empty by default, and its content is added by JavaScript wh
 
 If the user's guess is correct, a congratulatory message appears with some celebratory emojis, and the [**Submit**](#submit-button) button is disabled.
 
-![The Solution Area after a correct quess](readme-pics/solution-area-correct.png)
+![The Solution Area after a correct guess](readme-pics/solution-area-correct.png)
 
 The [Perfect Streak counter](#perfect-Streak-counter) is incremented by 1 on a correct guess.
 
-The user can then play a new game by clicing the [New Game button](#new-game-button).
+The user can then play a new game by clicking the [New Game button](#new-game-button).
 
 ##### Incorrect guess
 
-If the user's quess is incorrect, another message appears, containing the euqation using the operators selected by the users and its result. The user is also instructed to change an operator.
+If the user's guess is incorrect, another message appears, containing the equation using the operators selected by the users and its result. The user is also instructed to change an operator.
 
-![The Solution Area after an inorrect quess](readme-pics/solution-area-wrong.png)
+![The Solution Area after an incorrect guess](readme-pics/solution-area-wrong.png)
 
 The [**Submit**](#submit-button) button is also disabled in this case, but it is enabled again when the user changes any of the operators. Changing an operator also clears the Solution Area.
 
-![The Solution Area after an inorrect quess](readme-pics/submit-button-re-enabled.png)
+![The Solution Area after an incorrect guess](readme-pics/submit-button-re-enabled.png)
 
 
 The [Perfect Streak counter](#perfect-Streak-counter) is reset to 0 on an incorrect guess, including [Milestone "popups"](#milestone-popups) and their effects on the [Perfect Streak counter](#perfect-streak-counter).
@@ -267,7 +267,7 @@ When the Submit button is clicked, the app compares the result of the user's gue
 
 It also populates the [Solution Area](#solution-area) with content depending on whether the user's guess was correct.
 
-![The Solution Area after an inorrect quess](readme-pics/solution-area-wrong.png)
+![The Solution Area after an incorrect guess](readme-pics/solution-area-wrong.png)
 
 The Submit button is disabled once it has been pressed. It is enabled again in the following cases:
 
@@ -288,7 +288,7 @@ Certain perfect streak milestones trigger a celebratory "popup". Currently, thes
 
 At these points, clicking the Submit button activates the Milestone event. This consists of 2 parts:
 
-1. a "popup" appears with a background picture of colorful balloons, a congratularory text showing the perfect streak length, and a Continue button to return to the game.
+1. a "popup" appears with a background picture of colorful balloons, a congratulatory text showing the perfect streak length, and a Continue button to return to the game.
 2. The [Perfect Streak counter](#perfect-streak-counter) gets a colored background.
 
 ![A Milestone "popup"](readme-pics/milestone-popup.png)
@@ -307,7 +307,7 @@ Clicking the New Game button resets the [Game Area](#game-area) to its defaults 
 
 ### Perfect Streak counter
 
-The Perfect Streak counter records and displays the length of the user's consecutive correct guesses. It is only resent when the user submits an incorrect guess or reloads the page, but not when the user generates a new puzzle with the [New Game button](#new-game-button) or changes the difficulty level with the [Operand selector toggle](#sperand-selector-toggle) without solving the current puzzle (see the [Scoring rules](#scoring-rules) section for the reasoning why).
+The Perfect Streak counter records and displays the length of the user's consecutive correct guesses. It is only present when the user submits an incorrect guess or reloads the page, but not when the user generates a new puzzle with the [New Game button](#new-game-button) or changes the difficulty level with the [Operand selector toggle](#sperand-selector-toggle) without solving the current puzzle (see the [Scoring rules](#scoring-rules) section for the reasoning why).
 
 ![The Perfect Streak counter by default](readme-pics/perfect-streak-counter.png)
 
@@ -328,7 +328,7 @@ When the Operand Selector toggle is changed, the equation template is adjusted t
 
 ### Welcome Screen button
 
-This is the last element of the gameplay screen. Its fucntion is to enable the user to show the [Welcome screen](#welcome-screen) again, in case they want to double-chekc the rules. Its text content is "Show the rules again".
+This is the last element of the gameplay screen. Its function is to enable the user to show the [Welcome screen](#welcome-screen) again, in case they want to double-check the rules. Its text content is "Show the rules again".
 
 ![The Welcome Screen button](readme-pics/welcome-screen-button.png)
 
@@ -345,8 +345,8 @@ While this game is relatively minimalistic, there are several additional customi
 - **the range of operators**: Exponentiation is fairly straightforward to add by modifying the function `generateRandomOperators()` in the [Javascript code](assets/js/script.js) so that the `operators` array includes `**` for exponentiation.
 	- Including roots and parentheses in the equation would require some more rewriting of the concatenation and evaluation rules of the game.
 - **color palettes**: A different kind of customisation option would be to enable the user to choose their preferred color palette. There are 2 different ways of implementing this:
-	1. Users can select any color for certain elements in the game. This can be implemented with a some  color picker `form` elements. However, additional care has to be taken when selecting which elemts the user can change, to ensure that [sufficient color contrasts are maintained](#color-contrast-testing).
-	2. Users can select between pre-defined color palettes, changing several elements at once. Naturally, [color contrast testing](#color-contrast-testing) would also need to be done as part of implementing this feature.
+	1. Users can select any color for certain elements in the game. This can be implemented with some  color picker `form` elements. However, additional care has to be taken when selecting which elements the user can change, to ensure that [sufficient color contrasts are maintained](#color-contrast-testing).
+	2. Users can select between predefined color palettes, changing several elements at once. Naturally, [color contrast testing](#color-contrast-testing) would also need to be done as part of implementing this feature.
 - **a timer option**: This is a very popular option for small games and quizzes, however, it is contrary to the ["kinder scoring" approach](#scoring-rules) taken in this game. Therefore, I would only choose to implement a timer as an opt-in, non-default option for this game.
 
 ### Accessibility
@@ -400,7 +400,7 @@ External links open in a new tab.
 - [Redketchup.io](https://redketchup.io/color-picker) - color picker from image
 - [Shields.io](https://shields.io/) – add badges to README
 - [Slack](https://slack.com/) – mentor communication
-- [Visual Studio Code](https://code.visualstudio.com/) – code edito
+- [Visual Studio Code](https://code.visualstudio.com/) – code editor
 - [WebAIM](https://webaim.org/resources/contrastchecker/) – color contrast checking
 - [Web Disability Simulator](https://chromewebstore.google.com/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) – accessibility testing
 
@@ -653,7 +653,7 @@ Click to play the video
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
 |The big button in the Welcome section starts the game |When the button is clicked, the Welcome section is hidden and the Game Area appears |✅|
-|The Question Area displays a random puzle |When the game starts, a randomly generated equation appears |✅|
+|The Question Area displays a random puzzle |When the game starts, a randomly generated equation appears |✅|
 
 Click to play the video
 
@@ -734,7 +734,7 @@ Click to play the video
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
 |The number of operands in the Question Area increases on user input |When the operand toggle is increased by the user, the Question Area displays a new equation with the selected number of operands and one less operator drop-down selector |✅|
-|The number of operands in the Question Area descreases on user input |When the operand toggle is increased by the user, the Question Area displays a new equation with the selected number of operands and one less operator drop-down selector |✅|
+|The number of operands in the Question Area decreases on user input |When the operand toggle is increased by the user, the Question Area displays a new equation with the selected number of operands and one less operator drop-down selector |✅|
 |The Operand selector toggle does **not** reset elements outside the Game Area |When the user changes the value of the Operand selector toggle, the Perfect Streak counter is **not** changed |✅|
 |The Operand selector toggle never results in an equation with more than 2 decimal places|When the solution has more than 2 decimal places, a new equation is generated without further action|✅|
 
@@ -856,8 +856,8 @@ The following resources were used to learn/double check general, atomic function
 - [`form` color picker](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_color)
 - [Call a function within a function](https://stackoverflow.com/a/4524890)
 - [Slice a character off the end of a string](https://stackoverflow.com/a/952945)
-- [Remove a certain characrer from a string](https://www.scaler.com/topics/javascript-remove-character-from-string/)
-- [Evaulate a string as a mathematical expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#never_use_direct_eval!)
+- [Remove a certain character from a string](https://www.scaler.com/topics/javascript-remove-character-from-string/)
+- [Evaluate a string as a mathematical expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#never_use_direct_eval!)
 - [Docstrings](https://stackoverflow.com/questions/34205666/utilizing-docstrings)
 - [Enable and disable an input button](https://stackoverflow.com/a/13831737)
 - [Check if a number is an integer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
