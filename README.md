@@ -76,13 +76,18 @@ The [Welcome screen](#welcome-screen) and the [Milestone "popups"](#milestone-po
 
 ### Flow
 
-#### Scoring rules
-
 #### Difficulty level
 
-number of integers
-operators: only [+,-, *, /]
-result maxed at 2 decimal places
+The difficulty level of the game is capped in several ways
+
+- only 4 operators are used **+**,**-**, **\***, and **/**
+- the right side of the equation has no more than 2 decimal places
+- only positive integers are used for operands
+
+The user can adjust the level of difficulty by [selecting how many operands the equation should consist of](#pperand-selector-toggle).
+
+#### Scoring rules
+
 
 ## Features
 
