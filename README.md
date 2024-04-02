@@ -376,7 +376,7 @@ External links open in a new tab.
 - JavaScript
 - Markdown
 
-### Frameworks,  Libraries & Programs Used
+### Frameworks, libraries & programs used
 
 - [Am I Responsive?](https://ui.dev/amiresponsive) – show the website on a range of devices
 - [Balsamiq](https://balsamiq.com/) – create wireframes
@@ -401,7 +401,7 @@ External links open in a new tab.
 - [Redketchup.io](https://redketchup.io/color-picker) - color picker from image
 - [Shields.io](https://shields.io/) – add badges to README
 - [Slack](https://slack.com/) – mentor communication
-- [Visual Studio Code](https://code.visualstudio.com/) – code editor
+- [Visual Studio Code](https://code.visualstudio.com/) – code edito
 - [WebAIM](https://webaim.org/resources/contrastchecker/) – color contrast checking
 - [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/) – accessibility testing
 
