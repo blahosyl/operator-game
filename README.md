@@ -22,13 +22,13 @@ Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 ![GitHub language count](https://img.shields.io/github/languages/count/blahosyl/operator-game?color=black)
 
 
-## User Experience (UX)
+## User Experience
 
 This game lets users guess the correct operators in an equation with randomly generated integers, and see if their guess is correct. There are no limits on the number of guesses or the length of game play.
 
 Furthermore, since a new, random equation is generated each time, the game can be played a large number of times without the puzzles repeating (unlike a fixed-question trivia game where the users are more likely to memorise all questions).
 
-### User stories
+#### User stories for all users
 
 - [UX1] I want to relax and feel good while improving my skills.
 - [UX2] I want to use the game on a variety of screen sizes.
@@ -515,6 +515,68 @@ The current performance score is 100 on both [mobile](testing/automated-testing/
 ### Manual testing
 
 #### Testing user stories
+
+The user stories from the [User Experience](#user-experience) section are repeated here for convenience.
+
+#### User stories for all users
+
+- [UX1] I want to relax and feel good while improving my skills.
+- [UX2] I want to use the game on a variety of screen sizes.
+- [UX3] I want to easily navigate between the different stages of the game.
+- [UX4] I want to know the next logical step in the game play just by looking at the game elements.
+- [UX5] I want to solve a randomly generated puzzle.
+- [UX6] I want to know if my guess is correct or not.
+- [UX7] I want to keep playing as long as I like.
+- [UX8] I want to have the option to keep trying to guess the solution until I get it right **or** move on to the next equation.
+
+|Goal	|Feature facilitating the goal|
+|---	|---|
+|UX1	|[Perfect streak counter](#perfect-streak-counter)|
+|UX1	|[Milestone "popups"](#milestone-popups)|
+|UX1	|[Visual design](#visual-design)|
+|UX1	|[Scoring rules](#scoring-rules)|
+|UX2	|[Responsivity of all elements](#responsivity)|
+|UX3	|[Welcome screen text](#welcome-screen)|
+|UX4	|Text copy|
+|UX4	|[Color scheme](#color-scheme)|
+|UX5	|[Game Area](#game-area)|
+|UX5	|[Question Area](#question-area)|
+|UX6	|[Solution Area](#solution-area)|
+|UX6	|[Submit button](#submit-button)|
+|UX7	|[Game flow design](#flow)|
+|UX8	|[Game flow design](#flow)|
+|UX8	|[New Game button](#new-game-button)|
+|UX8	|[Game Area](#game-area)|
+
+
+#### First-time visitor goals
+
+- [FI1] I want to know how the gameplay works.
+- [FI2] I want to know how the scoring works.
+- [FI3] I want to open the rule description again at any point during gameplay.
+- [FI4] I want to decrease the difficulty level of the game.
+
+|Goal	|Feature facilitating the goal|
+|---	|---|
+|FI1	|[Gameplay rules section on the Welcome screen](#welcome-screen)|
+|FI2	|[Scoring rules section on the Welcome screen](#welcome-screen)|
+|FI3	|[Welcome screen button](#welcome-screen-button)|
+|FI4	|[Operand Selector toggle](#operand-selector-toggle)|
+
+
+#### Returning/frequent visitor goals
+
+Since the game is relatively simple, no distinction is made between returning and frequent visitor goals
+
+
+- [RE1] I want to quickly start the game without reading the rule again.
+- [RE2] I want to increase the difficulty level of the game.
+
+|Goal	|Feature facilitating the goal|
+|---	|---|
+|RE1	|[Start Game button on the Welcome screen](#start-game-button)|
+|RE2	|[Operand Selector toggle](#operand-selector-toggle)|
+
 
 #### Full testing of functionalities
 
