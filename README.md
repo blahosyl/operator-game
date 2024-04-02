@@ -199,8 +199,8 @@ The game area includes the following elements:
 
 - a short instruction line on how to play
 - the [Question Area](#question-area) displaying the puzzle to be solved
-- the [Solution Area](#solution-area) where the feedback message is shown when the user clicks the [**Check Answer**](#submit-button) button
-- the [**Check Answer**](#submit-button) button that displays the appropriate message in the [Solution Area](#solution-area)
+- the [Solution Area](#solution-area) where the feedback message is shown when the user clicks the [**Submit**](#submit-button) button
+- the [**Submit**](#submit-button) button that displays the appropriate message in the [Solution Area](#solution-area)
 
 ![The Game Area](readme-pics/game-area-empty.png)
 
@@ -251,7 +251,7 @@ If the user's quess is incorrect, another message appears, containing the euqati
 
 ![The Solution Area after an inorrect quess](readme-pics/solution-area-wrong.png)
 
-The [**Check Answer**](#submit-button) button is also disabled in this case, but it is enabled again when the user changes any of the operators. Changing an operator also clears the Solution Area.
+The [**Submit**](#submit-button) button is also disabled in this case, but it is enabled again when the user changes any of the operators. Changing an operator also clears the Solution Area.
 
 ![The Solution Area after an inorrect quess](readme-pics/submit-button-re-enabled.png)
 
