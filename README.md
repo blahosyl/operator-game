@@ -86,6 +86,10 @@ The [Milestone image](assets/images/balloons.webp) is the only image used in the
 
 ![The Milestone image: lots of balloons and pompoms in shades of 4 teal, red, orange and pink on a dark teal background](assets/images/balloons.webp)
 
+The [favicon](assets/favicon/android-chrome-192x192.png) used for the project depicts the four operators with  rounded square backgrounds. This was selected because it is explictly referencing the main purpose of the game and also fits the desgin theme. The favicon's color was changed to fit the color palette.
+
+![Color palette](assets/favicon/android-chrome-192x192.png)
+
 
 #### Wireframes
 
