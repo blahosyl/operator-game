@@ -875,7 +875,7 @@ The following resources were used to learn/double check general, atomic function
 
 The following sources contributed code or suggestions to specific functions within the project:
 
-- Lewis from the tutoring team helped me solve [this issue](https://github.com/blahosyl/operator-game/issues/30).
+- Lewis from the tutoring team helped me solve [this issue](https://github.com/blahosyl/operator-game/issues/3).
 - Roo from the tutoring team helped me solve [this issue](https://github.com/blahosyl/operator-game/issues/5).
 - Rory Patrick Sheridan, my mentor, helped me solve this [JSHint warning](https://github.com/blahosyl/operator-game/issues/38), and gave me the tips and and heads up described in [these issues](https://github.com/blahosyl/operator-game/issues?q=is%3Aissue+label%3Amentor).
 
