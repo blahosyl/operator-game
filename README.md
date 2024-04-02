@@ -465,7 +465,7 @@ Issues and bugs are tracked in [Github Issues](https://github.com/blahosyl/opera
 
 #### Code validation
 
-The [`html`]#(html-validation-with-the-w3c-validator), [`css`](#css-validation-with-jigsaw) and [`js`](#javascript-validation-with-jshint) files of the project were periodically validated throughout development.
+The [`html`](#html-validation-with-the-w3c-validator), [`css`](#css-validation-with-jigsaw) and [`js`](#javascript-validation-with-jshint) files of the project were periodically validated throughout development.
 
 The issues discovered during validation are tracked in GitHub Issues [#37](https://github.com/blahosyl/operator-game/issues/37) and [#38](https://github.com/blahosyl/operator-game/issues/38).
 
