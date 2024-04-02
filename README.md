@@ -301,7 +301,7 @@ These color effects use inline HTML styles assigned by the Javascript code. Apar
 
 The New Game button is located directly below the [Game Area](#game-area) and bears the text "New Puzzle" (since "New Game" was found confusing by some testers regarding how the [Perfect Streak counter](#perfect-streak-counter) works).
 
-Clicking the New Game button resets the [Game Area](#game-area) to its defaults and generates a new puzzle, but it does **not** reset the [Perfect Streak counter](#perfect-streak-counter) or the [Operand selector toggle](#sperand-selector-toggle) and its effect (see the [Scoring rules](#scoring-rules) section for the reasoning why).
+Clicking the New Game button resets the [Game Area](#game-area) to its defaults and generates a new puzzle, but it does **not** reset the [Perfect Streak counter](#perfect-streak-counter) or the [Operand selector toggle](#operand-selector-toggle) and its effect (see the [Scoring rules](#scoring-rules) section for the reasoning why).
 
 ![The New Game button](readme-pics/new-game-button.png)
 
