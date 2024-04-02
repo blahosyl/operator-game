@@ -401,7 +401,7 @@ External links open in a new tab.
 - [Slack](https://slack.com/) – mentor communication
 - [Visual Studio Code](https://code.visualstudio.com/) – code edito
 - [WebAIM](https://webaim.org/resources/contrastchecker/) – color contrast checking
-- [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/) – accessibility testing
+- [Web Disability Simulator](https://chromewebstore.google.com/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) – accessibility testing
 
 
 ## Deployment
