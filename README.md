@@ -508,7 +508,7 @@ The current performance score is [90 on mobile](testing/automated-testing/lighth
 
 Lighthouse accessibility tests were carried out throughout development (selected tests can be found in the folders [`lighthouse-accessibility`](testing/automated-testing/lighthouse-accessibility)) and [`lighthouse-full`](testing/automated-testing/lighthouse-full)). 
 
-On issue was found, which was fixed in [this commit](https://github.com/blahosyl/operator-game/commit/f05ec2ee280be0389fb87750e6a2e98705d1c5fd).
+One issue was found, which was fixed in [this commit](https://github.com/blahosyl/operator-game/commit/f05ec2ee280be0389fb87750e6a2e98705d1c5fd).
 
 
 The current performance score is 100 on both [mobile](testing/automated-testing/lighthouse-full/mobile/blahosyl.github.io-20240401T134642.html) and [desktop](testing/automated-testing/lighthouse-full/desktop/blahosyl.github.io-20240401T134508.html).
