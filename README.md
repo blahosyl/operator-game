@@ -76,6 +76,25 @@ The [Welcome screen](#welcome-screen) and the [Milestone "popups"](#milestone-po
 
 ### Flow
 
+#### Description of the rules
+
+On loading the page, the [Welcome screen](#welcome-screen) appears, containing a description of how to play the game and how the scoring works.
+
+#### Basic gameplay
+
+1. The game generates a random set of **operands**: positive integers between 1 and 10 (inclusive). These are displayed on the screen, with an operator drop-down toggle between each operand.
+2. The game generates a random set of **operators** from the set [+,-,*,/]. These are never shown to the user.
+3. The game also calculates the correct result of the equation based on the randomly generated operators and operands and displays this on the screen.
+4. The user has to select the correct operators to make the equation true.
+
+#### Evaluation
+
+The user can check their guess, that is, whether the operators they selected give the correct result, by clicking the [Submit button](#submit-button).
+
+If the guess is correct, a congratulatory message appears, and a new puzzle can be generated with the [New Game button](#new-game-button).
+
+If the guess is incorrect, the user can change the operators and try again as many times as they like. There are no limits on gameplay in terms of time or the number of tries.
+
 #### Difficulty level
 
 The difficulty level of the game is capped in several ways
