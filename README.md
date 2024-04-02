@@ -109,6 +109,9 @@ Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
 <small><i><a href='http://github.com/3kh0/readme-toc/'>Table of contents generated with readme-toc</a></i></small>
 
+You can also navigate the document structure by clicking the list icon in the top right corner.
+
+![Navigate the document by clicking the list icon](readme-pics/show-toc.png)
 
 ## User Experience
 
