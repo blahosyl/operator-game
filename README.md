@@ -584,6 +584,21 @@ Since the game is relatively simple, no distinction is made between returning an
 
 #### Full testing of functionalities
 
+##### Devices
+
+The website was tested on all emulators available on Chrome Developer tools. In addition, it was tested on the following devices:
+
+ - Macbook Air M2, Mac OS Sonoma 14.3.1 
+ - Macbook Air M1, Mac OS Sonoma 14.3.1
+
+ ##### Browsers
+
+The site was tested on the following browsers:
+
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+
 ##### Responsivity testing
 
 |Functionality	|Expected behavior	| result|

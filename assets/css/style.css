@@ -262,6 +262,10 @@ a {
   #score-rules-section {
     padding-top: 10rem;
   }
+
+  #new-game-button {
+    font-size: 200%;
+  }
 }
 
 /* very narrow screens */
