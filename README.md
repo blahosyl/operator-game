@@ -394,7 +394,7 @@ External links open in a new tab.
 - [Google Fonts](https://fonts.google.com/) - import fonts used on the website
 - [Lipsum](https://www.lipsum.com/), [loremipsum.io](https://loremipsum.io/) – Lorem Ipsum generators (not used in final version)
 - [MacDown](https://macdown.uranusjr.com/) – Markdown editor
-- [Preview](https://support.apple.com/guide/preview/welcome/mac) – cropping images
+- [Preview](https://support.apple.com/guide/preview/welcome/mac) – cropping and annotating images
 - [PythonTutor](https://pythontutor.com/) – debugging Javascript Code
 - [Redketchup.io](https://redketchup.io/color-picker) - color picker from image
 - [Shields.io](https://shields.io/) – add badges to README
