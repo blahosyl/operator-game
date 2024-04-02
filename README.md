@@ -887,7 +887,7 @@ All text content was written by me.
 
 #### Images
 
-Favicon: [Mathematics icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/mathematics), modified to fit the color scheme by my, converted to `ico` format with [Favicon.io](https://favicon.io/)
+Favicon: [Mathematics icons created by Freepik - Flaticon](https://www.flaticon.com/free-icon/mathematics-symbol_3477889?term=mathematics&page=1&position=25&origin=tag&related_id=3477889), modified to fit the color scheme by me, converted to `ico` format with [Favicon.io](https://favicon.io/)
 
 Milestone image by [vector_corp on Freepik](https://www.freepik.com/free-ai-image/colorful-balloons-decor-background_77741605.htm#page=3&position=9&from_view=search&track=ais&uuid=777890df-6c6e-4ecf-90da-7587aff2328e).
 
@@ -904,8 +904,8 @@ Milestone image by [vector_corp on Freepik](https://www.freepik.com/free-ai-imag
 
 ### Acknowledgements
 
-I would like to thank Peter Litauszki for giving me the idea for this project, and for being an enthusiastic tester.
+I would like to thank Peter Litauszki for giving me the idea for this project, and for being an enthusiastic test subject and video editor.
 
 I am also grateful to my mentor Rory Patrick Sheridan for his super-useful advice and great insights!
 
-Last but definitely not least, I would like to thank [Lewis](https://github.com/blahosyl/operator-game/issues/3) and Roo from the tutoring team for their efficient and friendly help when I got stumped.
+Last but definitely not least, I would like to thank [Lewis](https://github.com/blahosyl/operator-game/issues/3) and [Roo]((https://github.com/blahosyl/operator-game/issues/5)) from the tutoring team for their efficient and friendly help when I got stumped.
