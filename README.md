@@ -588,6 +588,7 @@ Since the game is relatively simple, no distinction is made between returning an
 
 The website was tested on all emulators available on Chrome Developer tools. In addition, it was tested on the following devices:
 
+ - iPhone 12 Pro, iOS 17.4.1
  - Macbook Air M2, Mac OS Sonoma 14.3.1 
  - Macbook Air M1, Mac OS Sonoma 14.3.1
 
@@ -595,9 +596,9 @@ The website was tested on all emulators available on Chrome Developer tools. In 
 
 The site was tested on the following browsers:
 
-- Google Chrome
-- Mozilla Firefox
-- Microsoft Edge
+- Google Chrome (mobile and desktop)
+- Mozilla Firefox (desktop)
+- Microsoft Edge (desktop)
 
 ##### Responsivity testing
 
