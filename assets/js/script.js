@@ -560,14 +560,14 @@ function newGame() {
   currentChosenOperators = [];// with the help of tutor Roo (refactored)
   // show the operators in the console log for development purposes
   // ASSESSMENT uncomment the next line for testing/assessment
-  console.log(currentChosenOperators = generateRandomOperators()); // with the help of tutor Roo
+  // console.log(currentChosenOperators = generateRandomOperators()); // with the help of tutor Roo
 
   // show the expected result of the calculation in the question area
   showResult();
 
   // show the correct result in the console log for development purposes
   // ASSESSMENT uncomment the next line for testing/assessment
-  console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+geval(concatenateWithOperands(currentChosenOperators)));
+  // console.log('the correct solution:',concatenateWithOperands(currentChosenOperators)+'='+geval(concatenateWithOperands(currentChosenOperators)));
 
   // the result should not have more than 2 decimal places
   while (Number.isInteger(showResult()*100) === false) {
