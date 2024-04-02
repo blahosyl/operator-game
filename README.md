@@ -254,7 +254,7 @@ The [**Submit**](#submit-button) button is also disabled in this case, but it is
 ![The Solution Area after an inorrect quess](readme-pics/submit-button-re-enabled.png)
 
 
-The [Perfect Streak counter](#perfect-Streak-counter) is reset to 0 on an incorrect guess, including [Milestone "popups"](milestone-"popups") and their effects on the [Perfect Streak counter](#perfect-streak-counter).
+The [Perfect Streak counter](#perfect-Streak-counter) is reset to 0 on an incorrect guess, including [Milestone "popups"](#milestone-popups) and their effects on the [Perfect Streak counter](#perfect-streak-counter).
 
 #### Submit button
 
@@ -280,7 +280,7 @@ When the Submit button is re-enabled within a game, its text content changes to 
 
 ![The Submit button text changes after being re-enabled](readme-pics/submit-button-re-enabled.png)
 
-The Submit button also triggers [Milestone "popups"](milestone-"popups") when the [Perfect Streak counter](#perfect-streak-counter) reaches certain values.
+The Submit button also triggers [Milestone "popups"](#milestone-popups) when the [Perfect Streak counter](#perfect-streak-counter) reaches certain values.
 
 ### Milestone popups
 
