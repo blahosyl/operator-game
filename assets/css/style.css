@@ -35,8 +35,8 @@ button {
 /* unified formatting for the big buttons */
 .big-button {
   font-size: 200%;
-  width: 15rem;
-  height: 5rem;
+  min-width: 15rem;
+  min-height: 5rem;
   border-radius: 20px;
 }
 
@@ -261,10 +261,6 @@ a {
   /* the section within `#welcome-section` displaying the scoring rules, hidden by default */
   #score-rules-section {
     padding-top: 10rem;
-  }
-
-  #new-game-button {
-    font-size: 200%;
   }
 }
 
