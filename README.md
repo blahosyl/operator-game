@@ -219,11 +219,9 @@ The numbers (operands) are selected randomly from the range of integers between 
 The operator **+** is shown on each drop-down selector by default. It is reset whenever a new puzzle is generated, but not when the user guess is wrong, so that they can keep track of the guesses they tried more easily.
 
 
-The difficulty of the puzzle is capped by making sure the result only has a maximum of 2 decimal places. Wheever this is not the case, a new equation is created.
+The difficulty of the puzzle is capped by making sure the result only has a maximum of 2 decimal places. Whenever this is not the case, a new equation is created.
 
 Negative integers are allowed for the solution of the equation, but not for the operands.
-
-[video]
 
 By default, the equation has 3 operands and 2 operators. The number of operands and operators in the equation can be changed by the [Operand selector toggle](#operand-selector-toggle).
 
