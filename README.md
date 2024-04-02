@@ -274,7 +274,7 @@ The Submit button is disabled once it has been pressed. It is enabled again in t
 - when the user changes an operator
 - when a new game is run
 - when the page is reloaded
-- when the [**Continue**](#continue-button) button on the Milestone "popup" is clicked
+- when the **Continue** button on a Milestone "popup" is clicked
 
 When the Submit button is re-enabled within a game, its text content changes to "Check Again".
 
