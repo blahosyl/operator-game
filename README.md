@@ -387,10 +387,10 @@ External links open in a new tab.
 - [GitHub](https://github.com/) – store the source files
 - [GitHub Desktop](https://desktop.github.com/) – GitHub UI
 - [GitHub Issues](https://github.com/features/issues) – project management, bug tracking
-- [GitHub TOC generator](http://github.com/3kh0/readme-toc/)
+- [GitHub TOC generator](http://github.com/3kh0/readme-toc/) – automatically generate a Markdown TOC
 - [GitHub web editor](https://github.com/) - the only way (known to me) to add videos to the README
 - [GitPod](https://gitpod.io/) – Integrated Development Environment (only used for tutoring)
-- Google Developer Tools – troubleshoot, test responsivity and styling
+- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools) – troubleshoot, test responsivity and styling
 - [Google Fonts](https://fonts.google.com/) - import fonts used on the website
 - [Lipsum](https://www.lipsum.com/), [loremipsum.io](https://loremipsum.io/) – Lorem Ipsum generators (not used in final version)
 - [MacDown](https://macdown.uranusjr.com/) – Markdown editor
