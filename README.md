@@ -378,15 +378,15 @@ External links open in a new tab.
 
 ### Frameworks,  Libraries & Programs Used
 
-- [Am I Responsive?](https://ui.dev/amiresponsive) – to show the website on a range of devices
-- [Balsamiq](https://balsamiq.com/) – wireframes
-- [Birme](https://www.birme.net/) – resize images and convert to `webp` format
+- [Am I Responsive?](https://ui.dev/amiresponsive) – show the website on a range of devices
+- [Balsamiq](https://balsamiq.com/) – create wireframes
+- [Birme](https://www.birme.net/) – resize image and convert to `webp` format
 - [Coolors.co](https://coolors.co/) - color palettes
 - [Favicon.io](https://favicon.io/) – create the favicon
-- [Flaticon](https://www.flaticon.com/) image for favicon
-- [FontAwsome](https://fontawesome.com/) – icons for the nav bar and hamburger menu (not used in the final version)
+- [Flaticon](https://www.flaticon.com/) – search for image for favicon
+- [FontAwsome](https://fontawesome.com/) – icons for operators (not used in the final version)
 - [Git](https://git-scm.com/) – version control
-- [GittHub](https://github.com/) – store the source files
+- [GitHub](https://github.com/) – store the source files
 - [GitHub Desktop](https://desktop.github.com/) – GitHub UI
 - [GitHub Issues](https://github.com/features/issues) – project management, bug tracking
 - [GitHub TOC generator](http://github.com/3kh0/readme-toc/)
@@ -398,9 +398,13 @@ External links open in a new tab.
 - [MacDown](https://macdown.uranusjr.com/) – Markdown editor
 - [Preview](https://support.apple.com/guide/preview/welcome/mac) – cropping images
 - [PythonTutor](https://pythontutor.com/) – debugging Javascript Code
-- [WebAIM](https://webaim.org/resources/contrastchecker/) – color contrast checking
 - [Redketchup.io](https://redketchup.io/color-picker) - color picker from image
 - [Shields.io](https://shields.io/) – add badges to README
+- [Slack](https://slack.com/) – mentor communication
+- [Visual Studio Code](https://code.visualstudio.com/) – code editor
+- [WebAIM](https://webaim.org/resources/contrastchecker/) – color contrast checking
+- [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/) – accessibility testing
+
 
 ## Deployment
 
