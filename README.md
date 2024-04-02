@@ -143,7 +143,7 @@ Furthermore, since a new, random equation is generated each time, the game can b
 Since the game is relatively simple, no distinction is made between returning and frequent visitor goals
 
 
-- [RE1] I want to quickly start the game without reading the rule again.
+- [RE1] I want to quickly start the game without reading the rules again.
 - [RE2] I want to increase the difficulty level of the game.
 
 ## Design
@@ -154,9 +154,9 @@ The intention was to create a visual impression that is retro-inspired but still
 
 #### Color scheme
 
-The color scheme started out very minimalistic, with only a red and orange border marking the [Game Area](#game-area) and [Question Area](#question-area), respectively. The design remained this minimalistic until the Javascript functions and logic was mostly finished.
+The color scheme started out very minimalistic, with only a red and orange border marking the [Game Area](#game-area) and [Question Area](#question-area), respectively. The design remained this minimalistic until the JavaScript functions and logic were mostly finished.
 
-The [image](#imagery) selected for the [Milestone "popups"](#milestone-popups) inspired the development of the color scheme to its current form. An image color picker was used to pick colors, which were then used for text elements and backgrounds. 
+The [image](#imagery) selected for the [Milestone "popups"](#milestone-popups) inspired the development of the color scheme to its current form. An image color picker was used to pick salient colors from the image, which were then used for text elements and backgrounds. 
 
 After this, color contrasts were checked and adjusted (see the [Color contrast testing](#color-contrast-testing) section), resulting in the following color palette:
 
@@ -198,9 +198,9 @@ On loading the page, the [Welcome screen](#welcome-screen) appears, containing a
 
 #### Basic gameplay
 
-1. The game generates a random set of **operands**: positive integers between 1 and 10 (inclusive). These are displayed on the screen, with an operator drop-down toggle between each operand.o
-2. The game generates a random set of **operators** from the set [+,-,*,/]. These are never shown to the user.
-3. The game also calculates the correct result of the equation based on the randomly generated operators and operands and displays this on the screen.
+1. The game generates a random set of **operands**: positive integers between 1 and 10 (inclusive). These are displayed on the screen, with an operator drop-down toggle between each operand.
+2. The game generates a random set of **operators** from the set [ + , - , * , / ]. These are never shown to the user.
+3. The game also calculates the correct result of the equation based on the randomly generated operators and operands, and displays this on the screen.
 4. The user has to select the correct operators to make the equation true.
 
 #### Evaluation
@@ -213,9 +213,9 @@ If the guess is incorrect, the user can change the operators and try again as ma
 
 #### Difficulty level
 
-The difficulty level of the game is capped in several ways
+The difficulty level of the game is capped in several ways:
 
-- only 4 operators are used **+**,**-**, **\***, and **/**
+- only 4 operators are used: [ + , - , * , / ]
 - the right side of the equation has no more than 2 decimal places
 - only positive integers are used for operands
 
@@ -305,7 +305,7 @@ The Question Area displays an equation without the appropriate operator(s). Inst
 
 ![The Question Area](readme-pics/question-area.png)
 
-The numbers (operands) are selected randomly from the range of integers between 1 and 10 (inclusive). The operators are selected from the array ["+/, "-", "*", "/"].
+The numbers (operands) are selected randomly from the range of integers between 1 and 10 (inclusive). The operators are selected from the array [ + ,  - ,  * ,  / ].
 
 The operator **+** is shown on each drop-down selector by default. It is reset whenever a new puzzle is generated, but not when the user guess is wrong, so that they can keep track of the guesses they tried more easily.
 
@@ -345,7 +345,7 @@ The [**Submit**](#submit-button) button is also disabled in this case, but it is
 ![The Solution Area after an incorrect guess](readme-pics/submit-button-re-enabled.png)
 
 
-The [Perfect Streak counter](#perfect-Streak-counter) is reset to 0 on an incorrect guess, including [Milestone "popups"](#milestone-popups) and their effects on the [Perfect Streak counter](#perfect-streak-counter).
+The [Perfect Streak counter](#perfect-Streak-counter) is reset to 0 on an incorrect guess, including the effect of [Milestone "popups"](#milestone-popups) on the [Perfect Streak counter](#perfect-streak-counter).
 
 #### Submit button
 
@@ -358,16 +358,16 @@ When the Submit button is clicked, the app compares the result of the user's gue
 
 It also populates the [Solution Area](#solution-area) with content depending on whether the user's guess was correct.
 
+The Submit button is disabled once it has been pressed, and its text content changes to "Check Again".
+
 ![The Solution Area after an incorrect guess](readme-pics/solution-area-wrong.png)
 
-The Submit button is disabled once it has been pressed. It is enabled again in the following cases:
+The Submit button is enabled again in the following cases:
 
 - when the user changes an operator
 - when a new game is run
 - when the page is reloaded
 - when the **Continue** button on a Milestone "popup" is clicked
-
-When the Submit button is re-enabled within a game, its text content changes to "Check Again".
 
 ![The Submit button text changes after being re-enabled](readme-pics/submit-button-re-enabled.png)
 
@@ -386,7 +386,7 @@ At these points, clicking the Submit button activates the Milestone event. This 
 
 The background color of the Milestone text and the Continue button is different for each milestone. The background color of the Perfect Streak text is the same as the background color of the last Continue button.
 
-These color effects use inline HTML styles assigned by the Javascript code. Apart from changing the `display` property of element, this is the only case of using inline styles in this project.
+These color effects use inline HTML styles assigned by the Javascript code. Apart from changing the `display` property of elements, this is the only case of using inline styles in this project.
 
 ### New Game button 
 
@@ -415,7 +415,7 @@ The Operand Selector toggle currently offers a range between 2 and 6 (inclusive)
 
 ![The Operand Selector toggle](readme-pics/operand-selector-toggle.png)
 
-When the Operand Selector toggle is changed, the equation template is adjusted to consist of the number of operands selected by the user. This also resets the [Game Area](#game-area) to its defaults and generates a new puzzle, but it does **not** reset the [Perfect Streak counter](#perfect-streak-counter) or the [Operand selector toggle](#sperand-selector-toggle) and its effect (see the [Scoring rules](#scoring-rules) section for the reasoning why).
+When the Operand Selector toggle is changed, the equation template is adjusted to consist of the number of operands selected by the user. This also resets the [Game Area](#game-area) to its defaults and generates a new puzzle, but it does **not** reset the [Perfect Streak counter](#perfect-streak-counter) (see the [Scoring rules](#scoring-rules) section for the reasoning why).
 
 ### Welcome Screen button
 
@@ -432,7 +432,7 @@ While this game is relatively minimalistic, there are several additional customi
 - **the number of operands**: This can easily be changed by modifying the `"number-selector"` form in the HTML code to include larger numbers. The only concern  here is that the [Question area](#question-area) might look overcrowded and take up too much space on smaller screens.
 - **the range of operands**: This is also easily changed by modifying "11" in the function `showRandomOperands(11)` in the [Javascript code](assets/js/script.js) to an integer of our choice. 
 	- As a further enhancement, a drop-down similar to the [Operand Selector toggle](#operand-selector-toggle) could let the user choose the upper bound of the generated operands themselves.
-- **negative operands**: By rewriting the function `generateRandomNumbers()` in the [Javascript code](assets/js/script.js) so that each operand is multiplied by either `1` or `-1` randomly, negative operands can be included in the game. The function `eliminateZero()` would still make sure 0 is not one of the operands.
+- **negative operands**: By rewriting the function `generateRandomNumbers()` in the [Javascript code](assets/js/script.js) so that each operand is multiplied by either `1` or `-1` randomly, negative operands can be included in the game. The function `eliminateZero()` would still make sure 0 is never one of the operands.
 - **the range of operators**: Exponentiation is fairly straightforward to add by modifying the function `generateRandomOperators()` in the [Javascript code](assets/js/script.js) so that the `operators` array includes `**` for exponentiation.
 	- Including roots and parentheses in the equation would require some more rewriting of the concatenation and evaluation rules of the game.
 - **color palettes**: A different kind of customisation option would be to enable the user to choose their preferred color palette. There are 2 different ways of implementing this:
@@ -565,7 +565,7 @@ The issues discovered during validation are tracked in GitHub Issues [#37](https
 
 The `html` file of the project was regularly tested by the [W3C validator](https://validator.w3.org/). 
 
-In the current version of the site, [no errors or warnings were found during validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fblahosyl.github.io%2Foperator-game).
+In the current version of the site, [no errors or warnings were found during validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fblahosyl.github.io%2Foperator-game%2F).
 
 ![HTML: no issues or warnings](testing/automated-testing/w3c-html/html-validation.png)
 
@@ -738,7 +738,7 @@ Click to play the video
 
 Click to play the video
 
-[Testing the small buttons on the welcome screen](https://github.com/blahosyl/operator-game/assets/26421503/a183d615-d378-4609-bbd2-08e429da7eca)
+[Testing the small buttons on the Welcome screen](https://github.com/blahosyl/operator-game/assets/26421503/a183d615-d378-4609-bbd2-08e429da7eca)
 
 
 |Functionality	|Expected behavior	| result|
@@ -769,7 +769,6 @@ https://github.com/blahosyl/operator-game/assets/26421503/26ef5d43-7e68-4245-abf
 |The Solution Area is cleared when an operator is changed |When the user changes an operator after a guess, the Solution Area is cleared |✅|
 |The Submit button is re-enabled when an operator is changed |When the user changes an operator after a guess, the button is re-enabled |✅|
 |If Submit button text changes when an operator is changed |When the user changes an operator after a guess, the button text is changed to "Check Again" |✅|
-|The Submit button is re-enabled when the page is re-loaded |When the user reloads the page, the Submit button is re-enabled |✅|
 |The background color of the Perfect Streak text is reset at an incorrect guess |The background color of the Perfect Streak text set back to white after an incorrect guess |✅|
 
 Click to play the video
@@ -825,7 +824,7 @@ Click to play the video
 |Functionality	|Expected behavior	| result|
 |:---				|:---					| :---: |
 |The number of operands in the Question Area increases on user input |When the operand toggle is increased by the user, the Question Area displays a new equation with the selected number of operands and one less operator drop-down selector |✅|
-|The number of operands in the Question Area decreases on user input |When the operand toggle is increased by the user, the Question Area displays a new equation with the selected number of operands and one less operator drop-down selector |✅|
+|The number of operands in the Question Area decreases on user input |When the operand toggle is decreased by the user, the Question Area displays a new equation with the selected number of operands and one less operator drop-down selector |✅|
 |The Operand selector toggle does **not** reset elements outside the Game Area |When the user changes the value of the Operand selector toggle, the Perfect Streak counter is **not** changed |✅|
 |The Operand selector toggle never results in an equation with more than 2 decimal places|When the solution has more than 2 decimal places, a new equation is generated without further action|✅|
 
@@ -999,4 +998,6 @@ I would like to thank Peter Litauszki for giving me the idea for this project, a
 
 I am also grateful to my mentor Rory Patrick Sheridan for his super-useful advice and great insights!
 
-Last but definitely not least, I would like to thank [Lewis](https://github.com/blahosyl/operator-game/issues/3) and [Roo]((https://github.com/blahosyl/operator-game/issues/5)) from the tutoring team for their efficient and friendly help when I got stumped.
+I would like to thank [Lewis](https://github.com/blahosyl/operator-game/issues/3) and [Roo]((https://github.com/blahosyl/operator-game/issues/5)) from the tutoring team for their efficient and friendly help when I got stumped.
+
+Last but definitely not least, thank you to the anonymous testers who gave me invaluable feedback.
