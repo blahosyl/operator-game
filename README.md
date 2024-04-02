@@ -231,11 +231,11 @@ The question area is also responsive, and adapts to very narrow viewports with a
 
 #### Solution Area
 
-The Solution Area is empty by default, and its content is added by JavaScript when the [**Check Answer**](#submit-button) button is clicked. The content varies depending on whether the user got the answer right, and what guess they submitted.
+The Solution Area is empty by default, and its content is added by JavaScript when the [**Submit**](#submit-button) button is clicked. The content varies depending on whether the user got the answer right, and what guess they submitted.
 
 ##### Correct guess
 
-If the user's guess is correct, a congratulatory message appears with some celebratory emojis, and the [**Check Answer**](#submit-button) button is disabled.
+If the user's guess is correct, a congratulatory message appears with some celebratory emojis, and the [**Submit**](#submit-button) button is disabled.
 
 ![The Solution Area after a correct quess](readme-pics/solution-area-correct.png)
 
