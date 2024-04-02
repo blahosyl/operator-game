@@ -813,10 +813,16 @@ In addition, the design accommodates the following conditions with some of its p
 	- avoid having too much content on the same page
 
 ### Bugs
+
+All bugs are tracked in [GitHub Issues](https://github.com/blahosyl/operator-game/issues).
+
 #### Known bugs
+
+There are no known bugs in the project.
+
 #### Solved bugs
 
-
+Solved bugs are listed in [GitHub Issues](https://github.com/blahosyl/operator-game/issues?q=is%3Aissue+label%3Abug).
 
 
 ## Credits
