@@ -24,15 +24,36 @@ Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
 ## User Experience (UX)
 
+This game lets users guess the correct operators in an equation with randomly generated integers, and see if their guess is correct. There are no limits on the number of guesses or the length of game play.
+
+Furthermore, since a new, random equation is generated each time, the game can be played a large number of times without the puzzles repeating (unlike a fixed-question trivia game where the users are more likely to memorise all questions).
+
 ### User stories
 
-#### Client goals
+- [UX1] I want to relax and feel good while improving my skills.
+- [UX2] I want to use the game on a variety of screen sizes.
+- [UX3] I want to easily navigate between the different stages of the game.
+- [UX4] I want to know the next logical step in the game play just by looking at the game elements.
+- [UX5] I want to solve a randomly generated puzzle.
+- [UX6] I want to know if my guess is correct or not.
+- [UX7] I want to keep playing as long as I like.
+- [UX8] I want to have the option to keep trying to guess the solution until I get it right **or** move on to the next equation.
+
 
 #### First-time visitor goals
 
-#### Returning visitor goals
+- [FI1] I want to know how the gameplay works.
+- [FI2] I want to know how the scoring works.
+- [FI3] I want to open the rule description again at any point during gameplay.
+- [FI4] I want to decrease the difficulty level of the game.
 
-#### Frequent visitor goals
+#### Returning/frequent visitor goals
+
+Since the game is relatively simple, no distinction is made between returning and frequent visitor goals
+
+
+- [RE1] I want to quickly start the game without reading the rule again.
+- [RE2] I want to increase the difficulty level of the game.
 
 ## Design
 
