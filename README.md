@@ -482,7 +482,7 @@ In the current version of the site, [no errors or warnings were found during val
 
 ##### CSS validation with Jigsaw
 
-The  `css` file of the project was regularly tested by [Jigsaw](https://jigsaw.w3.org/css-validator/). The issues discovered during validation are tracked in [GitHub Issues](https://github.com/blahosyl/enlightened-publishing/issues).
+The  `css` file of the project was regularly tested by [Jigsaw](https://jigsaw.w3.org/css-validator/). The issues discovered during validation are tracked in [GitHub Issues](https://github.com/blahosyl/operator-game/issues).
 
 In the current version of the site, [no errors or warnings were found during validation](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fblahosyl.github.io%2Foperator-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
 
@@ -491,7 +491,7 @@ In the current version of the site, [no errors or warnings were found during val
 
 ##### JavaScript validation with JSHint
 
-The  `js` file of the project was regularly tested by [JSHint](https://jshint.com/). The issues discovered during validation are tracked in [GitHub Issues](https://github.com/blahosyl/enlightened-publishing/issues).
+The  `js` file of the project was regularly tested by [JSHint](https://jshint.com/). The issues discovered during validation are tracked in [GitHub Issues](https://github.com/blahosyl/operator-game/issues).
 
 In the current version of the site, no errors or warnings were found during validation.
 
@@ -901,9 +901,8 @@ Milestone image by [vector_corp on Freepik](https://www.freepik.com/free-ai-imag
 - [Bodelschwingher Hof](https://github.com/4n4ru/CI_MS1_BodelschwingherHof/tree/master) by Ana Runje
 - [Travel World](https://github.com/PedroCristo/portfolio_project_1/) by Pedro Cristo
 - [Sourdough Bakes](https://github.com/siobhanlgorman) by Siobhan Gorman
-- [Horizon Photo](https://github.com/Ri-Dearg/horizon-photo/blob/master/README.md#mobile-testing) by Rory Patrick Sheridan- [The README of my first Code Institute project](https://github.com/blahosyl/academic-publishing)
-- [Academic Publishing](https://github.com/blahosyl/academic-publishing/) by myself
-
+- [Horizon Photo](https://github.com/Ri-Dearg/horizon-photo/blob/master/README.md#mobile-testing) by Rory Patrick Sheridan
+- [The README of my first Code Institute project](https://github.com/blahosyl/academic-publishing)
 
 ### Acknowledgements
 
