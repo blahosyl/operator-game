@@ -107,6 +107,11 @@ The user can adjust the level of difficulty by [selecting how many operands the 
 
 #### Scoring rules
 
+The whole game is designed around minimizing stress and only using positive reinforcement. There are no times limits, a decreasing number of "lives" or competition against another player or the computer. These cause unnecessary stress and frustration, and are especially hostile towards people who are neurodivergent or live with mental health issues.
+
+Instead, the game encourages personal growth without measuring ourselves against others, and the agency to set the difficulty of the puzzle to what we can handle at a given time.
+
+Accordingly, incorrect guesses are not counted. The only couter is one of correct answers in a row (the [Perfect Streak counter](#perfect-streak-counter)). This is only reset when the user makes an incorrect guess. Crucially, if the user chooses to skip a puzzle by clikcing the [New Game button](#new-game-button) or reduces the difficulty of the puzzle with the [Operand selector toggle](#pperand-selector-toggle), their streak is maintained.
 
 ## Features
 
