@@ -558,9 +558,12 @@ function newGame() {
 
   // reset operator numbers
   currentChosenOperators = [];// with the help of tutor Roo (refactored)
+  
+  currentChosenOperators = generateRandomOperators(); // with the help of tutor Roo
+  
   // show the operators in the console log for development purposes
   // ASSESSMENT uncomment the next line for testing/assessment
-  // console.log(currentChosenOperators = generateRandomOperators()); // with the help of tutor Roo
+  // console.log(currentChosenOperators);
 
   // show the expected result of the calculation in the question area
   showResult();
