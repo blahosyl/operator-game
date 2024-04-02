@@ -107,7 +107,7 @@ On loading the page, the [Welcome screen](#welcome-screen) appears, containing a
 
 #### Basic gameplay
 
-1. The game generates a random set of **operands**: positive integers between 1 and 10 (inclusive). These are displayed on the screen, with an operator drop-down toggle between each operand.
+1. The game generates a random set of **operands**: positive integers between 1 and 10 (inclusive). These are displayed on the screen, with an operator drop-down toggle between each operand.o
 2. The game generates a random set of **operators** from the set [+,-,*,/]. These are never shown to the user.
 3. The game also calculates the correct result of the equation based on the randomly generated operators and operands and displays this on the screen.
 4. The user has to select the correct operators to make the equation true.
@@ -128,7 +128,7 @@ The difficulty level of the game is capped in several ways
 - the right side of the equation has no more than 2 decimal places
 - only positive integers are used for operands
 
-The user can adjust the level of difficulty by [selecting how many operands the equation should consist of](#pperand-selector-toggle).
+The user can adjust the level of difficulty by [selecting how many operands the equation should consist of](#operand-selector-toggle).
 
 #### Scoring rules
 
