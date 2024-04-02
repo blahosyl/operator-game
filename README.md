@@ -65,7 +65,7 @@ The intention was to create a visual impression that is retro-inspired but still
 
 The color scheme started out very minimalistic, with only a red and orange border marking the [Game Area](#game-area) and [Question Area](#question-area), respectively. The design remained this minimalistic until the Javascript functions and logic was mostly finished.
 
-The [image](#imagery) selected for the [Milestone "popups"](#milestone-popups) inspired the development of the color scheme to its current form. An [image color picker](https://redketchup.io/color-picker) was used to pick colors, which were then used for text elements and backgrounds. 
+The [image](#imagery) selected for the [Milestone "popups"](#milestone-popups) inspired the development of the color scheme to its current form. An image color picker was used to pick colors, which were then used for text elements and backgrounds. 
 
 After this, color contrasts were checked and adjusted (see the [Color contrast testing](#color-contrast-testing) section), resulting in the following color palette:
 
@@ -392,6 +392,7 @@ External links open in a new tab.
 - [GitPod](https://gitpod.io/) – Integrated Development Environment (only used for tutoring)
 - [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools) – troubleshoot, test responsivity and styling
 - [Google Fonts](https://fonts.google.com/) - import fonts used on the website
+- [Image color picker](https://imagecolorpicker.com/) – color picker from image
 - [Lipsum](https://www.lipsum.com/), [loremipsum.io](https://loremipsum.io/) – Lorem Ipsum generators (not used in final version)
 - [MacDown](https://macdown.uranusjr.com/) – Markdown editor
 - [Preview](https://support.apple.com/guide/preview/welcome/mac) – cropping and annotating images
@@ -866,7 +867,6 @@ The following resources were used to learn/double check general, atomic function
 - [Change display style of DOM elements with Javasscript](https://www.w3schools.com/jsref/prop_style_display.asp)
 - [Inheriting opacity in CSS](https://css-tricks.com/forums/topic/opacity-of-child-element/), [2](https://stackoverflow.com/questions/5770341/i-do-not-want-to-inherit-the-child-opacity-from-the-parent-in-css)
 - [CSS `overflow`](https://www.w3schools.com/cssref/pr_pos_overflow.php)
-- [Image color picker](https://imagecolorpicker.com/)
 - [Iterate over a string](https://buzzcoder.gitbooks.io/codecraft-javascript/content/string/loop-through-a-string.html)
 - [`replace()` method](https://www.freecodecamp.org/news/javascript-replace-how-to-replace-a-string-or-substring-in-js/)
 - [Box shadows](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
