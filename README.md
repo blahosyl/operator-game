@@ -807,7 +807,7 @@ The paired colors have the following contrasts:
 
 ##### Web Disability Simulator
 
-The [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/) was used to check the site for a variety of conditions. The site was found to be fully functional for these conditions:
+The [Web Disability Simulator](https://chromewebstore.google.com/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) was used to check the site for a variety of conditions. The site was found to be fully functional for these conditions:
 
 - Sight
 	- Total color blindness
