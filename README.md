@@ -7,7 +7,7 @@ Users are shown an equation with the operators missing, and they have to guess t
 
 The game has a fully [responsive](#responsivity) and [accessible](#accessibility-testing) desgin, and [a kinder scoring mechanism](#scoring-rules), making it suitable for users of a variety of ages and abilities.
 
-Extra features include the user being able to [select the difficulty level](#operator-selector-toggle) and [celebratory "popups" at certain milestones](#milestone-popups).
+Extra features include the user being able to [select the difficulty level](#operand-selector-toggle) and [celebratory "popups" at certain milestones](#milestone-popups).
 
 Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
